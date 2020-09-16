@@ -1,0 +1,7 @@
+1. npm init --y  >>>>>>>>>> create package.json
+2. npm install webpack webpack-cli --save-dev  >>>>>>>>> install WB & WB-cli to devDependencies
+2 alt. npm i webpack webpack-cli -D  >>>>>>>>> install WB & WB-cli to devDependencies
+
+3. create script in package.json ("build": "webpack")
+
+4. npm run build >>>>>>>> run script
