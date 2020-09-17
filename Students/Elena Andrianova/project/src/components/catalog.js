@@ -25,7 +25,6 @@
 //     }
 //     return local;
 // }
-
 export let catalog = {
     container: null,
     items: [],
@@ -84,7 +83,7 @@ export let catalog = {
         this.container.addEventListener('click', ev => {
             if (ev.target.name == 'add') {
                 let dataset = ev.target.dataset;
-                this.basket.add(this._createNewItem(dataset));
+                this.basket.add(this._createNewItem(dataset) );
             }
         })
     },
