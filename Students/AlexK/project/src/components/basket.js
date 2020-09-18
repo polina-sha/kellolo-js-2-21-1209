@@ -1,85 +1,4 @@
-// export let cart = {
-//     items: [],
-//     selector: null,
-//     url: "https://raw.githubusercontent.com/kulyamzin/GeekBrain/master/Files/GeekBrains/basket.json",
-//     init() {
-//         this.selector = document.querySelector('.b-basket');
-//         this._get(this.url)
-//             .then(jsonTxt => {
-//                 this.items = jsonTxt.content;
-//                 this.total = jsonTxt.totalPrice;
-//             })
-//             .finally(() => {
-//                 this._render();
-//                 this._handle();
-//             })
-//     },
-//     _get(url) {
-//         return fetch(url).then(document => document.json()); //возвращает promise, содержащий JSON 
-//     },
-//     _render() {
-//         let html = `
-//         <div class="b-basket__top">
-//             <div class="b-basket-main">Product Details</div>
-//             <div class="b-basket-info">unite Price</div>
-//             <div class="b-basket-info">Quantity</div>
-//             <div class="b-basket-info">shipping</div>
-//             <div class="b-basket-info">Subtotal</div>
-//             <div class="b-basket-info">ACTION</div>
-//         </div>`;
-//         let i = 0;
-//         this.items.forEach(item => {
-//             html += `
-//         <div class="b-basket__row">
-//           <div class="b-basket__row__item b-basket-main">
-//             <div class="b-basket__row__item-img"><img src="${item.productImg}" alt="basket"></div>
-//             <div class="b-basket__row__item-txt">
-//               <h3><a href="#">${item.productName}</a></h3>
-//               <p><b>Color:</b> ${item.productColor}<br>
-//               <b>Size:</b> ${item.productSize}</p>
-//             </div>
-//           </div>
-//           <div class="b-basket-info">${item.productPrice}</div>
-//           <div class="b-basket-info"><input type="text" maxlength="4" value="${item.amount}" data-id="${item.productId}" data-command="ca"></div>
-//           <div class="b-basket-info">free</div>
-//           <div class="b-basket-info">${item.productPrice*item.amount}</div>
-//           <div class="b-basket-info">
-//             <button>   
-//               <i class="fas fa-times-circle" aria-hidden="true" data-id="${item.productId}" data-command="rm" style="font-size:15px"></i>
-//             </button>
-//           </div>
-//         </div>`;
-//         });
-//         this.selector.innerHTML = html;
-//     },
-//     _handle() {
-//         this.selector.addEventListener('click', event => {
-//             switch (event.target.dataset.command) {
-//                 case 'rm':
-//                     this.removeFullObj(event.target.dataset.id);
-//                     break;
-//             }
-//             this.selector.addEventListener('change', event => {
-//                 if (event.target.dataset.command == 'ca') {
-//                     this.changeAmount(event.target.dataset.id);
-//                 };
-//             })
-//         })
-//     },
-//     removeFullObj(id) {
-//         let elemDelId = this.items.find(element => element.productId == id);
-//         this.items.splice(this.items.indexOf(elemDelId), 1);
-//         this._render();
-//     },
-//     changeAmount(id) {
-//         let elemCaId = this.items.find(element => element.productId == id);
-//         elemCaId.amount = event.target.value;
-//         this._render();
-//     }
-
-// }
-
-class cart {
+export class cart{
     constructor() {
         this.items = [];
         this.selector = null;
@@ -109,7 +28,7 @@ class cart {
             }
             this.selector.addEventListener('change', event => {
                 if (event.target.dataset.command == 'ca') {
-                    this.changeAmount(event.target.dataset.id);
+                    this.changeAmount(event.target.dataset.id,event.target.value);
                 };
             })
         })
@@ -135,9 +54,9 @@ class cart {
         this.items.splice(this.items.indexOf(elemDelId), 1);
         this._render();
     }
-    changeAmount(id) {
+    changeAmount(id,newVal) {
         let elemCaId = this.items.find(element => element.productId == id);
-        elemCaId.amount = event.target.value;
+        elemCaId.amount = newVal;
         this._render();
     }
 }
@@ -176,7 +95,3 @@ class genShopingCartHtml {
       </div>`
     }
 }
-
-let cartt = new cart();
-
-cartt.init();
