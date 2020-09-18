@@ -1,0 +1,32 @@
+.topNav {
+  justify-content: center;
+  height: 51px;
+  display: flex;
+  padding-top: 30px;
+  .navAll {
+    a {
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      overflow: hidden;
+      padding-top: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 5rem 1rem;
+      &:hover {
+        border-bottom: 3px solid #ef5b70;
+        opacity: 70%;
+        text-decoration: none;
+      }
+      &.active {
+        border-bottom: 3px solid #ef5b70;
+      }
+      .active {
+        border-bottom: 3px solid #ef5b70;
+      }
+    }
+    .dropNav {
+      display: none;
+    }
+  }
+}
