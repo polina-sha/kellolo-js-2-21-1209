@@ -1,0 +1,195 @@
+@import "browseStyle.scss";
+
+
+
+.cart-head {
+	height: 148px;
+    background-color: #f8f3f4;
+    
+    .cart-head-content {
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $accentColor;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #636363;
+            span {
+                font-weight: 700;
+                color: $accentColor;
+            }
+        }
+    }
+}
+
+.headSlider {
+    background: url(../../assets/img/singlPage-slider-1.png) no-repeat center,
+    #f7f7f7;
+    height: 777px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        width: 47px;
+        height: 47px;
+        background-color: #d8d8d8;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        font-size: 24px;
+    }
+    button:hover {
+        background-color: darken($color: #d8d8d8, $amount: 10);
+    }
+    &--link {
+        width: 63px;
+        height: 1px;
+        background-color: #d6d6d6;
+        display: inline-block;
+        transition: $buttonTransition;
+        &--active{
+            height: 3px;
+            background-color: #ef5b70;
+        }
+        &:hover {
+            height: 3px;
+            background-color: #ef5b70;
+        }
+    }
+    &--content{
+        margin-top: -85px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        padding-top: 75px;
+        padding-bottom: 120px;
+    }
+    &--content > div:first-child {
+        text-align: center;
+    }
+    &--page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2 { 
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 700;
+            color: $accentColor;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #4d4d4d;
+        }
+    }
+
+    &--text{
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #5e5e5e;
+        margin: 0 22%;
+    }
+    &--details {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #b9b9b9;
+        white-space: pre; 
+        span {
+            color: #2f2f2f;
+        }
+    }
+    &--price {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #ef5b70;
+        margin: 1.5em 0;
+    }
+
+    &--addToCart {
+        
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 9em;
+            text-align: left;
+            label {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 700;
+                color: #2f2f2f;
+                margin-bottom: 1em;
+            }
+            input {
+                width: initial;
+                background-color: #ffffff;
+                border: 1px solid #eaeaea;
+                outline: none;
+                font-size: 13px;
+                line-height: 35px;
+                font-weight: 400;
+                padding-left: 1em;
+            }
+        }
+        button {
+            width: 100%;
+            height: 55px;
+            background-color: #ffffff;
+            border: 1px solid #ef5b70;
+            margin-top: 2em;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #ef5b70;
+            background: url(../../assets/img/forma_1_copy_2587.png) no-repeat 13em;
+            padding-left: 2em;
+            outline: none;
+            &:hover {
+                background-color: lighten($color: $accentColor, $amount: 30);
+                color: darken($color: #ef5b70, $amount: 10);
+            }
+        }
+        
+    }
+}
+
+.greyLine {
+    display: block;
+    width: 56%;
+    height: 1px;
+    background: #eaeaea;
+    margin-bottom: 3em;
+}
+
+.additional {
+    margin-top: 120px;
+    h3 {
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #4d4d4d;
+        text-align: center;
+    }
+}
+
+
