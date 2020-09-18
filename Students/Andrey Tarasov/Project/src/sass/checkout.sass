@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap")
+@import "header.sass"
+@import "block-under-header.sass"
+@import "footer.sass"
+
+body
+  margin: 0 auto
+  color: #222224
+  font-family: "Lato", sans-serif
+  font-weight: 300
+  position: relative
+  z-index: 100
+
+.top-header
+  width: 100%
+  background-color: #f8f3f4
+
+.top-header-container
+  width: 1140px
+  height: 148px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.list-links
+  ul
+    display: flex
+    li
+      list-style-type: none
+      text-align: center
+
+.top-header-container
+  p
+    font-size: 24px
+    font-weight: 900
+    font-stretch: normal
+    font-style: normal
+    letter-spacing: normal
+    line-height: 0.83
+    color: #f16d7f
+    text-transform: uppercase
+
+.list-links
+  ul
+    li
+      a
+        text-decoration: none
+        font-weight: bold
+        font-size: 14px
+        line-height: 1.43
+        color: #636363
+        text-transform: uppercase
+
+.list-links
+  ul
+    li
+      a:hover
+        color: #f16d7f
+
+.container_first
+  display: block
+  width: 1140px
+  margin: 0 auto 20px
+  padding: 0
+  //border: 3px solid #000
+
+.communication
+  width: 1140px
+  height: 0
+  //height: 450px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  background-color: #fff
+  //border: 2px solid #000
+  overflow: hidden
+  p
+    margin-top: 15px
+  form
+    margin-bottom: 79px
+  .communication_first
+    margin-left: 35px
+    h3
+      font-size: 13px
+      font-weight: 700
+      font-stretch: normal
+      font-style: normal
+      line-height: normal
+      letter-spacing: normal
+      text-align: left
+      color: #222222
+      text-transform: uppercase
+      margin-bottom: 15px
+      margin-top: 33px
+    p
+      font-size: 13px
+      font-weight: 400
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.54
+      letter-spacing: normal
+      text-align: left
+      color: #b3b2b2
+      margin-bottom: 34px
+    label
+      cursor: pointer
+      font-size: 12px
+      font-weight: 700
+      font-stretch: normal
+      font-style: normal
+      line-height: 12px
+      letter-spacing: normal
+      text-align: right
+      color: #222
+      text-transform: uppercase
+      margin-left: 15px
+      margin-bottom: 0
+      vertical-align: middle
+    input
+      cursor: pointer
+      vertical-align: middle
+      border: 1px solid #000
+    img
+      vertical-align: middle
+    a
+      display: inline-block
+      font-size: 13px
+      font-weight: normal
+      font-stretch: normal
+      font-style: normal
+      line-height: 13px
+      letter-spacing: normal
+      text-align: left
+      color: #b3b2b2
+      text-decoration: none
+      vertical-align: middle
+    a:hover
+      transform: scale(1.02)
+
+  button
+    display: inline-block
+    width: 180px
+    height: 50px
+    border: solid 1px #eaeaea
+    background-color: #ffffff
+    font-size: 14px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: center
+    color: #4a4a4a
+    text-transform: uppercase
+    margin-top: 38px
+  & button:hover
+    box-shadow: 3px 3px 3px #ccc
+    outline: none
+    border: none
+  & button:active
+    outline: none
+    border: none
+  & button:focus
+    outline: none
+    border: 1px solid #eaeaea
+
+.communication_second
+  margin-right: 165px
+  label
+    font-size: 12px
+    font-weight: 700
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.67
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    text-transform: uppercase
+    margin-top: 10px
+    margin-bottom: 16px
+    cursor: pointer
+    span
+      color: red
+      font-size: 16px
+  h3
+    font-size: 13px
+    font-weight: 700
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    text-transform: uppercase
+    margin-bottom: 15px
+    margin-top: 33px
+  p:first-of-type
+    font-size: 13px
+    font-weight: 400
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.54
+    letter-spacing: normal
+    text-align: left
+    color: #b3b2b2
+    margin-bottom: 27px
+  p:last-of-type
+    font-size: 13px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.54
+    letter-spacing: normal
+    text-align: left
+    color: #ff0d0d
+    margin-top: 22px
+    margin-bottom: 23px
+  input:not([type = "button"])
+    display: inline-block
+    width: 390px
+    height: 45px
+    border: solid 1px #eaeaea
+    padding-left: 15px
+  input:not([type = "button"]):focus
+    outline: none
+  input:not([type = "button"]):active
+    outline: none
+  input:nth-of-type(3)
+    width: 180px
+    height: 50px
+    border: solid 1px #eaeaea
+    background-color: #ffffff
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: center
+    color: #4a4a4a
+  input:nth-of-type(3):hover
+    box-shadow: 3px 3px 3px #ccc
+    outline: none
+  input:nth-of-type(3):focus
+    outline: none
+  input:nth-of-type(3):active
+    outline: none
+  a
+    font-size: 14px
+    font-weight: 700
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.43
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    margin-left: 32px
+    text-transform: none
+    text-decoration: none
+
+.shipping_adress
+  display: inline-block
+  width: 250px
+  height: 16px
+  font-size: 16px
+  font-weight: 900
+  font-stretch: normal
+  font-style: normal
+  line-height: normal
+  letter-spacing: normal
+  text-align: left
+  color: #222222
+  text-transform: uppercase
+  text-decoration: none!important
+  margin-top: 33px
+  margin-bottom: 6px
+  cursor: pointer
+
+#collapseOne:checked ~ .communication-form
+  height: 450px
+  margin-bottom: 79px
+  transition-duration: 1s
+
+#collapseTwo:checked ~ .communication
+  height: 140px
+  transition-duration: 1s
+
+#collapseThree:checked ~ .communication
+  height: 140px
+  transition-duration: 1s
+
+#collapseFour:checked ~ .communication
+  height: 140px
+  transition-duration: 1s
+
+#collapseFive:checked ~ .communication
+  height: 140px
+  transition-duration: 1s
+
+#collapseSix:checked ~ .communication
+  height: 140px
+  transition-duration: 1s
+
+#collapseOne, #collapseTwo, #collapseThree, #collapseFour, #collapseFive, #collapseSix,
+  position: absolute
+  visibility: hidden
+  left: -999999999px
+
+.line_down
+  width: 1140px
+  margin: 0 auto
+  &:last-of-type
+    margin-bottom: 93px
+  &:first-of-type
+    //margin-top: 79px
+.container_top
+  width: 1140px
+  height: 72px
+  display: flex
+  justify-content: flex-start
+  margin: 0 auto
+  a
+    font-size: 16px
+    font-weight: 900
+    font-stretch: normal
+    font-style: normal
+    line-height: 4.5
+    letter-spacing: normal
+    text-align: left
+    color: #222222
+    text-decoration: none
+    text-transform: uppercase!important
+

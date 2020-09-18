@@ -1,0 +1,228 @@
+.product_page {
+  margin-top: 59px;
+  display: flex;
+
+  &__category {
+    display: flex;
+    flex-flow: column nowrap;
+
+    label {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $mainTextColor;
+      padding: 12px;
+      border-left: 5px solid $buttonsColor;
+      border-bottom: 1px solid $borderColor;
+
+      &:hover {
+        color: darken($buttonsColor, 10%);
+      }
+    }
+
+    .collapse:checked + label {
+      color: $buttonsColor;
+
+      + .collapse_box {
+        padding: 22px 17px;
+      }
+    }
+
+    .collapse_box {
+      flex-flow: column nowrap;
+      width: 243px;
+      box-sizing: border-box;
+      padding: 0px 17px;
+
+      a {
+        text-decoration: none;
+        outline: none;
+        line-height: 33px;
+        font-weight: 400;
+        color: $mainTextColor;
+        transition: all 300ms ease-in-out;
+        &:hover {
+          color: $buttonsColor;
+        }
+      }
+    }
+  }
+
+  &__main {
+    margin-left: 49px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .filters {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $mainTextColor;
+        margin-bottom: 24px;
+      }
+
+      .style > div,
+      .size > div {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .style > div {
+        width: 176px;
+        justify-content: space-between;
+        a {
+          text-decoration: none;
+          outline: none;
+          font-size: 14px;
+          line-height: 26px;
+          font-weight: 400;
+          color: $mainTextColor;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 26px;
+          font-weight: 400;
+          color: #dfdfdf;
+          margin-bottom: initial;
+        }
+      }
+      .size {
+        > div {
+          width: 276px;
+          label {
+            width: 69px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $mainTextColor;
+          }
+        }
+      }
+      .price {
+        width: 262px;
+      }
+    }
+
+    .sort {
+      margin-top: 42px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      background-color: #f3f3f3;
+      label {
+        margin: 0 10px;
+        padding-left: 13px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: $mainTextColor;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        select {
+          outline: none;
+          border: none;
+          border-left: 1px solid #ebebeb;
+          padding-left: 11px;
+          font-size: 14px;
+          line-height: 30px;
+          height: 30px;
+          font-weight: 400;
+          color: $mainTextColor;
+        }
+      }
+    }
+
+    &__catalogue {
+      display: flex;
+      width: 846px;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+
+      .prod__item {
+        width: 263px;
+      }
+    }
+  }
+
+  &__catalogue {
+    &__bottom_nav {
+      margin-top: 43px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+      }
+
+      .nav_pages {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 261px;
+        height: 44px;
+        background-color: #ffffff;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+
+        .num_page {
+          font-size: 16px;
+          line-height: 44px;
+          font-weight: 700;
+          color: #c4c4c4;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            color: $buttonsColor;
+          }
+        }
+      }
+    }
+    &__all {
+      width: 150px;
+      height: 44px;
+      background-color: #ffffff;
+      border: 1px solid $buttonsColor;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 44px;
+      font-weight: 300;
+      color: $buttonsColor;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        background-color: $buttonsColor;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__banner {
+    &_back {
+      background: #222224;
+      margin: 110px 0 -97px;
+    }
+
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 341px;
+
+    &_inf_section {
+      width: 310px;
+      display: flex;
+      flex-flow: column;
+      margin-top: 102px;
+      text-align: center;
+      background-position: top center;
+      padding-top: 65px;
+    }
+  }
+}
