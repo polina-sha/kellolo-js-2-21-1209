@@ -5,7 +5,7 @@ export let catalog = {
     url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
     init() {
         this.container = document.querySelector('#catalog');
-        // this.basket = basket;
+        this.basket = cart;
         this._get(this.url)
             .then(arr => {
                 this.items = arr;
