@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: #222222;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  display: flex;
+  min-height: 100%;
+  flex-flow: column nowrap;
+  flex: 1 0 auto;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+  flex: 0 0 auto;
+}
+
+.bottomInfo__back {
+  margin-top: 97px;
+  height: 450px;
+  background: url(../../../../public/img/Layer41@1X.png) 0px -245px/cover #ccc no-repeat;
+  background-blend-mode: overlay;
+}
+
+.bottomInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 450px;
+}
+
+.botInf__slider, .botInf__subscrube {
+  width: calc(100% - 2px)
+}
+
+.botInf__slider{
+  display: flex;
+  flex-flow: column;
+
+}
+
+.botInf__active_slide {
+  display: flex;
+  justify-content: space-around;
+}
+
+.avatar {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url(../../../../public/img/Layer40@1X.jpeg) -24px -9px no-repeat;
+}
+
+.botInf_sl_content {
+  max-width: 386px;
+}
+
+.quote {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: #222224;
+}
+
+.name {
+  margin-top: 19px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $mainColor;
+}
+
+.from {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #222224;
+}
+
+.paginator {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 41px;
+}
+
+.pagination {
+  outline: none;
+  width: 38px;
+  height: 4px;
+  background: #d6d6d6;
+  margin: 0 6.5px;
+  transition: all 300ms ease-in-out;
+}
+
+.pagination:first-child {
+  margin-left: 0;
+}
+
+.pag_active {
+  background: $mainColor;
+}
+
+.pagination:hover {
+  background: #d14d5f;
+}
+
+.separator {
+  width: 2px;
+  height: 450px;
+  background: #ffffff;
+}
+
+.botInf__subscrube {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_form_h {
+  font-size: 24px;
+  line-height: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222224;
+}
+
+
+.sub_form_text {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222224;
+}
+
+.botInf__subscrube form {
+  margin-top: 35px;
+  height: 46px;
+  border-radius: 23.0px;
+  display: flex;
+  overflow: hidden;
+}
+
+.botInf__subscrube input {
+  width: 282px;
+  display: block;
+  outline: none;
+  background-color: #e1e1e1;
+  border: none;
+  padding: 18px 28px;
+  box-sizing: border-box;
+}
+
+
+.botInf__subscrube button {
+  width: 104px;
+  display: block;
+  outline: none;
+  border: none;
+  background-color: $mainColor;
+  color: #ffffff;
+  transition: all 300ms ease-in-out;
+
+}
+
+.botInf__subscrube button:hover {
+  background: #d14d5f;
+}
+
+.botInf__subscrube button:focus {
+  box-shadow: inset 0px 0px 25px #555;
+}
+
+.collapse {
+  display: none;
+
+  + label {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.collapse_box {
+  padding: 0;
+  display: flex;
+  max-height: 0px;
+  box-sizing: border-box;
+  transition: all 1s cubic-bezier(0, 1, 0, 1);
+  overflow: hidden;
+}
+.collapse:checked + label + .collapse_box {
+  transition: all 1s ease-in-out;
+  max-height: 2000px;
+}

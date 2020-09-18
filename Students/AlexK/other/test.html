@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    let cart = {
+      items: [],
+      insertSelector: null,
+      url: "https://raw.githubusercontent.com/kulyamzin/GeekBrain/master/Files/GeekBrains/basket.json",
+      init() {
+        this.insertSelector = document.querySelector('div');
+        this._get(this.url)
+        .then(jsonTxt => {
+          this.items = jsonTxt.content;
+        })
+        .finally(() => {
+          this._render();
+        })
+      },
+      _get(url) {
+        return fetch(url).then(document => document.json()); //возвращает promise, содержащий JSON 
+      },
+      _render() {
+        let html = '';
+        this.items.forEach(item =>{
+          html += `<p>${item}<p>`;
+            console.log(item);
+        });
+        this.insertSelector.innerHTML= html ;
+      }
+    }
+
+    cart.init();
+  </script>
+</body>
+
+</html>
