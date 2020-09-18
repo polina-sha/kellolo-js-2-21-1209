@@ -1,0 +1,121 @@
+@import "browseStyle.scss";
+
+
+
+.checkoutBlock {
+    margin-top: 70px;
+    p {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #b3b2b2;
+        span {
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #222222;
+        }
+    }
+    .attentionText {
+        color: $accentColor;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+    label {
+        font-size: 12px;
+        line-height: 2.5;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+    }
+    
+
+    button {
+        outline: none;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        padding: 1em 3em;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        width: fit-content;
+        transition: 0.3s;
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
+    a {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+        &:hover {
+            color: #000000;
+        }
+    }
+    
+}
+
+.checkoutItems{
+    
+    transition: $buttonTransition;
+    & > input {
+        display: none;
+    }
+    & > label {
+        position: relative;
+        z-index: 20;
+        display: block;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        margin: 1em 0;
+    }
+    & > div {
+        margin-top: -1px;
+        overflow: hidden;
+        height: 0px;
+        position: relative;
+        z-index: 10;
+        transition: $buttonTransition;
+    }
+    & input:checked ~ div {
+        height: fit-content;
+        margin-bottom: 65px;
+    }
+
+    & input[type="text"],
+    & input[type="password"] {
+        outline: none;
+        height: 45px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        margin: 1em 0;
+    }
+}
+
+.shippingAddressBlock {
+    display: flex;
+
+    .shippingAddress {
+        width: 47%;
+        margin-left: 2em;
+    }
+
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        width: 34%;
+    }
+}
+
+.greyLine {
+    width: inherit;
+    border-top: 1px solid #e8e8e8;
+}

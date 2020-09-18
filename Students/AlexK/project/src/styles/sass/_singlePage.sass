@@ -1,0 +1,196 @@
+.b-carousel
+    background-color: #f7f7f7
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    text-transform: uppercase
+    a
+        display: block
+        background-color: #d8d8d8
+        width: 47px
+        height: 47px
+        line-height: 47px
+        text-align: center
+        i
+            color: #ffffff
+    img
+        object-fit: scale-down
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        color: $accentColor
+        font-size: 14px;
+        font-weight: 700
+        line-height: 24px
+    &__nav
+        background-color: #ffffff
+        height: 100px
+        ol
+            padding: 0
+        li
+            display: inline-block
+            border-bottom: 2px solid #eaeaea
+            width: 63px
+            height: 10px
+            span
+                display: none
+        li:hover
+            border-bottom: 2px solid $accentColor
+        p
+            text-align: center
+            margin-top: $caruseltMargin
+.b-text
+    margin-top: $caruseltMargin
+    text-align: center
+    text-transform: uppercase
+    display: flex
+    flex-direction: column
+    align-items: center
+    p
+        width: 618px
+        color: #5e5e5e
+        line-height: 24px
+        text-transform: none
+    > p:last-of-type
+        color: $accentColor
+        font-size: 24px
+        font-weight: 700
+        line-height: 24px
+        width: auto
+    &-detail-size  
+        display: flex
+        justify-content: space-around
+        color: #747171
+        line-height: 24px
+        font-weight: 700
+        span 
+            color: #2f2f2f
+        p:first-of-type
+            text-align: right
+            padding-right: 10px
+        p:last-of-type
+            text-align: left
+            padding-left: 10px
+    &__line
+        width: 642px
+        border: 1px solid #eaeaea
+    &__form 
+        width: 642px
+        color: #2f2f2f
+        font-weight: 700
+        line-height: 24px
+        text-transform: uppercase
+        input
+            width: 144px
+            height: 35px
+            border: 1px solid #eaeaea
+            background-color: #ffffff
+            outline: none
+            padding-left: 14px
+            padding-right: 14px
+            color: $grayFont
+            font-weight: 400
+            line-height: 24px
+            margin-top: 20px
+        button
+            width: 537px
+            height: 55px
+            font-size: 16px
+            font-weight: 700    
+            border: 1px solid $accentColor
+            background-color: #ffffff
+            color: $accentColor
+            outline: none
+            margin-top: 30px
+        button:hover
+            background-color: $accentColor
+            color: #ffffff
+        &-fields
+            display: flex
+            justify-content: space-between
+            margin-top: 65px
+.f-row
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+.b-shoplist 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+.b-item 
+  width: 261px
+  position: relative
+  text-align: center
+  margin-top: 20px
+  &-pic
+      background-color: $itemsBgColor
+  &:hover
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+    img
+        opacity: 0.3
+    .b-item-pic
+        background: rgba(0, 0, 0, 0.7)
+    .b-item-overlay
+        visibility: visible
+  img
+    width: inherit
+    height: 279px
+    object-fit: scale-down
+  &-txt
+    width: inherit
+    background-color: #ffffff
+    display: flex
+    flex-direction: column
+    font-weight: 700
+    text-align: left!important
+    span
+      word-break: break-all
+      color: $grayFont
+      display: block
+      width: inherit
+      padding-left: 15px
+      padding-top: 14px
+      &:last-of-type              
+        color: $accentColor
+        padding-bottom: 20px
+  &-overlay
+    width: inherit
+    position: absolute
+    top: 120px
+    text-align: center
+    visibility: hidden
+    button
+        height: 39px
+        outline: none
+        border: 1px solid #ffffff
+        background: none
+        font-size: 13px
+        color: #ffffff
+        padding-left: 20px
+        padding-right: 20px
+        &:hover
+            border: 1px solid $accentColor 
+            color: $accentColor
+        svg
+            padding-right: 5px
+.heading
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 50px
+    margin-bottom: 50px
+    span:first-of-type
+        color: #4d4d4d!important
+        font-size: 24px!important
+        font-weight: 700!important
+        text-transform: uppercase!important
+    span:last-of-type
+        color: #9f9f9f
+        font-size: 14px
+        font-weight: 400
+        line-height: 54px
+        letter-spacing: 0.35px
+        text-transform: none

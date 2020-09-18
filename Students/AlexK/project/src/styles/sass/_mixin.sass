@@ -1,0 +1,46 @@
+=noBorder 
+    border: none
+    outline: none
+=flexAlignCenter
+    display: flex
+    align-items: center
+=fontDetails($fSize,$fWeight,$lSpace)
+    font-size: $fSize
+    font-weight: $fWeight
+    letter-spacing: $lSpace
+=ul-nostyle 
+    list-style: none
+    padding: 0
+    margin: 0
+=hover-style($color) 
+    &:hover 
+        background: lighten($color, 45%)
+
+=animation($content) 
+  animation: $content;
+
+=fontHeading ($color)
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    color: $color
+
+=borderRadius ($borderColor)
+    border-radius: 3px
+    border: 1px solid $borderColor
+    background-color: #ffffff
+
+=ul-nostyle 
+  list-style: none
+  padding: 0
+  margin: 0
+=display-flex-row
+  display: flex
+  flex-direction: row
+  justify-content: start
+  align-items: center
+=required-fields
+  content: '*'
+  color: red
+  padding-left: 3px
