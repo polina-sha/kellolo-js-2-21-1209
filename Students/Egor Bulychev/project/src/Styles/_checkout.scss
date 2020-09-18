@@ -1,0 +1,145 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-bottom: 66px;
+  padding-top: 33px;
+}
+  .forms__checkout{
+    display: none;
+
+    form{
+      padding-left: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height:460px;
+      cursor:auto;
+
+
+
+
+      h2{
+        color: #222222;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      label{
+        height: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      i{
+        color: #b3b2b2;
+      }
+
+      span{
+        height: 12px;
+        color: #b3b2b2;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: none;
+      }
+
+      .red_star{
+        color: #ff0d0d;
+        font-weight: 400;}
+    }
+
+    button{
+      width: 180px;
+      height: 50px;
+      border: 1px solid #eaeaea;
+      background-color: #ffffff;
+      color: #4a4a4a;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      outline: none;
+      transition: .3s;
+      margin-top: 20px;
+      margin-bottom: 25px;
+
+    }
+
+
+
+    input{
+      width: 390px;
+      height: 45px;
+      border: 1px solid #eaeaea;
+      background-color: #ffffff;
+      outline: none;
+      padding-left: 20px;
+    }
+  }
+
+
+    .radio{
+      display: none;
+    }
+
+    .radio:checked + .fake::before{
+      opacity:1;
+    }
+
+    .fake{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #555555;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .fake::before{
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #222222;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity:0;
+      transition: .2s;
+    }
+
+
+
+.checkoutRadio, .checkoutRadio + label ~ div {
+  display: none;
+}
+
+.checkoutRadio + label, .checkoutRadio:checked + label {
+  padding: 33px 0;
+  border-bottom: 1px solid #e8e8e8;
+  cursor: pointer;
+  height: 13px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.checkoutRadio:checked + label{
+  border-bottom: none;
+}
+
+.checkoutRadio:checked + label + div {
+  display: flex;
+  padding-top: 40px;
+  animation: fadeIn ease-in 1.5s;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}

@@ -1,0 +1,45 @@
+.topNav 
+    height: 51px
+    font-weight: 700
+    font-size: 14px
+    +flexAlignCenter
+    justify-content: center
+    a 
+        text-transform: uppercase
+        text-decoration: none
+        color: #222222
+        height: inherit
+        line-height: 51px
+    a:hover 
+        border-bottom: 3px solid $accentColor
+        color: $accentColor
+        padding-top: 3px
+    a:not(:last-child)
+        margin-right: 46px
+
+//CurrentPageStyles        
+.b-arrivals 
+    background-color: #f8f3f4
+    height: 148px
+    text-transform: uppercase
+    color: $accentColor
+    font-size: 24px
+    font-weight: 700
+
+    .container
+        +flexAlignCenter
+        height: inherit
+
+    &__pageNav 
+        margin-left: auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+        font-size: 14px
+        font-weight: 300
+        color: $grayFont
+    &__pageNav a:nth-child(n+1) 
+        padding-left: 4px
+    &__pageNav a:last-child 
+        font-weight: 700
+        color: $accentColor
