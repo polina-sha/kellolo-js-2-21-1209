@@ -1,4 +1,4 @@
-class Basket {
+export default class Basket {
     constructor() {
         this.items = [];
         this.container = null;

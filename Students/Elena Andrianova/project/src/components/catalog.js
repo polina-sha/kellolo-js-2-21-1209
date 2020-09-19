@@ -1,4 +1,4 @@
-class Catalog {
+export default class Catalog {
     constructor(basket) {
         this.container = null;
         this.items = [];
