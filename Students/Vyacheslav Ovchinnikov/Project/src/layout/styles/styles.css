@@ -116,7 +116,6 @@ a.logo {
     margin-right: 2.6rem; }
 
 .drop {
-  /*позже переделать на флексах*/
   background-color: #ffffff;
   border-radius: 5px;
   border: 1px solid #ececec;
@@ -172,7 +171,7 @@ a.logo {
   background-color: #f8f8f8; }
   .promo__content {
     height: 66.5rem;
-    background: url("../../assets/imgs/topHeaderBack.png") no-repeat top right;
+    background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/topHeaderBack.png") no-repeat top right;
     background-size: 61rem auto; }
     .promo__content div {
       height: 10.7rem;
@@ -324,7 +323,7 @@ a.logo {
     flex-shrink: 0;
     height: inherit;
     width: 76.7rem;
-    background: url(../../assets/imgs/offerForWomen.jpg) no-repeat;
+    background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/offerForWomen.jpg") no-repeat;
     background-size: cover;
     position: relative; }
     .offerForWomenBanner .offerText {
@@ -349,11 +348,11 @@ a.logo {
       padding: 30px 30px 30px 110px;
       flex-grow: 1; }
       .offerForWomenDetails .offerUnit:first-child {
-        background: url(../../assets/imgs/offerDetails1.png) no-repeat 3.6rem 3rem; }
+        background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/offerDetails1.png") no-repeat 3.6rem 3rem; }
       .offerForWomenDetails .offerUnit:nth-child(2) {
-        background: url(../../assets/imgs/offerDetails2.png) no-repeat 3.6rem 3rem; }
+        background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/offerDetails2.png") no-repeat 3.6rem 3rem; }
       .offerForWomenDetails .offerUnit:last-child {
-        background: url(../../assets/imgs/offerDetails3.png) no-repeat 3.6rem 3rem; }
+        background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/offerDetails3.png") no-repeat 3.6rem 3rem; }
       .offerForWomenDetails .offerUnit .offerDetailsHead {
         font-size: 2rem;
         font-weight: 700; }
@@ -663,11 +662,11 @@ input[type=checkbox]:checked ~ a.mainFilter__a3 {
       display: inline-block;
       width: 13px;
       height: 13px;
-      background: url(../images/checkbox.png) no-repeat; }
+      background: url("") no-repeat; }
     .sizesWrap > div input[type="checkbox"] {
       display: none; }
     .sizesWrap > div input[type="checkbox"]:checked + .productsCheckbox {
-      background: url(../images/checkbox.png) no-repeat, url(../images/check-solid.svg) no-repeat;
+      background: url("") no-repeat, url("") no-repeat;
       background-size: contain, 12px;
       background-blend-mode: multiply; }
     .sizesWrap > div label {
@@ -717,7 +716,7 @@ input[type=checkbox]:checked ~ a.mainFilter__a3 {
       padding-bottom: 2px;
       -webkit-appearance: none;
       -moz-appearance: none;
-      background: url(../images/caret-down-solid.svg) no-repeat right 5px center;
+      background: url("") no-repeat right 5px center;
       background-size: 9px;
       padding-right: 20px; }
 
@@ -948,7 +947,7 @@ input[type=checkbox]:checked ~ .form {
 .subscribeWrap {
   margin-top: 100px;
   height: 438px;
-  background: url(../../assets/imgs/subscribe.jpg) no-repeat center bottom, #ccc;
+  background: url("https://raw.githubusercontent.com/Veledar/STATIK/master/imgs/subscribe.jpg") no-repeat center bottom, #ccc;
   background-blend-mode: overlay;
   background-size: cover; }
   .subscribeWrap .subscribe {
