@@ -13,7 +13,7 @@ export default  {
             })
             .finally(() => {
                 this._render();
-                this.button = document.querySelectorAll('.AddToCart');
+                this.button = document.querySelectorAll('.AddToCart-clic');
                 this._handleActions();
             })
     },
@@ -30,13 +30,13 @@ export default  {
                         <div href="shoppingCart.html" class="catalog__product">
                         <div class="catalog__mango">
                             <img class="mango" src="${item.productImg}" alt="mango">
-                            <button type="button" class="AddToCart"
+                            <button type="button" class="AddToCart AddToCart-clic "
                                 name = "add"
                                 data-id="${item.productId}" 
                                 data-price="${item.productPrice}" 
                                 data-name="${item.productName}" 
                                 data-img="${item.productImg}">
-                                <img src="../src/assets/img/FeturedItems/AddToCart.png" alt="AddToCart"><span>Add to Cart</span>
+                                <img class="AddToCart-clic" src="../src/assets/img/FeturedItems/AddToCart.png" alt="AddToCart"><span class="AddToCart-clic">Add to Cart</span>
                             </button>
                         </div>
                         <div class="product__name">${item.productName}</div>
