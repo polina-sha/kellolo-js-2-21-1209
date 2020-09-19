@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/css/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/product.css">
+    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+    <title>Product</title>
+</head>
+
+<body>
+
+<div class="container_bootstrap">
+
+    <a href="#" class="logo">Bran<span>d</span></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle dropdown-toggle__browse" href="#" role="button"
+                   id="dropdownMenuLink"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Browse
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <h3>Women</h3>
+                    <hr>
+                    <a class="dropdown-item" href="#">Tops</a>
+                    <a class="dropdown-item" href="#">Sweaters/Knits</a>
+                    <a class="dropdown-item" href="#">Jackets/Coats</a>
+                    <a class="dropdown-item" href="#">Blazers</a>
+                    <a class="dropdown-item" href="#">Denim</a>
+                    <a class="dropdown-item" href="#">Leggings/Pants</a>
+                    <a class="dropdown-item" href="#">Skirts/Shorts</a>
+                    <a class="dropdown-item" href="#">Accesseries</a>
+                    <h3>Men</h3>
+                    <hr>
+                    <a class="dropdown-item" href="#">Tees/Tank tops</a>
+                    <a class="dropdown-item" href="#">Shirts/Polos</a>
+                    <a class="dropdown-item" href="#">Sweaters</a>
+                    <a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
+                    <a class="dropdown-item" href="#">Blazers</a>
+                    <a class="dropdown-item" href="#">Jackets/vests</a>
+                </div>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for Item..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../src/img/icons/fa-search.png"
+                                                                                        alt="#"></button>
+            </form>
+        </div>
+    </nav>
+
+    <img src="../src/img/cart.png" alt="cart" class="header__cart">
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle dropdown-toggle__account" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            My Account
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Enter</a>
+            <a class="dropdown-item" href="#">Exit</a>
+        </div>
+    </div>
+
+</div>
+
+<!--<header class="container">-->
+<!--    <a href="#" class="logo">Bran<span>d</span></a>-->
+
+<!--    <form method="get" class="search">-->
+<!--        <button name="Browse">Browse <img src="img/icons/fa-caret-down.png" alt="#"></button>-->
+<!--        <input type="text" name="search" placeholder="Search for Item...">-->
+<!--        <button><img src="img/icons/fa-search.png" alt="#"></button>-->
+<!--    </form>-->
+
+<!--    <img src="img/cart.png" alt="cart" class="header__cart">-->
+<!--    <button name="accountBar" class="header__account-bar">My Account <img src="img/icons/fa-caret-down-white.png" alt="#"></button>-->
+<!--</header>-->
+
+<div class="headerLine"></div>
+
+<div class="topNav">
+    <a href="index.html">Home</a>
+    <a href="shopping-cart.html">Man</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="product.html">Accoseriese</a>
+    <a href="checkout.html">Featured</a>
+    <a href="singlePage.html">Hot Deals </a>
+</div>
+
+<div class="top-header">
+    <div class="top-header-container">
+
+        <p>New Arrivals </p>
+
+        <div class="list-links">
+
+            <ul>
+                <li><a href="index.html">Home /</a></li>
+                <li><a href="shopping-cart.html">Men /</a></li>
+                <li><a href="#">New Arrivals</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<main>
+    <div class="container-product">
+        <aside>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span>Category</span><img src="../src/img/product/triangle-down.png" alt="треугольник вниз">
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Shorts</a>
+                            <a href="#">Sweaters & Knits</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Tanks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span>Brand</span><img src="../src/img/product/triangle-down.png" alt="треугольник вниз">
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Pants</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span>Designer</span><img src="../src/img/product/triangle-down.png" alt="треугольник вниз">
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="container-about-the-product">
+            <div class="container-with-forms">
+                <div class="trending">
+                    <h3>Trending now</h3>
+                    <ul>
+                        <li>Bohemian <span>|</span></li>
+                        <li>Floral <span>|</span></li>
+                        <li>Lace</li>
+                        <li>Floral <span>|</span></li>
+                        <li>Lace <span>|</span></li>
+                        <li>Bohemian</li>
+                    </ul>
+                </div>
+                <div class="size">
+                    <h3>Size </h3>
+                    <form method="get">
+                        <div><input type="checkbox" id="XXS">
+                            <label for="XXS">XXS</label></div>
+                        <div><input type="checkbox" id="XS">
+                            <label for="XS">XS</label></div>
+                        <div><input type="checkbox" id="S">
+                            <label for="S">S</label></div>
+                        <div><input type="checkbox" id="M">
+                            <label for="M">M</label></div>
+                        <div><input type="checkbox" id="L">
+                            <label for="L">L</label></div>
+                        <div><input type="checkbox" id="XL">
+                            <label for="XL">XL</label></div>
+                        <div><input type="checkbox" id="XXL">
+                            <label for="XXL">XXL</label></div>
+                    </form>
+                </div>
+                <div class="price">
+                    <h3>Price</h3>
+                    <img src="../src/img/product/price-selection.png" alt="Выбор диапозона цены">
+                    <div>
+                        <p>$52</p>
+                        <p>$400</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-choice">
+                <button class="sortBy">Sort By</button>
+                <select name="choice" id="choice">
+                    <option value="">Name</option>
+                    <option value="">Brand</option>
+                    <option value="">Category</option>
+                </select>
+                <button class="show">Show</button>
+                <select name="choice-size" id="choice-size">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                </select>
+            </div>
+            <div class="choice-of-clothes">
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="anorak"><img src="../src/img/product/anorak.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="leather-jacket"><img src="../src/img/product/leather-jacket.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="backpack"><img src="../src/img/product/backpack.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="t-shirt"><img src="../src/img/product/t-shirt.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="jacket-with-hood"><img src="../src/img/product/jacket-with-hood.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="windbreaker"><img src="../src/img/product/windbreaker.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="panama-hat"><img src="../src/img/product/panama-hat.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="long-jacket"><img src="../src/img/product/long-jacket.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+                <div class="container-items__things">
+
+                    <div class="container-items__things__buy">
+                        <button><img src="../src/img/icons/white-cart.png" alt="Корзина">Add to Cart</button>
+                    </div>
+
+                    <a href="#" id="shirt"><img src="../src/img/product/shirt.png" alt="Футболка"></a>
+
+                    <div class="container-items__things__review">
+                        <p>Mango People T-shirt</p>
+                        <p>$52.00</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flipping-pages">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&lt; </span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">20</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="view-all">View All</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="shared-container">
+        <div class="container-service">
+            <div class="free-delivery">
+                <img src="../src/img/icons/truck.png" alt="Грузоперевозки">
+                <h3>Free Delivery</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="sales-discounts">
+                <img src="../src/img/icons/percent.png" alt="Проценты">
+                <h3>Sales & discounts</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+            <div class="quality-assurance">
+                <img src="../src/img/icons/crown.png" alt="Корона">
+                <h3>Quality assurance</h3>
+                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+<footer>
+    <div class="mailing">
+        <div class="mailing-blackout">
+
+        </div>
+
+        <div class="mailing-container">
+            <div class="mailing-container__description">
+                <img src="../src/img/face-girl.png" alt="Лицо девушки">
+                <div>
+                    <q>Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+                        condimentum mattis neque sed pretium</q>
+                    <p><span>Bin Burhan</span> <br> Dhaka, Bd</p>
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="mailing-container__line">
+
+            </div>
+
+            <div class="mailing-container__subscribe">
+                <h3>Subscribe</h3>
+                <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                <div>
+                    <form method="get">
+                        <input type="email" name="login" placeholder="Enter Your Email">
+                        <button>Subscribe</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-information">
+
+        <div class="brand">
+            <a href="#" class="logo">Bran<span>d</span></a>
+            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                processes and cross-unit partnerships.
+            </p>
+            <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+            </p>
+        </div>
+
+        <div class="company">
+            <h3>COMPANY</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">How It Works</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div class="information">
+            <h3>INFORMATION</h3>
+            <a href="#">Tearms &amp;Condition</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">How to Buy</a>
+            <a href="#">How to Sell</a>
+            <a href="#">Promotion</a>
+        </div>
+
+        <div class="category">
+            <h3>SHOP CATEGORY</h3>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Child</a>
+            <a href="#">Apparel</a>
+            <a href="#">Brows All</a>
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        <div class="container-copyright">
+            <div class="container-copyright__text">
+                <p>© 2017 Brand All Rights Reserved.</p>
+            </div>
+            <div class="container-copyright__icons">
+                <a href="#"><img src="../src/img/icons/f.png" alt="Фэйсбук"></a>
+                <a href="#"><img src="../src/img/icons/twitter.png" alt="Твиттер"></a>
+                <a href="#"><img src="../src/img/icons/in.png" alt="#"></a>
+                <a href="#"><img src="../src/img/icons/p.png" alt="#"></a>
+                <a href="#"><img src="../src/img/icons/g+.png" alt="#"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

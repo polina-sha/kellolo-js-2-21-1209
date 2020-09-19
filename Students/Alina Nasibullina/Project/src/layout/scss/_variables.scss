@@ -1,0 +1,163 @@
+$accentColor: #f16d7f;
+$accentColorDark: darken($color: $accentColor, $amount: 5);
+
+$buttonTransition: 0.3s;
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+	transition: $buttonTransition;
+	cursor: pointer;
+}
+
+
+
+/*заголовок New Arrivals хлебные крошки*/
+.cart-head {
+	height: 148px;
+	background-color: #f8f3f4;
+}
+
+.cart-head-content {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-head-content h1 {
+	font-size: 24px;
+	line-height: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: $accentColor;
+}
+
+.cart-head-content p {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #636363;
+}
+
+.cart-head-content>p>span {
+	font-weight: 700;
+	color: $accentColor;
+}
+
+
+/*карточка продукта, при наведении затемняется, отображается контент Add to card*/
+.fetured_items__content {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fetured_items__link {
+    height: 360px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.hover_cart {
+    position: absolute;
+    width: 120px;
+    height: 39px;
+    border: 1.0px solid #ffffff;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 100px 70px;
+    padding-right: 20px;
+    opacity: 0;
+    //background: url(../../assets/img/forma_1_copy_1287.png) no-repeat 10px;
+    background: none;
+    outline: none;
+    transition: $buttonTransition;
+}
+
+.hover_cart img{
+	width: 23px;
+	height: 22px;
+}
+
+.fetured_items__link:hover {
+    box-shadow: 0px 5px 8px 0px #d9d9d9;
+}
+
+.fetured_items__link:hover img {
+    filter: brightness(0.3);
+}
+
+.fetured_items__link:hover .hover_cart {
+	opacity: 1;
+}
+
+.fetured_items__link img {
+	width: 261px;
+	height: 280px;
+	background-color: #e9e9e9;
+    transition: $buttonTransition;
+}
+
+.fetured_items__link>p {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    margin-left: 15px;
+}
+
+.fetured_items__link .price {
+	font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $accentColor;
+}
+
+.fetured_items__link > div:last-child 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 12px;
+    p {
+        margin: 0;
+    }
+}
+
+/*звездочки рейтинга*/
+.fa-star, .fa-star-half-alt {
+    color: #e4af48;
+}
+
+/*стили блока каталога, добавленного через js*/
+
+.d-md-none {
+    display: none;
+}

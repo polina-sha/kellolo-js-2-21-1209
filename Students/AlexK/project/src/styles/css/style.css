@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+    /* remove default arrow */
+}
+
+.headerLine {
+    border-bottom: 1px solid #ececec;
+}
+
+/***************Стили для баннера с чуваком***************/
+.topBanner {
+    height: 613px;
+    background-color: #e8e8e8;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.topBanner .container {
+    background-image: url("../../assets/img/topHeaderBack.png");
+    background-repeat: no-repeat;
+    background-size: 570px;
+    background-position-x: right;
+    background-position-y: 5px;
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.redBlock {
+    width: 12px;
+    height: 92px;
+    background-color: #f16d7f;
+}
+
+.topBanner__text {
+    padding-left: 10px;
+    height: 110px;
+    width: auto;
+    margin-top: -15px;
+}
+
+.firstLine {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.secondLine {
+    color: #f16d7f;
+}
+
+
+/**************Стили для горячих предложений***************/
+.hotOffers {
+    height: 1023px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offers__link {
+    position: relative;
+    margin-top: 20px;
+}
+
+.offers__text {
+    position: absolute;
+    width: auto;
+    height: 82px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.offers__text span {
+    color: #f16d7f;
+    font-size: 30px;
+    letter-spacing: 0.75px;
+}
+
+/**************Стили для будующих поступлений***************/
+.browse__product {
+    width: 212px;
+    line-height: 48px;
+    background-color: #f16d7f;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.items__button {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.browse__product i {
+    padding-left: 10px;
+}
+
+/**************Стили для горячего предложения***************/
+.footerBanner {
+    height: 529px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footerBanner__photo {
+    width: 767px;
+    height: 529px;
+    position: relative;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.footerBanner__menu {
+    height: 529px;
+    width: 373px;
+    background-color: #222224;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footerBanner__photo-txt {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 78px;
+    margin-left: 40px;
+    margin-top: 150px;
+    color: #f16d7f;
+}
+
+.footerBanner__photo-txt span {
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0.9px;
+}
+
+.footerBanner__menu__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 300;
+    /* Text style for "W, orldwid" */
+    letter-spacing: 0.35px;
+}
+
+.left {
+    flex-basis: 50px;
+    text-align: center;
+}
+
+.right {
+    flex-basis: 220px;
+    line-height: 24px;
+}
+
+.right span {
+    font-size: 20px;
+    font-weight: 700;
+    /* Text style for "Free Deliv" */
+    letter-spacing: 0.5px;
+}
+
+/**************Стили для контактов***************/
+.b-contacts {
+    background-image: url("../../assets/img/2-layers.png");
+    background-blend-mode: overlay;
+    background-size: cover;
+    height: 438px;
+    margin-top: 60px;
+}
+
+.b-contacts .container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.b-contacts__left {
+    width: 569px;
+    height: 171px;
+    display: flex;
+    color: #222224;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+}
+
+.b-contacts__left__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.b-contacts__left__text__paragraph {
+    max-width: 350px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.b-contacts__left__text__paragraph-name {
+    color: #f16d7f;
+    font-weight: 700;
+}
+
+.b-contacts__left__text__paragraph-country {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.b-contacts__left__text__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+}
+
+.b-contacts__left__text__navigation a {
+    display: block;
+    align-items: center;
+    width: 38px;
+    height: 4px;
+    background-color: #d6d6d6;
+}
+
+.b-contacts__left__text__navigation-block-active {
+    background-color: #f16d7f !important;
+}
+
+.b-contacts__right {
+    height: inherit;
+    width: 569px;
+    border-left: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    /* Text style for "Subscribe" */
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    line-height: 54px;
+    text-transform: uppercase;
+
+    /* Text style for "FOR OUR NE" */
+}
+
+.b-contacts__right span {
+    letter-spacing: 0.35px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.b-contacts__right-mail {
+    margin-top: 20px;
+}
+
+.b-contacts__right input {
+    width: 334px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #e1e1e1;
+    outline: none;
+    border: none;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    color: #222224;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0.35px;
+    overflow: hidden;
+}
+
+.b-contacts__right button {
+    width: 104px;
+    line-height: 46px;
+    border-radius: 0 23px 23px 0;
+    background-color: #f16d7f;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    margin-left: -25px;
+}
+
+.b-contacts__right button:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+}
+/****************************Стили для второго урока***************/
+
+
+.b-requirements__totalCosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+}
+
+.b-requirements__totalCosts__grand {
+    color: #222222;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.b-requirements__totalCosts__grand span {
+    color: #f16d7f !important;
+}
+
+.b-requirements__totalCosts__sub,
+.b-requirements__totalCosts__grand {
+    margin-left: auto;
+    margin-right: 45px;
+    margin-top: 20px;
+}
+
+.b-requirements__totalCosts div:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.b-requirements__totalCosts__line {
+    width: 275px;
+    height: 1px;
+    background-color: #e2e2e2;
+}
+
+.b-shipping {
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-requirements__block {
+    width: 360px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.b-requirements__block h3 {
+    line-height: 16px;
+}
+
+.b-requirements__block p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.b-requirements__shipping {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #222222;
+}
+
+.b-requirements__totalCosts {
+    background-color: #f5f3f3;
+    margin-top: 20px;
+}
+
+/****************************Стили для input и button***************/
+.myarrow:after {
+    content: url("../../assets/img/basket/caret_s.png");
+    margin-left: -20px;
+    padding: .1em;
+    pointer-events: none;
+    color: #bdbdbd;
+}
+
+.b-shipping input {
+    height: 45px;
+    width: 355px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    outline: none;
+    padding-left: 18px;
+}
+
+.b-shipping input:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.b-shipping button {
+    height: 35px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    outline: none;
+    margin-top: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.b-shipping button:hover {
+    background-color: #f16d7f;
+    color: #ffffff;
+}
+
+.proceed {
+    /* Style for "Rectangle" */
+    width: 273px;
+    height: 50px !important;
+    background-color: #f16d7f !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.b-basket {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    color: #656565;
+    margin-top: 90px;
+}
+
+.b-basket p {
+    line-height: 16px;
+    color: #6f6e6e;
+    text-transform: none;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.b-basket i {
+    color: #c0c0c0;
+}
+
+.b-basket__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.b-basket__row {
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-basket__row input {
+    width: 54px;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    outline: none;
+    text-align: center;
+}
+
+.b-basket__row button {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+
+.b-basket__row button:hover i {
+    color: red;
+}
+
+.b-basket__row__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+
+.b-basket__row__item-txt {
+    margin-left: 21px;
+}
+
+.b-basket-main {
+    width: 400px;
+}
+
+.b-basket-info {
+    width: 100px;
+    text-align: center;
+}
+
+.b-basket__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+
+.b-basket__footer button {
+    height: 50px;
+    padding: 0 40px 0 40px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+}
+
+.b-basket__footer button:hover {
+    color: #ffffff;
+    background-color: #f16d7f;
+}
+
+.b-basket__footer-right {
+    margin-left: auto;
+}
+

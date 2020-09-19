@@ -1,0 +1,42 @@
+@import "variables";
+.breadCrumbBG{
+  background: #f8f3f4;
+  .breadCrumb {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    & .newArrival {
+      width: 176px;
+      color: #f16d7f;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding-left: 10px;
+    }
+    .breadCrumbLink {
+      width: 220px;
+      height: 11px;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      & a {
+        color: #636363;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      & a:last-child {
+        color: #f16d7f;
+        font-weight: 700;
+      }
+      & a:hover {
+        color: #f16d7f;
+      }
+    }
+  }
+}
+
+
+
