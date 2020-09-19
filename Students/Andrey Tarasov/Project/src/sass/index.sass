@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import "header.sass"
+@import "footer.sass"
+
+$_colorBlack: #222224
+$_colorPink: #f16d7f
+$_colorWhite: #fff
+$_colorGreyLight: #fbfbfb
+$_colorGreyDark: #9f9f9f
+
+*
+	margin: 0
+	padding: 0
+
+body
+	margin: 0 auto
+	color: $_colorBlack
+	font-family: 'Lato', sans-serif
+	font-weight: 300
+
+.topBanner
+	height: 665px
+	width: 100%
+	margin: 0 auto
+	background-color: #e8e8e8
+
+.container-banner
+	width: 1140px
+	height: 664px
+	padding-top: 276px
+	margin: 0 auto
+	background-image: url(../img/topHeaderBg.png)
+	background-repeat: no-repeat
+	background-position: right
+	background-size: 56%
+
+.topBanner__text
+	padding-left: 12px
+	width: 500px
+	height: 98px
+	border-left: 12px solid $_colorPink
+
+.topBanner__text h1
+	height: 55px
+	font-size: 60px
+	letter-spacing: 1.5px
+	line-height: 44px
+	font-weight: 900
+	text-transform: uppercase
+	text-align: left
+	font-stretch: normal
+	color: $_colorBlack
+
+.topBanner__text p
+	height: 37px
+	font-size: 40px
+	font-weight: 900
+	line-height: 42px
+	//letter-spacing: 1px
+	text-transform: uppercase
+	text-align: left
+	font-stretch: normal
+	font-style: normal
+	color: $_colorBlack
+
+.topBanner__text p span
+	font-size: 40px
+	font-weight: 900
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: $_colorPink
+
+.selecting-category
+	width: 1140px
+	height: 823px
+	margin: 98px auto 100px
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: space-between
+	align-content: space-between
+	display: flex
+
+
+.category-one, .category-four
+	width: 560px
+	height: 542px
+	position: relative
+
+.category-two, .category-three
+	width: 560px
+	height: 261px
+	position: relative
+
+.category-one div p:first-of-type, .category-two div p:first-of-type, .category-three div p:first-of-type, .category-four div p:first-of-type
+	font-size: 18px
+	font-weight: 900
+	color: $_colorBlack
+	text-transform: uppercase
+	text-align: left
+	margin: 0
+
+.category-one div:nth-child(2), .category-two div:first-of-type, .category-three div:first-of-type, .category-four div:first-of-type
+	font-size: 30px
+	letter-spacing: -0.25px
+	color: $_colorPink
+	font-weight: 900
+	text-transform: uppercase
+	text-align: left
+
+.category-one div
+	padding-top: 0
+	padding-left: 19px
+	width: 156px
+	height: 66px
+	background-color: $_colorWhite
+	position: absolute
+	top: 26px
+
+.category-two div
+	padding-top: 0
+	padding-left: 18px
+	width: 207px
+	height: 66px
+	background-color: $_colorWhite
+	position: absolute
+	top: 25px
+
+.category-three div
+	padding-top: 0
+	padding-left: 18px
+	width: 144px
+	height: 66px
+	background-color: $_colorWhite
+	position: absolute
+	top: 26px
+
+.category-four div
+	padding-top: 0
+	padding-left: 19px
+	width: 161px
+	height: 66px
+	background-color: $_colorWhite
+	position: absolute
+	top: 25px
+
+.container-text
+	width: 1140px
+	margin: 0 auto 60px
+	text-align: center
+
+.container-text h3
+	font-size: 30px
+	font-weight: bold
+	line-height: 1.8
+	letter-spacing: 0.75px
+	text-align: center
+	color: $_colorBlack
+
+.container-text p
+	font-size: 14px
+	letter-spacing: 0.35px
+	color: $_colorGreyDark
+
+.container-items
+	width: 1140px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.container-items__things
+	width: 261px
+	height: 364px
+	margin-bottom: 39px
+
+.container-items__things a img
+	width: 261px
+	height: 280px
+
+.container-items__things__buy button
+	display: flex
+	justify-content: space-around
+	align-items: center
+	width: 123px
+	height: 39px
+	border: 1px solid $_colorWhite
+	color: $_colorWhite
+	background: none
+
+.container-items__things__buy
+	height: 280px
+	width: 261px
+	background-color: rgba(0, 0, 0, 0.5)
+	display: none
+	position: absolute
+
+.container-items__things__review
+	padding-top: 19px
+	padding-left: 14px
+
+.container-items__things__review p:first-of-type
+	font-size: 14px
+	font-weight: 400
+	text-align: left
+	color: $_colorBlack
+	text-transform: uppercase
+	margin-bottom: 17px
+
+.container-items__things__review p:last-of-type
+	font-size: 16px
+	font-weight: bold
+	text-align: left
+	color: $_colorPink
+
+.container-items__things:hover
+	box-shadow: 3px 0 3px darkgrey
+
+.container-items__things:hover .container-items__things__buy
+	display: flex
+	justify-content: center
+	align-items: center
+
+.button-browseProduct
+	width: 1140px
+	margin: 0 auto 113px
+	text-align: center
+
+.browseProduct
+	border: none
+	outline: none
+	width: 212px
+	height: 48px
+	line-height: 48px
+	background-color: $_colorPink
+	padding-left: 19px
+	font-size: 16px
+	font-weight: bold
+	letter-spacing: 0.4px
+	text-align: center
+	color: $_colorWhite
+
+.browseProduct:hover
+	box-shadow: 3px 0 3px darkgrey
+
+.container-offer
+	display: flex
+	width: 1140px
+	margin: 0 auto
+
+.container-offer__stock
+	width: 767px
+	height: 529px
+	background-image: url(../img/offerBg.jpg)
+	box-sizing: border-box
+	padding-top: 146px
+	padding-left: 39px
+
+.container-offer__stockWomen h2
+	font-size: 53.5px
+	font-weight: 700
+	letter-spacing: 0.8px
+	text-align: left
+	color: $_colorWhite
+	text-transform: uppercase
+
+.container-offer__stockWomen span
+	color: $_colorPink
+
+.container-offer__stockWomen p
+	font-size: 32px
+	font-weight: 700
+	letter-spacing: 0.8px
+	text-align: left
+	color: $_colorWhite
+	text-transform: uppercase
+
+.container-offer__service
+	width: 373px
+	height: 529px
+	background-color: $_colorBlack
+	box-sizing: border-box
+	padding-top: 48px
+	margin-bottom: 97px
+
+.container-offer__service__free,
+.container-offer__service__sales,
+.container-offer__service__quality
+	color: $_colorWhite
+	width: 355px
+	margin-bottom: 35px
+	padding-left: 111px
+	box-sizing: border-box
+
+.container-offer__service__free
+	background-image: url(../img/icons/truck.png)
+	background-repeat: no-repeat
+	background-position: 36px 0
+
+.container-offer__service__sales
+	background-image: url(../img/icons/percent.png)
+	background-repeat: no-repeat
+	background-position: 36px 0
+
+.container-offer__service__quality
+	background-image: url(../img/icons/crown.png)
+	background-repeat: no-repeat
+	background-position: 36px 0
+.container-offer__service__free h3 a,
+.container-offer__service__sales h3 a,
+.container-offer__service__quality h3 a
+	display: block
+	margin-bottom: 17px
+	font-size: 20px
+	font-weight: 400
+	letter-spacing: 0.5px
+	text-align: left
+	color: $_colorGreyLight
+	text-decoration: none
+
+.container-offer__service__free p,
+.container-offer__service__sales p,
+.container-offer__service__quality p
+	font-size: 14px
+	font-weight: 300
+	line-height: 1.71
+	letter-spacing: 0.35px
+	text-align: left
+	color: $_colorGreyLight
+
+
+
+
+
+
+
+

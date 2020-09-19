@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap')
+
+%buttonHover
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)      
+body
+    margin: 0 auto
+    padding: 0
+    color: #222222
+    font-family: 'Lato', sans-serif
+    font-weight: 300
+    a
+        text-decoration: none
+        color: #222222
+.container 
+    width: $containerSize
+    margin: auto
+.header 
+    height: 100px
+    +flexAlignCenter
+    &__cart
+        margin-left: auto
+        margin-right: 26px
+    &__account-bar
+        +noBorder   
+        width: 130px
+        line-height: 38px
+        background-color: $accentColor
+        padding-left: 19px
+        color: #ffffff
+        font-size: 15px
+        font-weight: 400 
+    &__account-bar:hover
+        @extend %buttonHover
+    &Line
+         border-bottom: 1px solid #ececec  
+    .search 
+        input
+            +noBorder
+            height: inherit
+            overflow: hidden
+            padding: 14px 16px
+            border-left: 1px solid #e6e6e6
+            border-right: 1px solid #e6e6e6
+        button:last-child
+            +noBorder
+            height: inherit
+            background: none
+            padding: 12px
+            color: #a4a4a4
+        button:hover
+            background-color: $accentColor
+            color: #ffffff
+        button:hover i
+            color:#ffffff
+  
+.logo 
+    width: 165px
+    line-height: 51px
+    text-transform: uppercase
+    background: url("../../assets/img/logo.png") no-repeat
+    background-blend-mode: overlay
+    font-size: 27px
+    padding-left: 72px
+    span 
+        color: $accentColor
+        font-weight: 700
+.search 
+    height: 38px
+    +flexAlignCenter
+    border-radius: 3px
+    border: 1px solid #e6e6e6
+    overflow: hidden
+    font-size: 14px
+    &__browse 
+        padding: 14px
+        background-color: #f9f9f9
+        line-height: 38px
+        color: #7c7c7c
+        +noBorder
+        i
+            color: #838383
+            padding-left: 10px
+.browse__product:hover
+    @extend %buttonHover
+.proceed:hover
+    @extend %buttonHover

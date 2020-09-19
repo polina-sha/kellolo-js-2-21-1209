@@ -1,0 +1,48 @@
+@media (max-width: 991px) {
+  .container_bootstrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+    .container_bootstrap img {
+      margin: 10px auto; }
+    .container_bootstrap nav {
+      height: 100px; }
+
+  .topNav {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .topBanner__text {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .topBanner {
+    position: relative;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+  .selecting-category {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 2500px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .category-one, .category-two, .category-three, .category-four {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
+  .container-items {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap; }
+
+  .container-items__things {
+    margin-left: auto;
+    margin-right: auto; } }
+
+/*# sourceMappingURL=index-scss.css.map */
