@@ -1,0 +1,131 @@
+$colorButtonMain: #f16d7f;
+$colorHeadlineText: #f16d7f;
+.subscribe_copy {
+    background: url(../assets/Layer_41.jpg) no-repeat #ccc;
+    height: 438px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 97px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.sub_content {
+    height: 438px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.sub_left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 50%;
+    & img {
+        margin-top: -35px;
+    }
+    & div {
+        margin-top: -40px;
+    }
+}
+
+.sub_text {
+    width: 396px;
+    color: #222224;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 19px;
+}
+.sub_name {
+    color: $colorHeadlineText;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sub_sec_name {
+    color: #222224;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin-top: -15px;
+}
+.sbsc_line_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 140px;
+    height: 45px;
+}
+.sbcs_line {
+    width: 38px;
+    height: 4px;
+    background-color: #d6d6d6;
+    &:hover {
+        background-color: $colorButtonMain;
+    }
+}
+.active_line {
+    background-color: $colorButtonMain;
+}
+.sub_right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    & p {
+        font-weight: 300;
+        letter-spacing: 0.35px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        margin-top: -20px;
+    }
+    & form {
+        outline: none;
+        border: none;
+    }
+    & input {
+        width: 282px;
+        border: none;
+        height: 46px;
+        border-radius: 50px 0px 0px 50px;
+        background-color: #e1e1e1;
+        padding-left: 28px;
+        outline: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    & button {
+        width: 104px;
+        border: none;
+        height: 46px;
+        border-radius: 0px 50px 50px 0px;
+        background-color: $colorButtonMain;
+        color: #ffffff;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            opacity: 70%;
+            cursor: pointer;
+        }
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+}
+.subscribe_h {
+    color: #222224;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,207 @@
+@import "browseStyle.scss";
+
+
+.topBanner {
+	background-color: #e8e8e8;
+	height: 613px;
+}
+
+.topBanner .container {
+	background: url(../../assets/img/topHeaderBack.png) no-repeat 90% 0;
+    background-size: 48%;
+    height: inherit;
+}
+
+.topBanner .topBanner__content {
+	padding-top: 225px;
+    display: flex;
+}
+
+.topBanner .redLine {
+    width: 12px;
+    height: auto;
+    background-color: $accentColor;
+	margin-right: 12px;
+}
+
+.topBanner__text {
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.topBanner__text h1 {
+    font-size: 60px;
+    margin: 0;
+    margin-bottom: 16px;
+    line-height: 43px;
+}
+
+.topBanner__text h2 {
+    font-size: 40px;
+    margin: 0;
+    line-height: 35px;
+}
+
+.topBanner__text h2 span {
+	color: $accentColor;
+}
+
+.range__content {
+	margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 823px;
+}
+
+.range {
+	position: relative;
+	width: 560px;
+}
+
+.range__link {
+    text-decoration: none;
+    transition: $buttonTransition;;
+}
+
+.range__link:hover {
+	opacity: 0.8;
+}
+
+.range__text {
+    position: absolute;
+    margin-top: 25px;
+    background-color: #ffffff;
+    padding: 20px 16px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.range__text span {
+	font-size: 30px;
+	color: $accentColor;
+}
+
+.fetured__box {
+    margin-top: 100px;
+    &>h3,
+    &>p {
+        text-align: center;
+    }
+}
+
+.fetured_items__h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.fetured_items__span {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
+}
+
+.browseAllProduct {
+	border: none;
+    outline: none;
+    width: 212px;
+    background-color: $accentColor;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 54px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    margin-top: 35px;
+    transition: $buttonTransition;
+}
+
+.browseAllProduct:hover {
+	background-color: $accentColorDark;
+}
+
+.only_offer {
+    margin-top: 113px;
+	height: 529px;
+    display: flex;
+}
+
+.offer__banner {
+	width: 767px;
+	height: inherit;
+	background-image: url(../../assets/img/layer_39_1321.png),
+		url(../../assets/img/layer_38_1315.png);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+.offer__banner h2, .offer__banner p {
+	padding-left: 40px;
+}
+
+.offer_h2 {
+	margin: 0 auto;
+	padding-top: 130px;
+    font-size: 53.7px;
+}
+
+.offer_h2 span {
+	color: $accentColor;
+}
+
+.offer__banner p {
+	margin: 0;
+	font-size: 32.2px;
+}
+
+.offer__content {
+	width: 373px;
+	height: inherit;
+	background-color: #222224;
+	letter-spacing: 0.025em;
+	color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.offer__details {
+    padding-left: 110px;
+    padding-right: 40px;
+}
+
+.offer__details h3 {
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+.offer__details p {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 300;
+}
+
+.offer__details:nth-child(1) {
+	background: url(../../assets/img/forma_1_1322.png) no-repeat 30px 10px;
+}
+
+.offer__details:nth-child(2) {
+	background: url(../../assets/img/forma_1_1340.png) no-repeat 30px 10px;
+}
+
+.offer__details:nth-child(3) {
+	background: url(../../assets/img/forma_1_1341.png) no-repeat 30px 10px;
+}

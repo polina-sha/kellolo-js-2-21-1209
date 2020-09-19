@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../src/layout/styles/css/cartStyle.css">
+    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header container">
+        <a href="index.html" class="logo">Bran<span>d</span></a>
+
+        <form method="get" class="search">
+            <button class="search__browse" name="browse" id="">Browse <i class="fas fa-caret-down"></i></button>
+            <input type="text" name="search" placeholder="Search for item...">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+
+        <img src="../src/assets/imgs/cart.png" alt="cart" class="header__cart">
+        <button name="accountBar" class="header__account-bar">My Account <i class="fas fa-caret-down"></i></button>
+    </div>
+    <div class="headerLine"></div>
+
+    <nav class="topNav container">
+        <a href="index.html">Home</a>
+        <a href="#">Man</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Accoseriese</a>
+        <a href="#">Featured</a>
+        <a href="#">Hot Deals</a>
+    </nav>
+
+    <div class="breadCrumbBG">
+        <div class="breadCrumb container">
+            <div class="newArrival">New arrival</div>
+            <div class="breadCrumbLink">
+                <a href="#">Home</a>
+                <a href="#">Men</a>
+                <a href="#" class="breadCrumbLink-active">New arrival</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="shoppingCart container">
+        <div class="cartbox">
+
+
+
+
+            <div class="cartProductTop">
+                <div class="cartTopDetailes">Product Detailes</div>
+                <div class="cartTopPrice">Unite Price</div>
+                <div class="cartTopQuantility">Quantity</div>
+                <div class="cartTopShipping">Shopping</div>
+                <div class="cartTopSubtotal">Subtotal</div>
+                <div class="cartTopProductDetailes">Action</div>
+            </div>
+            
+
+            <div class="cartProduct">
+
+
+                <div class="cartDetailes">
+                    <div class="detailesImage">
+                        <img src="../src/assets/imgs/Layer_43.jpg" alt="men T-shirt">
+                    </div>
+
+                    <div class="detailesDescription">
+                        <a href="#">Mango People T-shirt</a>
+                        <p>Color: red</p>
+                        <p>Size: XLL</p>
+                    </div>
+
+                </div>
+
+
+                <div class="cartPrice">
+                    $150
+                </div>
+
+                <div class="cartQuantility">
+                    <input type="number" value="1" >
+                </div>
+
+
+                <div class="cartShipping">
+                    free
+                </div>
+
+                <div class="cartSubtotal">
+                    $300
+                </div>
+
+                <div class="cartProductDetailes">
+                    <button><i class="fas fa-times-circle"></i></button>
+                </div>
+            </div>
+
+            <div class="cartLine"></div>
+
+
+            <div class="cartProduct">
+
+
+                <div class="cartDetailes">
+                    <div class="detailesImage">
+                        <img src="../src/assets/imgs/Layer_44(1).jpg" alt="men T-shirt">
+                    </div>
+
+                    <div class="detailesDescription">
+                        <a href="#">Mango People T-shirt</a>
+                        <p>Color: red</p>
+                        <p>Size: XLL</p>
+                    </div>
+
+                </div>
+
+
+                <div class="cartPrice">
+                    $150
+                </div>
+
+                <div class="cartQuantility">
+                    <input type="number" value="1" >
+                </div>
+
+
+                <div class="cartShipping">
+                    free
+                </div>
+
+                <div class="cartSubtotal">
+                    $300
+                </div>
+
+                <div class="cartProductDetailes">
+                    <button><i class="fas fa-times-circle"></i></button>
+                </div>
+            </div>
+
+            <div class="cartLine"></div>
+
+
+            <div class="cartProduct">
+
+
+                <div class="cartDetailes">
+                    <div class="detailesImage">
+                        <img src="../src/assets/imgs/Layer_45.jpg" alt="men T-shirt">
+                    </div>
+
+                    <div class="detailesDescription">
+                        <a href="#">Mango People T-shirt</a>
+                        <p>Color: red</p>
+                        <p>Size: XLL</p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="cartPrice">
+                    $150
+                </div>
+
+                <div class="cartQuantility">
+                    <input type="number" value="1" >
+                </div>
+
+
+                <div class="cartShipping">
+                    free
+                </div>
+
+                <div class="cartSubtotal">
+                    $300
+                </div>
+
+                <div class="cartProductDetailes">
+                    <button><i class="fas fa-times-circle"></i></button>
+                </div>
+            </div>
+
+
+
+
+            <div class="cartLine"></div>
+
+        </div>
+
+        <div class="cartButton container">
+            <button>Clear shopping cart</button>
+            <button>Continue shopping</button>
+        </div>
+
+
+        <div class="cartForm container">
+
+            <div class="shippingAdress">
+                <div class="cartFormText">Shipping Adress</div>
+                <input id="town" list="towns"  type="text" placeholder="Bangladesh">
+
+                <datalist id="towns">
+                    <option value="Gaurnadi">
+                    <option value="Madaripur">
+                    <option value="Barisal">
+                    <option value="Bangladesh">
+                </datalist>
+
+                <input  type="text" placeholder="State">
+                <input  type="number" placeholder="Postcode / Zip">
+                <button class="cartFormButton">get a quote</button>
+            </div>
+
+            <div class="couponDiscount">
+                <div class="cartFormText">Coupon discount</div>
+                <div class="couponTextEnter">Enter your coupon code if you have one</div>
+
+                <input class="cartFormInput" type="text" placeholder="State">
+
+                <button class="cartFormButton">Apply coupon</button>
+            </div>
+            <div class="check">
+                <div class="checkOut">
+                    <div class="checkOutSub">Sub total <span>$900</span></div>
+                    <div class="checkOutTotal">GRAND TOTAL <span>$900</span></div>
+                    <div class="line"></div>
+                    <button>Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribeBG">
+        <div class="subscribe container">
+            <div class="subscribe__block">
+                <img src="../src/assets/imgs/Layer_40.png" alt="photo">
+                <div class="subscribe__block-text">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                    <p>Bin Burhan <br><span>Dhaka, Bd</span></p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="subscribe__blockFeedback">
+                <div class="subscribe__blockFeedback-text">
+                    <h3>Subscribe</h3>
+                    <p>For our newletter and promotion</p>
+                </div>
+                <form action="subscribe-form"  class="subscribeForm">
+                    <input type="email" name="mail" placeholder="Enter Your Email">
+                    <button>Subscribe</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer container">
+        <div class="footer__top">
+            <div class="footer_blockText">
+                <div class="logo">Bran<span>d</span></div>
+
+                <p> Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. </p>
+
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior initiatives for wireless technologies. Dynamically optimize. </p>
+            </div>
+
+            <div class="footer_blockLink">
+                <p>Company</p>
+                <a href="#" class="footer__link">Home</a>
+                <a href="#" class="footer__link">Shop</a>
+                <a href="#" class="footer__link">About</a>
+                <a href="#" class="footer__link">How It Works</a>
+                <a href="#" class="footer__link">Contact</a>
+            </div>
+
+            <div class="footer_blockLink">
+                <p>Information</p>
+                <a href="#" class="footer__link">Tearms & Condition</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+                <a href="#" class="footer__link">How to Buy</a>
+                <a href="#" class="footer__link">How to Sell</a>
+                <a href="#" class="footer__link">Promotion</a>
+            </div>
+            <div class="footer_blockLink">
+                <p>Shop Category</p>
+                <a href="#" class="footer__link">Men</a>
+                <a href="#" class="footer__link">Women</a>
+                <a href="#" class="footer__link">Child</a>
+                <a href="#" class="footer__link">Apparel</a>
+                <a href="#" class="footer__link">Brows All</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footerBG container">
+                <p>&copy; 2017  Brand  All Rights Reserved.</p>
+                <div class="footerBG-link">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
