@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap")
+@import "header.sass"
+@import "block-under-header.sass"
+@import "footer.sass"
+
+$_colorBlack: #222224
+$_colorPink: #f16d7f
+$_colorWhite: #fff
+$_colorGreyLight: #fbfbfb
+$_colorGreyDark: #9f9f9f
+
+body
+  margin: 0 auto
+  color: #222224
+  font-family: "Lato", sans-serif
+  font-weight: 300
+
+.top-header
+  width: 100%
+  background-color: #f8f3f4
+
+.top-header-container
+  width: 1140px
+  height: 148px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.list-links
+  ul
+    display: flex
+    li
+      list-style-type: none
+      text-align: center
+
+.top-header-container
+  p
+    font-size: 24px
+    font-weight: 900
+    font-stretch: normal
+    font-style: normal
+    letter-spacing: normal
+    line-height: 0.83
+    color: #f16d7f
+    text-transform: uppercase
+
+.list-links
+  ul
+    li
+      a
+        text-decoration: none
+        font-weight: bold
+        font-size: 14px
+        line-height: 1.43
+        color: #636363
+        text-transform: uppercase
+
+.list-links
+  ul
+    li
+      a:hover
+        color: #f16d7f
+
+.container-carousel
+  width: 100%
+  background-color: #f7f7f7
+
+.carousel
+  width: 1140px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  box-sizing: border-box
+  padding-top: 11px
+  padding-bottom: 42px
+  margin: 0 auto
+  background-color: #f7f7f7
+  position: relative
+  z-index: 10
+  a
+    display: inline-block
+    width: 47px
+    height: 47px
+    background-color: #d8d8d8
+    text-align: center
+    line-height: 47px
+  a:hover
+    background-color: #d1d1d1
+
+.description-carousel
+  box-sizing: border-box
+  width: 1140px
+  margin: -86px auto 0
+  text-align: center
+  padding-top: 73px
+  padding-bottom: 122px
+  position: relative
+  z-index: 20
+  background-color: #fff
+  border: solid 1px #eaeaea
+
+.chapter-container-items
+  margin: 0 auto
+  width: 1140px
+  text-align: center
+
+.description-carousel
+  .women_colection
+    font-size: 14px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.71
+    letter-spacing: normal
+    color: #f16d7f
+    text-transform: uppercase
+  hr:nth-of-type(1)
+    width: 147px
+    height: 1px
+    margin: 0 auto
+    background-color: #eaeaea
+    position: relative
+    z-index: 10
+    outline: none
+    border: none
+  h3:nth-of-type(1)
+    font-size: 18px
+    font-weight: 900
+    line-height: 1.33
+    letter-spacing: normal
+    color: #4d4d4d
+    text-transform: uppercase
+    margin-top: 18px
+    margin-bottom: 67px
+  p:nth-of-type(2)
+    width: 618px
+    height: 60px
+    margin: 0 auto
+    font-size: 14px
+    font-weight: 300
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.71
+    letter-spacing: normal
+    text-align: center
+    color: #5e5e5e
+    margin-bottom: 28px
+  .material
+    width: 334px
+    height: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    p
+      display: flex
+      align-items: center
+      width: 160px
+      height: 10px
+      font-size: 14px
+      font-weight: bold
+      font-stretch: normal
+      font-style: normal
+      line-height: 1.71
+      letter-spacing: normal
+      text-align: center
+      color: #b9b9b9
+      text-transform: uppercase
+      margin: 0
+      span
+        font-size: 14px
+        font-weight: bold
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.71
+        letter-spacing: normal
+        text-align: center
+        color: #2f2f2f
+        text-transform: uppercase
+        margin-left: 5px
+  .price_carousel
+    font-size: 24px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1
+    letter-spacing: normal
+    text-align: center
+    color: #ef5b70
+    text-transform: uppercase
+    margin-top: 37px
+    margin-bottom: 43px
+  hr:nth-of-type(2)
+    width: 623px
+    height: 1px
+    outline: none
+    border: none
+    background-color: #eaeaea
+    margin: 0 auto 63px
+  .groupFormCarousel
+    form
+      width: 538px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 0 auto
+      div
+        label
+          display: inline-block
+          width: 144px
+          font-size: 14px
+          font-weight: bold
+          font-stretch: normal
+          font-style: normal
+          line-height: 1.71
+          letter-spacing: normal
+          text-align: left
+          color: #2f2f2f
+          text-transform: uppercase
+          margin-bottom: 16px
+          margin-top: 0
+        select
+          width: 144px
+          height: 35px
+          padding-left: 15px
+          box-sizing: border-box
+          outline: none
+          border: solid 1px #eaeaea
+        input
+          width: 144px
+          height: 35px
+          padding: 0
+          padding-left: 15px
+          box-sizing: border-box
+          outline: none
+          border: solid 1px #eaeaea
+  button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 538px
+    height: 55px
+    outline: none
+    padding: 0
+    margin: 28px auto 0
+    background-color: #fff
+    border: solid 1px #ef5b70
+    font-size: 16px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 26px
+    letter-spacing: normal
+    text-align: center
+    color: #ef5b70
+    img
+      line-height: 55px
+      margin-right: 10px
+  button:hover
+    box-shadow: 3px 3px 3px darkgrey
+
+.chapter-container-items
+  font-size: 24px
+  font-weight: 900
+  font-stretch: normal
+  font-style: normal
+  line-height: 0.83
+  letter-spacing: normal
+  text-align: center
+  color: #4d4d4d
+  text-transform: uppercase
+  margin: 119px auto 72px
+
+.lineColor
+  width: 63px
+  height: 4px
+  background-color: #ef5b70
+  margin: -2.5px auto 0
+  position: relative
+  z-index: 30
+
+.container-items
+  width: 1140px
+  margin: 0 auto 73px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.container-items__things
+  width: 261px
+  height: 364px
+
+.container-items__things
+  a
+    background-color: #e9e9e9
+    display: inline-block
+    width: 261px
+    height: 280px
+    text-align: center
+    img
+      height: 280px
+      background-color: #e9e9e9
+
+.container-items__things__buy button
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: 123px
+  height: 39px
+  border: 1px solid $_colorWhite
+  color: $_colorWhite
+  background: none
+
+.container-items__things__buy
+  height: 280px
+  width: 261px
+  background-color: rgba(0, 0, 0, 0.5)
+  display: none
+  position: absolute
+
+.container-items__things__review
+  padding-left: 14px
+  box-sizing: border-box
+
+.container-items__things__review p:first-of-type
+  font-size: 14px
+  font-weight: 400
+  text-align: left
+  color: #6f6e6e
+  text-transform: uppercase
+  margin-top: 18px
+  margin-bottom: 10px
+
+.container-items__things__review p:last-of-type
+  font-size: 16px
+  font-weight: bold
+  text-align: left
+  color: $_colorPink
+
+.container-items__things:hover
+  box-shadow: 3px 0 3px darkgrey
+
+.container-items__things:hover .container-items__things__buy
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+
+
+
+
+

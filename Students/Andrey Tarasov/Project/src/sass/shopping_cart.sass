@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap")
+@import "header.sass"
+@import "block-under-header.sass"
+@import "footer.sass"
+
+body
+	margin: 0 auto
+	color: #222224
+	font-family: "Lato", sans-serif
+	font-weight: 300
+
+main
+	.top-header
+		width: 100%
+		background-color: #f8f3f4
+
+.top-header-container
+	width: 1140px
+	height: 148px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.list-links
+	ul
+		display: flex
+		li
+			list-style-type: none
+			text-align: center
+
+.top-header-container
+	p
+		font-size: 24px
+		font-weight: 900
+		font-stretch: normal
+		font-style: normal
+		letter-spacing: normal
+		line-height: 0.83
+		color: #f16d7f
+		text-transform: uppercase
+
+.list-links
+	ul
+		li
+			a
+				text-decoration: none
+				font-weight: bold
+				font-size: 14px
+				line-height: 1.43
+				color: #636363
+				text-transform: uppercase
+
+.list-links
+	ul
+		li
+			a:hover
+				color: #f16d7f
+
+.shopping-cart_container
+	width: 1140px
+	margin: 90px auto 20px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.shopping-cart_container
+	div
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.shopping-cart_container
+	div
+		p
+			margin-left: 50px
+			width: 80px
+			text-align: center
+
+.shopping-cart_container
+	p
+		margin: 0
+		font-size: 13px
+		font-weight: bold
+		font-stretch: normal
+		font-style: normal
+		line-height: 1.54
+		letter-spacing: -0.2px
+		color: #222222
+		text-transform: uppercase
+
+.headerLine
+	border-bottom: 1px solid #ececec
+
+.shopping-cart_products
+	width: 1140px
+	margin: 22px auto 25px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.left-side
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.right-side
+	form
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.right-side
+	form
+		p
+			margin: 0 51px 0 47px
+			font-size: 13px
+			font-weight: 700
+			font-stretch: normal
+			font-style: normal
+			line-height: 1.54
+			letter-spacing: normal
+			text-align: left
+			color: #656565
+			text-transform: uppercase
+
+.right-side
+	form
+		input
+			width: 54px
+			height: 30px
+			margin: 0 34px 0 35px
+			text-align: center
+			outline: none
+
+.right-side
+	form
+		button
+			width: 15px
+			height: 15px
+			border-radius: 7.5px
+			display: flex
+			justify-content: center
+			align-items: center
+			outline: none
+			border: none
+			margin: 0 30px 0 60px
+			background-color: #fff
+
+.right-side
+	form
+		button:hover
+			box-shadow: 3px 0 3px darkgrey
+
+.left-side__text
+	margin-left: 21px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.left-side__text
+	div
+		p
+			margin: 0
+			font-size: 13px
+			font-weight: 700
+			font-stretch: normal
+			font-style: normal
+			line-height: 1.54
+			letter-spacing: normal
+			text-align: left
+			color: #6f6e6e
+
+.left-side__text
+	div
+		p
+			span
+				font-size: 13px
+				font-weight: 300
+				font-stretch: normal
+				font-style: normal
+				line-height: 1.54
+				letter-spacing: normal
+				text-align: left
+				color: #575757
+
+.left-side__text-chapter
+	margin-bottom: 38px
+	font-size: 13px
+	font-weight: 700
+	font-stretch: normal
+	font-style: normal
+	line-height: normal
+	letter-spacing: normal
+	text-align: right
+	color: #222222
+	text-transform: uppercase
+
+.group-button
+	width: 1140px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+
+.group-button
+	button
+		width: 235px
+		height: 50px
+		background-color: #fff
+		text-align: center
+		outline: none
+		margin: 44px 0 63px
+		border: solid 1px #eaeaea
+		font-size: 14px
+		font-weight: bold
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #4a4a4a
+		text-transform: uppercase
+
+.group-button
+	button:hover
+		background-color: #eaeaea
+
+.group-form
+	width: 1140px
+	margin: 0 auto 79px
+	display: flex
+	justify-content: space-between
+
+.shipping-adress
+	h3
+		display: inline-block
+		font-size: 16px
+		font-weight: 900
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: #222222
+		text-transform: uppercase
+		margin-top: 0
+		margin-bottom: 12px
+	select
+		display: inline-block
+		width: 355px
+		height: 45px
+		padding-left: 18px
+		margin-top: 10px
+		margin-bottom: 10px
+		box-sizing: border-box
+		outline: none
+		border: solid 1px #eaeaea
+		background-color: #ffffff
+
+	input
+		display: inline-block
+		width: 355px
+		height: 45px
+		padding-left: 18px
+		margin: 10px 0
+		box-sizing: border-box
+		outline: none
+		border: solid 1px #eaeaea
+		background-color: #ffffff
+
+	button
+		width: 100px
+		height: 35px
+		display: inline-block
+		padding-left: 15px
+		box-sizing: border-box
+		outline: none
+		border: solid 1px #eaeaea
+		background-color: #ffffff
+		text-transform: uppercase
+		font-size: 11px
+		font-weight: 700
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: #4a4a4a
+		margin-top: 13px
+
+.shipping-adress
+	button:hover
+		background-color: #eaeaea
+
+.shipping-adress
+	width: 355px
+	display: flex
+	flex-direction: column
+
+.coupon-discount
+	width: 355px
+	display: flex
+	flex-direction: column
+
+.coupon-discount
+	h3
+		font-size: 16px
+		font-weight: 900
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: #222222
+		text-transform: uppercase
+		margin-bottom: 28px
+		margin-top: 0
+
+.coupon-discount
+	form
+		p
+			font-size: 14px
+			color: #000
+			margin-bottom: 24px
+
+.coupon-discount
+	input
+		margin: 0
+		padding: 0
+		width: 350px
+		height: 45px
+		background-color: #fff
+		outline: none
+		text-align: left
+		border: solid 1px #eaeaea
+		margin-bottom: 25px
+		box-sizing: border-box
+		padding-left: 18px
+
+.coupon-discount
+	button
+		margin: 0
+		padding: 0
+		width: 118px
+		height: 35px
+		background-color: #fff
+		outline: none
+		text-align: left
+		border: solid 1px #eaeaea
+		box-sizing: border-box
+		padding-left: 18px
+		font-size: 11px
+		font-weight: 700
+		color: #4a4a4a
+		text-transform: uppercase
+
+.coupon-discount
+	button:hover
+		background-color: #eaeaea
+
+.proceed-to-checkout
+	width: 360px
+	height: 214px
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	text-align: right
+	background-color: #f5f3f3
+	box-sizing: border-box
+	padding: 40px 43px 42px 44px
+
+.proceed-to-checkout
+	p
+		margin: 0
+		padding: 0
+
+.proceed-to-checkout
+	p:first-of-type
+		font-size: 11px
+		font-weight: 700
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #4a4a4a
+		text-transform: uppercase
+		margin-bottom: 14px
+
+.proceed-to-checkout
+	p:first-of-type
+		span
+			margin-left: 20px
+
+.proceed-to-checkout
+	p:last-of-type
+		font-size: 16px
+		font-weight: 900
+		font-stretch: normal
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #222
+		text-transform: uppercase
+		margin-bottom: 22px
+
+.proceed-to-checkout
+	p:last-of-type
+		span
+			font-size: 16px
+			font-weight: 900
+			font-stretch: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: normal
+			color: #f16d7f
+			text-transform: uppercase
+			margin-left: 20px
+
+.proceed-to-checkout
+	.headerLine
+		width: 273px
+		height: 1px
+		background-color: #ccc
+		margin-bottom: 17px
+
+.proceed-to-checkout
+	button
+		width: 273px
+		height: 50px
+		background-color: #f16d7f
+		color: #fff
+		font-size: 16px
+		font-weight: bold
+		font-stretch: normal
+		outline: none
+		border: none
+		font-style: normal
+		line-height: normal
+		letter-spacing: normal
+		text-transform: uppercase
+
+.proceed-to-checkout
+	button:hover
+		box-shadow: 3px 0 3px darkgrey
