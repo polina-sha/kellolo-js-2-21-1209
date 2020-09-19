@@ -702,7 +702,7 @@
 /*-------------------------------FETURED END-----------------------------*/
 /*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
 .offerWomenLeft {
-  background: url("../../assets/imgs/offerForWomen.jpg");
+  background: url("https://raw.githubusercontent.com/kellolo/kellolo-js-2-21-1209/master/Students/Alina%20Churkina/project/src/assets/img/5_sale/sale.jpg");
   flex-shrink: 0;
   background-size: cover; }
   @media (max-width: 992px) {
