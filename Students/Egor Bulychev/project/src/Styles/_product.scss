@@ -1,0 +1,266 @@
+.product__page{
+  height: 1650px;
+  display: flex;
+  position: relative;
+aside{
+  display: flex;
+  flex-direction: column;
+  width:240px;
+  padding-top: 30px;
+
+  .dropdown{
+
+    margin-bottom: 20px;
+  }
+
+  input{
+    display:none;
+  }
+
+  label{
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ef5b70;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+    border-left:5px solid #ef5b70;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+}
+
+
+
+
+
+
+  .left__menu{
+    flex-direction: column;
+    ul{
+      padding-left: 25px;
+    }
+  }
+
+
+  li{
+    list-style-type: none;
+  }
+
+
+  a{
+    font-size: 14px;
+    line-height: 33px;
+    font-weight: 400;
+    color: #6f6e6e;
+    text-decoration: none;
+  }
+
+
+}
+
+.dropdown__List{
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 0px;
+ animation: fadeIn ease-in-out 5s;
+  transition-duration: 1s;
+}
+
+.categoryChecked:checked + label +.dropdown__List{
+  max-height: 2000px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+main{
+  width:900px;
+  padding-left: 80px;
+}
+.product__main{
+  margin-top:30px;
+  width: 273px;
+  height: 120px;
+
+  h2{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6f6e6e;
+  }
+
+  label{
+    padding-right: 20px;
+    line-height: 27px;
+  }
+
+  p{
+    line-height: 25px;
+  }
+}
+
+.price{
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  margin-top: 25px;
+}
+
+.price2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter{
+  height: 50px;
+  background-color: #f3f3f3;
+
+  .sortBy{
+    width: 153px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 160px;
+    left: 310px;
+    font-weight: 400;
+    color: #6f6e6e;
+
+    select{
+      height: inherit;
+      border: none;
+      outline: none;
+      border-left: 1px solid #ebebeb;
+      font-size: 16px;
+      color: #6f6e6e;
+      padding-top:3px;
+      width: 80px;
+    }
+  }
+}
+
+.show{
+  width: 119px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  position: absolute;
+  left: 475px;
+  top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 400;
+  color: #6f6e6e;
+
+  select{
+    height: inherit;
+    border: none;
+    outline: none;
+    border-left: 1px solid #ebebeb;
+    font-size: 16px;
+    color: #6f6e6e;
+    padding-top:3px;
+    width: 50%;
+  }
+}
+
+.numbers{
+  width: 261px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ .numbers__links{
+   width: inherit;
+   display: flex;
+   justify-content: space-around;
+ }
+}
+
+.viewAll{
+  width: 150px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #ef5b70;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #ef5b70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.down__buttons{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+
+.newInfoBlock{
+  height: 341px;
+  background-color: #222224;
+  margin-top: 50px;
+}
+
+.deliveryInfo{
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+
+  .delivery{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+    a:hover{
+      transition-duration: .5s;
+      transform: scale(1.5,1.5);
+    }
+
+    h3{
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      color: #fbfbfb;
+    }
+
+    p{
+      font-size: 14px;
+      line-height: 23px;
+      font-weight: 300;
+      letter-spacing: 0.025em;
+      color: #fbfbfb;
+      margin: 0;
+    }
+  }
+}

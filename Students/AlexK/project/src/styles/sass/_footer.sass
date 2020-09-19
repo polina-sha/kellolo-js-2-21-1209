@@ -1,0 +1,63 @@
+%flex-Center
+    +flexAlignCenter
+    justify-content: center
+.b-footer
+    background-color: $bgColorFullSize
+    height: 80px
+    color: $grayFont
+    +fontDetails(16px,400,0.4px)
+    .container 
+       @extend %flex-Center
+       height: inherit
+    i
+        color:  $grayFont
+    &__social
+        +flexAlignCenter
+        flex-direction: row
+        justify-content: space-between
+        width: 182px
+        margin-left: auto
+        text-align: center
+        line-height: 32px
+        a
+            display:block
+            background-color: #ffffff
+            width: 32px
+            height: 32px
+        a:hover
+            background-color: $accentColor
+            & i
+                color: #ffffff
+.b-footer-menu
+        +flexAlignCenter
+        margin-bottom: 50px
+        margin-top: 50px
+        &__left
+            flex-basis: 428px
+            p
+                color: $grayFont
+                font-size: 14px
+                line-height: 24px
+                letter-spacing: 0.35px
+        &__right
+            display: flex
+            margin-left: auto
+            justify-content: space-between
+            &__block:nth-child(n+2)
+                display: flex
+                flex-direction: column
+                margin-left: 50px
+            &_block-header
+                color: $accentColor
+                +fontDetails(18px,700 ,0.45px)
+                text-transform: uppercase
+                line-height: 45px
+            &_block-menu
+                display: flex
+                flex-direction: column
+                +fontDetails(16px,400,0.4px)
+                line-height: 42px
+                a:hover
+                    color: $accentColor!important
+                a 
+                    color: $grayFont!important

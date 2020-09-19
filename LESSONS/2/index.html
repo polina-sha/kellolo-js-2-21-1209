@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .people {
+            display: flex;
+            width: 100vw;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="people">
+        
+    </div>
+    <script>
+        const data = [
+            {name: 'Oleg', age: 32},
+            {name: 'Olga', age: 25},
+            {name: 'Alexey', age: 17},
+            {name: 'Jack', age: 23},
+            {name: 'Darth Vader', age: 35},
+            {name: 'Hodor', age: 42},
+        ]
+
+        class Social {
+            //Catalog || Basket
+            constructor() {
+                this.container = document.querySelector('.people');
+                this.items = [];
+                this._init();
+            }
+
+            _init() {
+                this.items = data.map(h => new Human(h.name, h.age));
+                this._render();
+            }
+
+            _render() {
+                let html = '';
+
+                this.items.forEach(item => {
+                    html += item.render();
+                })
+
+                this.container.innerHTML = html;
+            }
+        }
+
+        class Human {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            render() {
+                return `
+                    <div class="card">
+                        <img src="https://placehold.it/60x80">
+                        <p><b>${this.name}</b></p>
+                        <p>${this.age}</p>
+                    </div>
+                `
+            }
+        }
+        // class Human {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //         this._init();
+        //     }
+        //     _init() {
+        //         console.log(this.name + ' was born');
+        //     }
+
+        //     sayHi(name = 'stranger') {
+        //         alert(this.name + ' greets you ' + name)
+        //     }
+
+        //     _render() {
+
+        //     }
+        // }
+        
+        let olya = new Human('Olga', 32);
+        let kolya = new Human('Nikolai', 33);
+
+
+    </script>
+</body>
+</html>

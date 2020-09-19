@@ -1,0 +1,31 @@
+@mixin shop-cart__details-font () {
+    font-size: 13px;
+    color: rgba(101, 101, 101, 1);
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin shop-cart__h3-font () {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(34, 34, 34, 1);
+    letter-spacing: -0.01em;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+@mixin borders () {
+    border: 1px solid;
+}
+
+@mixin sort-name () {
+    font-size: 14px;
+    color: $color-deep-grey;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    border: 1px solid rgba(235, 235, 235, 1);
+}
+
+
