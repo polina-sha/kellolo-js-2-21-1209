@@ -1,3 +1,3 @@
-import {init} from '../components/app' ;
+import app from './components';
 
-init.basket();
+app();
