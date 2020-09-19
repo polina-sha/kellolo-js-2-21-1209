@@ -98,7 +98,13 @@ a.logo {
       .header__left .search button i {
         color: #838383; }
   .header__right {
+    position: relative;
     margin-left: 2.6rem; }
+    .header__right .headerCartWrap {
+      position: absolute;
+      top: 50px;
+      right: 30px;}
+      
     .header__right .button {
       padding: 1.3rem 1.9rem;
       background-color: #f38191;
