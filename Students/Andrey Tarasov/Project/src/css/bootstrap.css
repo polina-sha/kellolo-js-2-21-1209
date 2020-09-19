@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0 auto;
+  color: #222224;
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+
+.container_bootstrap {
+  width: 1140px;
+  margin: 32px auto 30px;
+  display: flex;
+  align-items: center !important; }
+
+.logo {
+  width: 100px;
+  line-height: 51px;
+  text-transform: uppercase;
+  background: url("../img/logo.png") no-repeat;
+  background-blend-mode: overlay;
+  font-size: 27px;
+  padding-left: 72px;
+  display: block;
+  text-decoration: none !important;
+  color: #222224;
+  font-weight: 400;
+  margin-right: 100px; }
+  .logo:hover {
+    color: #222224; }
+
+.logo span {
+  color: #f16d7f;
+  font-weight: 400; }
+
+.navbar {
+  width: 600px !important;
+  background-color: #fff !important; }
+
+.dropdown-toggle__browse {
+  width: 87px !important;
+  height: 38px !important;
+  background-color: #f6f6f6 !important;
+  outline: none !important;
+  border: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 26px !important;
+  letter-spacing: 0.35px !important;
+  text-align: center !important;
+  color: #222222 !important; }
+  .dropdown-toggle__browse:focus {
+    box-shadow: none !important; }
+  .dropdown-toggle__browse:hover {
+    background-color: #ececec !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important; }
+  .dropdown-toggle__browse:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important; }
+
+.mr-sm-2 {
+  width: 280px !important;
+  height: 38px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: solid 1px #ececec !important; }
+  .mr-sm-2:focus {
+    box-shadow: none !important; }
+  .mr-sm-2:active {
+    box-shadow: none !important; }
+
+.my-sm-0 {
+  width: 36px !important;
+  height: 38px !important;
+  border: solid 1px #ececec !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important; }
+  .my-sm-0:hover {
+    background-color: #ececec !important; }
+  .my-sm-0:active {
+    box-shadow: none !important; }
+
+.dropdown-toggle__account {
+  width: 130px !important;
+  height: 38px !important;
+  background-color: #f16d7f !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 3px !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 26px !important;
+  letter-spacing: 0.38px !important;
+  text-align: center !important;
+  color: #ffffff !important; }
+  .dropdown-toggle__account:focus {
+    box-shadow: none !important; }
+  .dropdown-toggle__account:active {
+    box-shadow: none !important; }
+  .dropdown-toggle__account:hover {
+    box-shadow: 3px 3px 3px darkgrey !important;
+    outline: none !important;
+    border: none !important; }
+
+.dropdown-menu hr {
+  width: 150px !important;
+  margin-left: 20px !important; }
+.dropdown-menu h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 26px !important;
+  letter-spacing: 0.35px !important;
+  text-align: left !important;
+  color: #222222 !important;
+  margin-left: 20px !important;
+  margin-top: 20px !important; }
+
+/*# sourceMappingURL=bootstrap.css.map */

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Cart Page</title>
+    <link rel="stylesheet" href="../src/styles/css/mStyle.css">
+    <link rel="stylesheet" href="../src/styles/css/style.css">
+    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header container">
+            <a href="index.html">
+                <div class="logo">Bran<span>d</span></div>
+            </a>
+
+            <form method="get" class="search">
+                <button class="search__browse" name="Browse" id="">Browse<i class="fas fa-caret-down"></i></button>
+                <input type="text" name="search" placeholder="Search for Item...">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+
+            <img src="../src/assets/img/cart.png" alt="cart" class="header__cart">
+            <button name="accountBar" class="header__account-bar">My Account <i class="fas fa-caret-down"></i></button>
+        </div>
+
+        <div class="headerLine"></div>
+    </header>
+    <nav class="topNav">
+        <a href="#">Home</a>
+        <a href="#">Man</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Accoseriese</a>
+        <a href="#">Featured</a>
+        <a href="#">Hot Deals </a>
+    </nav>
+    <div class="b-arrivals">
+        <div class="container">
+            <div class="b-arrivals__pageName">New Arrivals</div>
+            <div class="b-arrivals__pageNav">
+                <a href="index.html">Home / </a>
+                <a href="#">Man / </a>
+                <a href="#">new arrivals</a>
+            </div>
+        </div>
+    </div>
+    <main class="b-basket container">
+        <!-- <div class="b-basket__top">
+            <div class="b-basket-main">Product Details</div>
+            <div class="b-basket-info">unite Price</div>
+            <div class="b-basket-info">Quantity</div>
+            <div class="b-basket-info">shipping</div>
+            <div class="b-basket-info">Subtotal</div>
+            <div class="b-basket-info">ACTION</div>
+        </div>
+        <div class="b-basket__row">
+            <div class="b-basket__row__item b-basket-main">
+                <div class="b-basket__row__item-img"><img src="../src/assets/img/basket/2-layers.png" alt="basket"></div>
+                <div class="b-basket__row__item-txt">
+                    <h3><a href="#">Mango People T-shirt</a></h3>
+                    <p><b>Color:</b> Red <br>
+                       <b>Size:</b> Xll</p>
+                </div>
+            </div>
+            <div class="b-basket-info">200</div>
+            <div class="b-basket-info"><input type="text" maxlength="4"></div>
+            <div class="b-basket-info">free</div>
+            <div class="b-basket-info">$300</div>
+            <div class="b-basket-info"><button><i class="fa fa-times-circle-o" aria-hidden="true"></i></button></div>
+        </div>
+        <div class="b-basket__row">
+            <div class="b-basket__row__item b-basket-main">
+                <div class="b-basket__row__item-img"><img src="../src/assets/img/basket/Layer_44.png" alt="basket"></div>
+                <div class="b-basket__row__item-txt">
+                    <h3><a href="#">Mango People T-shirt</a></h3>
+                    <p><b>Color:</b> Red <br>
+                       <b>Size:</b> Xll</p>
+                </div>
+            </div>
+            <div class="b-basket-info">150</div>
+            <div class="b-basket-info"><input type="text" maxlength="4"></div>
+            <div class="b-basket-info">free</div>
+            <div class="b-basket-info">$300</div>
+            <div class="b-basket-info"><button><i class="fa fa-times-circle-o" aria-hidden="true"></i></button></div>
+        </div>
+        <div class="b-basket__row">
+            <div class="b-basket__row__item b-basket-main">
+                <div class="b-basket__row__item-img"><img src="../src/assets/img/basket/3-layers.png" alt="basket"></div>
+                <div class="b-basket__row__item-txt">
+                    <h3><a href="#">Mango People T-shirt</a></h3>
+                    <p><b>Color:</b> Red <br>
+                       <b>Size:</b> Xll</p>
+                </div>
+            </div>
+            <div class="b-basket-info">150</div>
+            <div class="b-basket-info"><input type="text" maxlength="4"></div>
+            <div class="b-basket-info">free</div>
+            <div class="b-basket-info">$300</div>
+            <div class="b-basket-info"><button><i class="fa fa-times-circle-o" aria-hidden="true"></i></button></div>
+        </div> -->
+        <div class="b-basket__footer">
+            <button>cLEAR SHOPPING CART</button>
+            <button class="b-basket__footer-right">cONTINUE sHOPPING</button>
+        </div>
+    </main>
+    <section class="b-shipping container">
+        <div class="b-requirements__shipping b-requirements__block">
+            <h3>Shipping Adress</h3>
+            <form action="">
+                <span class="myarrow"><input placeholder="Bangladesh" list="citys"></span>
+                <datalist id="citys">
+                    <option label="Москва" value="moscow">
+                    <option label="Нью Йорк" value="new york">
+                    <option label="Лондон" value="london">
+                    <option label="Токио" value="tokyo">
+                </datalist>
+                <input type="text" placeholder="State" maxlength="38">
+                <input type="number" placeholder="Postcode / Zip">
+                <button>get a quote</button>
+            </form>
+        </div>
+        <div class="b-requirements__coupons b-requirements__block">
+            <h3>coupon discount</h3>
+            <p>Enter your coupon code if you have one</p>
+            <form action="">
+                <input type="text" placeholder="State" maxlength="28">
+                <button>Apply coupon</button>
+            </form>
+        </div>
+        <div class="b-requirements__totalCosts b-requirements__block">
+            <div class="b-requirements__totalCosts__sub">Sub total $900</div>
+            <div class="b-requirements__totalCosts__grand">GRAND TOTAL <span>$900</span></div>
+            <div class="b-requirements__totalCosts__line"></div>
+            <button class="proceed">proceed to checkout</button>
+        </div>
+    </section>
+    <div class="b-contacts">
+        <div class="container">
+            <div class="b-contacts__left">
+                <div class="b-contacts__left-pic"><img src="../src/assets/img/Layer_40.png" alt="face"></div>
+                <div class="b-contacts__left__text">
+                    <div class="b-contacts__left__text__paragraph">
+                        <p><b><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                    a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed
+                                    pretium”</i></b></p>
+                        <p><span class="b-contacts__left__text__paragraph-name">Bin Burhan</span><br>
+                            <span class="b-contacts__left__text__paragraph-country">Dhaka, Bd</span></p>
+                    </div>
+                    <div class="b-contacts__left__text__navigation">
+                        <a href="#" class="b-contacts__left__text__navigation-block"></a>
+                        <a href="#" class="b-contacts__left__text__navigation-block-active"></a>
+                        <a href="#" class="b-contacts__left__text__navigation-block"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="b-contacts__right">
+                Subscribe <br>
+                <span>FOR OUR NEWLETTER AND PROMOTION</span>
+                <form method="get" class="b-contacts__right-mail">
+                    <input type="text" name="e-mail" placeholder="Enter Your Email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="b-footer-menu container">
+            <div class="b-footer-menu__left">
+                <div class="logo">Bran<span>d</span></div>
+                <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate
+                    multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                    processes and
+                    cross-unit partnerships.</p>
+
+                <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+            </div>
+            <div class="b-footer-menu__right">
+                <div class="b-footer-menu__right__block">
+                    <div class="b-footer-menu__right_block-header">COMPANY</div>
+                    <div class="b-footer-menu__right_block-menu">
+                        <a href="#">Home</a>
+                        <a href="#">Shop</a>
+                        <a href="#">About</a>
+                        <a href="#">How It Works</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="b-footer-menu__right__block">
+                    <div class="b-footer-menu__right_block-header">INFORMATION</div>
+                    <div class="b-footer-menu__right_block-menu">
+                        <a href="#">Tearms & Condition</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">How to Buy</a>
+                        <a href="#">How to Sell</a>
+                        <a href="#">Promotion</a>
+                    </div>
+                </div>
+                <div class="b-footer-menu__right__block">
+                    <div class="b-footer-menu__right_block-header">SHOP CATEGORY</div>
+                    <div class="b-footer-menu__right_block-menu">
+                        <a href="#">Men</a>
+                        <a href="#">Women</a>
+                        <a href="#">Child</a>
+                        <a href="#">Apparel</a>
+                        <a href="#">Brows All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-footer">
+            <div class="container">
+                <div class="b-footer__copyright">© 2017 Brand All Rights Reserved.</div>
+                <div class="b-footer__social">
+                    <a href="" class="b_footer_social-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="" class="b_footer_social-twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="" class="b_footer_social-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="" class="b_footer_social-pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a href="" class="b_footer_social-google"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- <script src="../src/components/basket.js"></script> -->
+    <script src="../dist/main.js"></script>
+
+</body>
+
+</html>

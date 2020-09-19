@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/styles/css/mStyle.css">
+  <link rel="stylesheet" href="../src/styles/css/style.css">
+  <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+  <title>CheckOut Page</title>
+</head>
+
+<body>
+
+<header>
+    <div class="header container">
+        <a href="index.html">
+            <div class="logo">Bran<span>d</span></div>
+        </a>
+
+        <form method="get" class="search">
+            <button class="search__browse" name="Browse" id="">Browse<i class="fas fa-caret-down"></i></button>
+            <input type="text" name="search" placeholder="Search for Item...">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+
+        <img src="../src/assets/img/cart.png" alt="cart" class="header__cart">
+        <button name="accountBar" class="header__account-bar">My Account <i class="fas fa-caret-down"></i></button>
+    </div>
+
+    <div class="headerLine"></div>
+</header>
+<nav class="topNav">
+    <a href="#">Home</a>
+    <a href="#">Man</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Accoseriese</a>
+    <a href="#">Featured</a>
+    <a href="#">Hot Deals </a>
+</nav>
+<div class="b-arrivals">
+    <div class="container">
+        <div class="b-arrivals__pageName">New Arrivals</div>
+        <div class="b-arrivals__pageNav">
+            <a href="index.html">Home / </a>
+            <a href="#">Man / </a>
+            <a href="#">new arrivals</a>
+        </div>
+    </div>
+</div>
+<main class="order-info container">
+  <ul class="order-info__collapse">
+    <li>
+      <input type="checkbox" id="shipping-adress">
+      <label for="shipping-adress">01.&nbspShipping Adress</label>
+      <div class="order-info__content">
+        <div class="order-info__content__left">
+          <div>
+            <h3>Check as a guest or register</h3>
+            <span>Register with us for future convenience</span>
+          </div>
+          <form class="user-login">
+            <div class="display-row-in-col">
+              <input type="radio" id="checkout as guest" name="radio"><label for="checkout as guest">checkout as guest</label>
+            </div>
+            <div class="display-row-in-col">
+              <input type="radio" id="register" name="radio"><label for="register">register</label>
+            </div>
+          </form>
+          <div>
+            <h3>register and save time!</h3>
+            <span>Register with us for future convenience</span>
+          </div>
+            <div><ul>
+              <li>&nbspFast and easy checkout</li>
+              <li>&nbspEasy access to your order history and status</li>
+            </ul>
+          </div>
+          <button class="btn">Continue</button>
+        </div>
+        <div class="order-info__content__right">
+          <div>
+            <h3>Already registed ?</h3>
+            <span>Please log in below</span>
+          </div>
+          <div>
+            <form class="user-login">
+              <label for="email">EMAIL ADDRESS</label>
+              <input type="email" id="email" class="account-data">
+              <label for="password">PASSWORD</label>
+              <input type="password" id="password" class="account-data">
+              <span>*Required Fileds</span>
+            </form>
+            <button class="btn">Log in</button>
+            <span class="link">Forgot Password ?</span>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <input type="checkbox" id="billing-info">
+      <label for="billing-info">02.&nbspBilling Information</label>
+      <div class="order-info__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident reprehenderit assumenda velit mollitia nam soluta blanditiis animi impedit corrupti? Ea inventore totam qui sint illo facere ipsam mollitia itaque!
+      </div>
+    </li>
+    <li>
+      <input type="checkbox" id="SHIPPING INFORMATION">
+      <label for="SHIPPING INFORMATION">03.&nbspSHIPPING INFORMATION</label>
+      <div class="order-info__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident reprehenderit assumenda velit mollitia nam soluta blanditiis animi impedit corrupti? Ea inventore totam qui sint illo facere ipsam mollitia itaque!
+      </div>
+    </li>
+    <li>
+      <input type="checkbox" id="SHIPPING METHOD">
+      <label for="SHIPPING METHOD">04.&nbspSHIPPING METHOD</label>
+      <div class="order-info__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident reprehenderit assumenda velit mollitia nam soluta blanditiis animi impedit corrupti? Ea inventore totam qui sint illo facere ipsam mollitia itaque!
+      </div>
+    </li>
+    <li>
+      <input type="checkbox" id="PAYMENT METHOD">
+      <label for="PAYMENT METHOD">05.&nbspPAYMENT METHOD</label>
+      <div class="order-info__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident reprehenderit assumenda velit mollitia nam soluta blanditiis animi impedit corrupti? Ea inventore totam qui sint illo facere ipsam mollitia itaque!
+      </div>
+    </li>
+  </ul>
+</main>
+
+  <div class="b-contacts">
+    <div class="container">
+        <div class="b-contacts__left">
+            <div class="b-contacts__left-pic"><img src="../src/assets/img/Layer_40.png" alt="face"></div>
+            <div class="b-contacts__left__text">
+                <div class="b-contacts__left__text__paragraph">
+                    <p><b><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed
+                                pretium”</i></b></p>
+                    <p><span class="b-contacts__left__text__paragraph-name">Bin Burhan</span><br>
+                        <span class="b-contacts__left__text__paragraph-country">Dhaka, Bd</span></p>
+                </div>
+                <div class="b-contacts__left__text__navigation">
+                    <a href="#" class="b-contacts__left__text__navigation-block"></a>
+                    <a href="#" class="b-contacts__left__text__navigation-block-active"></a>
+                    <a href="#" class="b-contacts__left__text__navigation-block"></a>
+                </div>
+            </div>
+        </div>
+        <div class="b-contacts__right">
+            Subscribe <br>
+            <span>FOR OUR NEWLETTER AND PROMOTION</span>
+            <form method="get" class="b-contacts__right-mail">
+                <input type="text" name="e-mail" placeholder="Enter Your Email">
+                <button>Subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="b-footer-menu container">
+        <div class="b-footer-menu__left">
+            <div class="logo">Bran<span>d</span></div>
+            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                syndicate
+                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                processes and
+                cross-unit partnerships.</p>
+
+            <p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+        </div>
+        <div class="b-footer-menu__right">
+            <div class="b-footer-menu__right__block">
+                <div class="b-footer-menu__right_block-header">COMPANY</div>
+                <div class="b-footer-menu__right_block-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">How It Works</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="b-footer-menu__right__block">
+                <div class="b-footer-menu__right_block-header">INFORMATION</div>
+                <div class="b-footer-menu__right_block-menu">
+                    <a href="#">Tearms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">How to Buy</a>
+                    <a href="#">How to Sell</a>
+                    <a href="#">Promotion</a>
+                </div>
+            </div>
+            <div class="b-footer-menu__right__block">
+                <div class="b-footer-menu__right_block-header">SHOP CATEGORY</div>
+                <div class="b-footer-menu__right_block-menu">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Child</a>
+                    <a href="#">Apparel</a>
+                    <a href="#">Brows All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-footer">
+        <div class="container">
+            <div class="b-footer__copyright">© 2017 Brand All Rights Reserved.</div>
+            <div class="b-footer__social">
+                <a href="" class="b_footer_social-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="" class="b_footer_social-twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="" class="b_footer_social-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" class="b_footer_social-pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="" class="b_footer_social-google"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
