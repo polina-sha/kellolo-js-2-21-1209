@@ -1,9 +1,5 @@
-import {
-  cat
-} from "./catalog";
-import {
-  cart
-} from "./basket.js";
+import {cat} from "./catalog";
+import {cart} from "./basket.js";
 
 export default () => {
   if (document.querySelector('.b-basket')) {
@@ -13,5 +9,4 @@ export default () => {
     let a = new cat();
     a.init()
   };
-
 }
