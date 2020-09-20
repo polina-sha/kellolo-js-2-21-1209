@@ -1,0 +1,25 @@
+{
+  "name": "kellolo-js-2-21-1209",
+  "version": "1.0.0",
+  "description": "something smart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roman111975/kellolo-js-2-21-1209.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roman111975/kellolo-js-2-21-1209/issues"
+  },
+  "homepage": "https://github.com/Roman111975/kellolo-js-2-21-1209#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
