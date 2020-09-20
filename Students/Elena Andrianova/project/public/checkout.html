@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../src/layout/styles/css/checkout.css">
+    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div class="header container">
+            <a href="index.html" class="logo">Bran<span>d</span></a>
+
+            <form method="get" class="search">
+                <button class="search__browse" name="browse" id="">Browse <i class="fas fa-caret-down"></i></button>
+                <input type="text" name="search" placeholder="Search for item...">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+
+            <img src="../src/assets/imgs/cart.png" alt="cart" class="header__cart">
+            <button name="accountBar" class="header__account-bar">My Account <i class="fas fa-caret-down"></i></button>
+        </div>
+        <div class="headerLine"></div>
+        <nav class="topNav container">
+            <a href="index.html">Home</a>
+            <a href="#">Man</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Accoseriese</a>
+            <a href="#">Featured</a>
+            <a href="#">Hot Deals</a>
+        </nav>
+        <div class="breadCrumbBG">
+            <div class="breadCrumb container">
+                <div class="newArrival">New arrival</div>
+                <div class="breadCrumbLink">
+                    <a href="#">Home</a>
+                    <a href="#">Men</a>
+                    <a href="#" class="breadCrumbLink-active">New arrival</a>
+                </div>
+            </div>
+        </div>
+
+        <details open class="spoiler container">
+            <summary tabindex="1"><span>01. Shipping adress</span></summary>
+            <form action="registration">
+                <div class="register">
+                    <h3>Checkout as a guest or register</h3>
+                    <p>Register with us for future convenience</p>
+                    <label for="registrationGuest"><input type="radio" name="register" id="registrationGuest"> Check out as guest</label>
+                    <label for="registration"><input type="radio" name="register" id="registration" checked> Register</label>
+                    <h3>Register and save time</h3>
+                    <p>register with us for future convenience</p>
+                    <p><i class="fas fa-angle-double-right"></i> Fast and easy checkout</p>
+                    <p><i class="fas fa-angle-double-right"></i> Easy access to your order history and status</p>
+                    <button>Continue</button>
+                </div>
+                <div class="register">
+                    <h3>Alredy registed</h3>
+                    <p>Please log in below</p>
+                    <label for="registerEmail">Email addres <span>*</span></label>
+                    <input type="email" id="registerEmail">
+                    <label for="registerPassword">Password <span>*</span></label>
+                    <input type="password" id="registerPassword" minlength="8" >
+                    <p><span>* Required Fileds</span></p>
+                    <div class="registerLog">
+                        <button>Log in</button>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+        </details>
+        <details class="spoiler container">
+            <summary tabindex="2"><span>02. Billing information</span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi architecto commodi error
+                impedit iure minus molestiae, nam necessitatibus porro quae quaerat quo recusandae repellendus similique
+                soluta sunt voluptate.
+            </p>
+            <p>Assumenda consequuntur cumque ducimus error est exercitationem fugit harum in inventore iure laboriosam
+                non officia perferendis perspiciatis quisquam, recusandae voluptatibus! Asperiores blanditiis deleniti
+                exercitationem laudantium omnis placeat. Eligendi, in nihil.
+            </p>
+
+        </details>
+        <details class="spoiler container">
+            <summary tabindex="3"><span>03. Shipping information</span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi architecto commodi error
+                impedit iure minus molestiae, nam necessitatibus porro quae quaerat quo recusandae repellendus similique
+                soluta sunt voluptate.
+            </p>
+            <p>Assumenda consequuntur cumque ducimus error est exercitationem fugit harum in inventore iure laboriosam
+                non officia perferendis perspiciatis quisquam, recusandae voluptatibus! Asperiores blanditiis deleniti
+                exercitationem laudantium omnis placeat. Eligendi, in nihil.
+            </p>
+
+        </details>
+        <details class="spoiler container">
+            <summary tabindex="4"><span>04. Shipping method</span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi architecto commodi error
+                impedit iure minus molestiae, nam necessitatibus porro quae quaerat quo recusandae repellendus similique
+                soluta sunt voluptate.
+            </p>
+            <p>Assumenda consequuntur cumque ducimus error est exercitationem fugit harum in inventore iure laboriosam
+                non officia perferendis perspiciatis quisquam, recusandae voluptatibus! Asperiores blanditiis deleniti
+                exercitationem laudantium omnis placeat. Eligendi, in nihil.
+            </p>
+
+        </details>
+        <details class="spoiler container">
+            <summary tabindex="5"><span>05. Payment method</span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi architecto commodi error
+                impedit iure minus molestiae, nam necessitatibus porro quae quaerat quo recusandae repellendus similique
+                soluta sunt voluptate.
+            </p>
+            <p>Assumenda consequuntur cumque ducimus error est exercitationem fugit harum in inventore iure laboriosam
+                non officia perferendis perspiciatis quisquam, recusandae voluptatibus! Asperiores blanditiis deleniti
+                exercitationem laudantium omnis placeat. Eligendi, in nihil.
+            </p>
+
+        </details>
+        <details class="spoiler container">
+            <summary tabindex="6"><span>06. Order review</span></summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad animi architecto commodi error
+                impedit iure minus molestiae, nam necessitatibus porro quae quaerat quo recusandae repellendus similique
+                soluta sunt voluptate.
+            </p>
+            <p>Assumenda consequuntur cumque ducimus error est exercitationem fugit harum in inventore iure laboriosam
+                non officia perferendis perspiciatis quisquam, recusandae voluptatibus! Asperiores blanditiis deleniti
+                exercitationem laudantium omnis placeat. Eligendi, in nihil.
+            </p>
+
+        </details>
+        <div class="subscribeBG">
+            <div class="subscribe container">
+                <div class="subscribe__block">
+                    <img src="../src/assets/imgs/Layer_40.png" alt="photo">
+                    <div class="subscribe__block-text">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                        <p>Bin Burhan <br><span>Dhaka, Bd</span></p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="subscribe__blockFeedback">
+                    <div class="subscribe__blockFeedback-text">
+                        <h3>Subscribe</h3>
+                        <p>For our newletter and promotion</p>
+                    </div>
+                    <form action="subscribe-form"  class="subscribeForm">
+                        <input type="email" name="mail" placeholder="Enter Your Email">
+                        <button>Subscribe</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer container">
+            <div class="footer__top">
+                <div class="footer_blockText">
+                    <div class="logo">Bran<span>d</span></div>
+
+                    <p> Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. </p>
+
+                    <p>Efficiently plagiarize 24/365 action items and focused infomediaries.Distinctively seize superior initiatives for wireless technologies. Dynamically optimize. </p>
+                </div>
+
+                <div class="footer_blockLink">
+                    <p>Company</p>
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Shop</a>
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">How It Works</a>
+                    <a href="#" class="footer__link">Contact</a>
+                </div>
+
+                <div class="footer_blockLink">
+                    <p>Information</p>
+                    <a href="#" class="footer__link">Tearms & Condition</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">How to Buy</a>
+                    <a href="#" class="footer__link">How to Sell</a>
+                    <a href="#" class="footer__link">Promotion</a>
+                </div>
+                <div class="footer_blockLink">
+                    <p>Shop Category</p>
+                    <a href="#" class="footer__link">Men</a>
+                    <a href="#" class="footer__link">Women</a>
+                    <a href="#" class="footer__link">Child</a>
+                    <a href="#" class="footer__link">Apparel</a>
+                    <a href="#" class="footer__link">Brows All</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footerBG container">
+                    <p>&copy; 2017  Brand  All Rights Reserved.</p>
+                    <div class="footerBG-link">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+</html>

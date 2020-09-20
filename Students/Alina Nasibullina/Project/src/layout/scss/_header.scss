@@ -1,0 +1,385 @@
+@import "_variables";
+
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 165px;
+    line-height: 51px;
+    text-transform: uppercase;
+    background: url("../../assets/img/logo.png") no-repeat;
+    background-blend-mode: overlay;
+    font-size: 27px;
+    padding-left: 72px;
+    text-decoration: none;
+    outline: none;
+}
+
+.logo span {
+    color: $accentColor;
+    font-weight: 700;
+}
+
+.search--content {
+    position: relative;
+    
+    .search--menu {
+        display: none;
+        width: 262px;
+        height: fit-content;
+        position: absolute;
+        top: 50px;
+        left: -10px;
+        z-index: 2;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 1px solid #e8e8e8;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 25px;
+        box-shadow: 0px 5px 8px 0px #d9d9d9;
+        transition: $buttonTransition;
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32px;
+            text-transform: uppercase;
+            margin: 0.5em 0 0 0;
+        }
+        .greyLine {
+            width: 95%;
+            height: 1px;
+            background-color: #e8e8e8;
+            margin-bottom: 0.5em;
+        }
+        
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            text-transform: none;
+            color: #4f4f4f;
+            &:hover {
+                color: #222222;
+            }
+        }
+    }
+}
+
+.search {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.search__browse {
+    padding: 14px;
+    background-color: #f9f9f9;
+    line-height: 38px;
+    border: none;
+    color: #7c7c7c;
+    outline: none;
+    transition: $buttonTransition;
+
+}
+
+.search__browse i {
+    color: #838383;
+}
+
+.search__browse:hover {
+    background-color: darken($color: #f9f9f9, $amount: 10);
+    color: darken($color: #7c7c7c, $amount: 10);
+}
+
+#Browse {
+    display: none;
+}
+
+#Browse:checked ~ .search--menu {
+    display: flex;
+    z-index: 1;
+}
+
+
+.header .search input {
+    height: inherit;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 14px 16px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+
+
+
+.header .search button:last-child {
+    border: none;
+    outline: none;
+    height: inherit;
+    background: none;
+    padding: 12px;
+    color: #a4a4a4;
+}
+
+.header .search button:last-child:hover {
+    color: darken($color: #a4a4a4, $amount: 10);
+    background-color: #f9f9f9;
+}
+
+.header__cart_link {
+	text-decoration: none;
+    margin-left: auto;
+    margin-right: 26px;
+    transition: $buttonTransition;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.card--content {
+    position: relative;
+    margin-left: 350px;
+
+    .greyLine {
+        width: 100%;
+        height: 1px;
+        background-color: #ededed;
+        margin: 0.5em 0;
+    }
+    .card-link--dropDown {
+        display: block;
+        position: absolute;
+        left: -15px;
+        width: 262px;
+        height: fit-content;
+        border-radius: 5px;
+        background-color: #ffffff;
+        z-index: 2;
+        padding: 20px 15px;
+        box-shadow: 0px 5px 8px 0px #d9d9d9;
+        transition: $buttonTransition;
+        & > div:last-of-type {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .invisible {
+        display: none;
+    }
+
+    .dropDown--product {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 72px;
+            height: 85px;
+        }
+        p {
+            color: #222222;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            span {
+                color: $accentColor;
+            }
+            .fa-star,
+            .fa-star-half-alt {
+                color: #e4af48;
+            }
+        }
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            height: 15px;
+            width: 15px;
+            color: #aaaaaa;
+            padding: 0;
+            &:hover {
+                color: darken($color: #aaaaaa, $amount: 10);
+            } 
+        }
+
+    }
+    #checkout {
+        outline: none;
+        width: 100%;
+        height: 50px;
+        border: 1px solid $accentColor;
+        background-color: #ffffff;
+        color: $accentColor;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #fef9f9;
+            color: $accentColorDark;
+        }
+    }
+    a {
+        display: block;
+        width: calc(100% - 2px);
+        height: 50px;
+        margin-top: 10px;
+        border: 1px solid #eaeaea;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 50px;
+        color: #4a4a4a;
+        transition: $buttonTransition;
+        &:hover {
+            background-color: #eaeaea;
+            color: darken($color:#4a4a4a, $amount: 10);
+        }
+    }
+    
+    input {
+        display: none;
+    }
+    
+    //функционал задублирован, переделать на всех страницах
+    input:checked ~ .card-link--dropDown {
+        display: block;
+    }
+}
+
+.header__cart_link:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header__account-bar {
+    border: none;
+    outline: none;
+    width: 130px;
+    line-height: 38px;
+    background-color: $accentColor;
+    padding-left: 19px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: $buttonTransition;
+}
+
+.header__account-bar:hover {
+	background-color: $accentColorDark;
+}
+
+
+
+.headerLine {
+    border-bottom: 1px solid #ececec;
+}
+
+
+
+.topNav {
+    height: 33px;
+    margin-top: 18px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topNav__list {
+    height: inherit;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    .topNav--dropDown {
+        display: none;
+        height: 351px;
+        width: 846px;
+        top: 33px;
+        left: -63px;
+        position: absolute;
+        z-index: 2;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 1px solid #e8e8e8;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 25px;
+        box-shadow: 0px 5px 8px 0px #d9d9d9;
+        transition: $buttonTransition;
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 32px;
+            text-transform: uppercase;
+            margin: 0.5em 0 0 0;
+        }
+        .greyLine {
+            width: 28%;
+            height: 1px;
+            background-color: #e8e8e8;
+            margin-bottom: 0.5em;
+        }
+        
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+            text-transform: none;
+            color: #646464;
+            &:hover {
+                color: #222222;
+            }
+            &:hover img {
+                opacity: 0.8;
+            }
+        }
+        img { 
+            width: 255px;
+            height: 118px;
+        }
+    }
+}
+
+.topNav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #222222;
+    padding: 0 3px 0 3px;
+}
+
+.navLine {
+    width: inherit;
+    height: 3px;
+    background-color: #ef5b70;
+    opacity: 0;
+    transition: $buttonTransition;
+}
+
+
+
+.topNav__list:hover .navLine {
+	opacity: 1;
+}
+
+.topNav__list:hover .topNav--dropDown {
+    height: 310px;
+    display: flex;
+}
