@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     output: {
-       filename: 'js/bundle.js' 
+        filename: 'js/bundle.js'
     },
     module: {
         rules: [
@@ -20,16 +20,16 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-        chunkFilename: '[id].css',
+            filename: 'css/[name].css',
+            chunkFilename: '[id].css',
         }),
         new CopyWebpackPlugin({
             patterns: [
-                {from: './src/assets/imgs', to: 'img'},
-          ],
-        }),
+                { from: './src/assets/imgs', to: 'img' },
+            ],
+          }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
         })
     ]
-}
+} 
