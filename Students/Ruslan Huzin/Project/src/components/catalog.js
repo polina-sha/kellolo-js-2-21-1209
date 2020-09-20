@@ -1,14 +1,13 @@
 export default class Catalog {
-    constructor(basket) {
-        this.container = null;
+    constructor(basket, container = '#catalog', url = 'catalog.json') {
+        this.container = document.querySelector(container);
         this.items = [];
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json';
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/' + url;
         this.basket = basket;
         this._init();
     }
 
     _init() {
-        this.container = document.querySelector('#catalog');
         this._get(this.url)
             .then(arr => {
                 this.items = arr.map(p => new Product(p.productName, p.productPrice, p.productImg, p.productId));

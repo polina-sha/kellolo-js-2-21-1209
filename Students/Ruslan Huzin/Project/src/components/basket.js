@@ -1,15 +1,14 @@
 export default class Basket {
-    constructor() {
-        this.container = null;
+    constructor(container = '#basket', url = 'basket.json') {
+        this.container = document.querySelector(container);
         this.items = [];
         this.shown = false;
         this.containerItems = null;
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json';
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/' + url;
         this._init();
     }
 
     _init() {
-        this.container = document.querySelector('#basket');
         this.containerItems = document.querySelector('#basket-items');
         this._get(this.url)
             .then(bask => {
