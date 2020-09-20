@@ -17,6 +17,7 @@ export let basket = {
                 this._handleActions();
             })
     },
+
     _get(url) {
         return fetch(url).then(d => d.json());
     },
