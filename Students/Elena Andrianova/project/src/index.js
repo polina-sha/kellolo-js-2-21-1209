@@ -1,3 +1,6 @@
-import app from './components';
+import './layout/styles/css/styles.css'
+
+import app from './components'
+
 
 app();
