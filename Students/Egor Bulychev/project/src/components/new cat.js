@@ -1,20 +1,33 @@
-export let cat = {
-    container: null,
-    items: [],
-    bask: null,
-    url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
-    init() {
-        this.container = document.querySelector('#catalog');
-        this.bask = bask;
-        this._get(this.url)
-            .then(arr => {
-                this.items = arr;
-            })
-            .finally(() => {
-                this._render();
-                this._handleActions();
-            })
-    },
+class Cat  {
+    constructor() {
+        container = null;
+        this.items = [];
+        this.bask = null;
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
+        this.price = null;
+        this.img = null;
+        this.name = null;
+        this.id = null;
+        this._init()}
+
+        init() {
+            this.container = document.querySelector('#catalog');
+            this.price = dataset.id;
+            this.img = dataset.img;
+            this.name = dataset.name;
+            this.id = dataset.id;
+            this.bask = bask;
+            this._get(this.url)
+                .then(arr => {
+                    this.items = arr;
+                })
+                .finally(() => {
+                    this._render();
+                    this._handleActions();
+                })
+    }
+    };
+
     _get(url) {
         return fetch(url).then(d => d.json());
     },
@@ -78,4 +91,22 @@ export let cat = {
             amount: 1
         }
     }
-}
+
+    class Item {
+        constructor(productId,productImg,productPrice, productName ) {
+            this.productId = productId;
+            this.productImg = productImg;
+            this.productPrice = productPrice;
+            this.productName = productName;
+        }
+
+        render() {
+            return `
+                <div class="card">
+                    <img src=${this.productImg}">
+                    <p><b>${this.productName}</b></p>
+                    <p>${this.productPrice}</p>
+                </div>
+            `
+        }
+    }
