@@ -3,85 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/bootstrap.css">
-    <link rel="stylesheet" href="../src/css/checkout.css">
-    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="../src/layout/styles/bootstrap.css"> -->
+    <link rel="stylesheet" href="../src/layout/styles/checkout.css">
+    <!-- <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script> -->
     <title>Checkout</title>
 </head>
 
 <body>
 
-<div class="container_bootstrap">
-
+<header class="container">
     <a href="#" class="logo">Bran<span>d</span></a>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle dropdown-toggle__browse" href="#" role="button"
-                   id="dropdownMenuLink"
-                   data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Browse
-                </a>
 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <h3>Women</h3>
-                    <hr>
-                    <a class="dropdown-item" href="#">Tops</a>
-                    <a class="dropdown-item" href="#">Sweaters/Knits</a>
-                    <a class="dropdown-item" href="#">Jackets/Coats</a>
-                    <a class="dropdown-item" href="#">Blazers</a>
-                    <a class="dropdown-item" href="#">Denim</a>
-                    <a class="dropdown-item" href="#">Leggings/Pants</a>
-                    <a class="dropdown-item" href="#">Skirts/Shorts</a>
-                    <a class="dropdown-item" href="#">Accesseries</a>
-                    <h3>Men</h3>
-                    <hr>
-                    <a class="dropdown-item" href="#">Tees/Tank tops</a>
-                    <a class="dropdown-item" href="#">Shirts/Polos</a>
-                    <a class="dropdown-item" href="#">Sweaters</a>
-                    <a class="dropdown-item" href="#">Sweatshirts/Hoodies</a>
-                    <a class="dropdown-item" href="#">Blazers</a>
-                    <a class="dropdown-item" href="#">Jackets/vests</a>
-                </div>
-            </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search for Item..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../src/img/icons/fa-search.png"
-                                                                                        alt="#"></button>
-            </form>
-        </div>
-    </nav>
+    <form method="get" class="search">
+        <button name="Browse">Browse <img src="../src/assets/imgs/icons/fa-caret-down.png" alt="#"></button>
+        <input type="text" name="search" placeholder="Search for Item...">
+        <button></button>
+    </form>
 
-    <img src="../src/img/cart.png" alt="cart" class="header__cart">
-
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle dropdown-toggle__account" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            My Account
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Enter</a>
-            <a class="dropdown-item" href="#">Exit</a>
-        </div>
-    </div>
-
-</div>
-
-<!--<header class="container">-->
-<!--    <a href="#" class="logo">Bran<span>d</span></a>-->
-
-<!--    <form method="get" class="search">-->
-<!--        <button name="Browse">Browse <img src="img/icons/fa-caret-down.png" alt="#"></button>-->
-<!--        <input type="text" name="search" placeholder="Search for Item...">-->
-<!--        <button><img src="img/icons/fa-search.png" alt="#"></button>-->
-<!--    </form>-->
-
-<!--    <img src="img/cart.png" alt="cart" class="header__cart">-->
-<!--    <button name="accountBar" class="header__account-bar">My Account <img src="img/icons/fa-caret-down-white.png" alt="#"></button>-->
-<!--</header>-->
+    <img src="../src/assets/imgs/cart.png" alt="cart" class="header__cart">
+    <button name="accountBar" class="header__account-bar">My Account <img src="../src/assets/imgs/icons/fa-caret-down-white.png"
+            alt="#"></button>
+</header>
 
 <div class="headerLine"></div>
 
@@ -131,9 +75,9 @@
                     <label for="register">register</label>
                     <h3>register and save time!</h3>
                     <p>Register with us for future convenience</p>
-                    <a href="#"><img src="../src/img/icons/direction.png" alt="Направление вправо"> Fast and easy checkout</a>
+                    <a href="#"><img src="../src/assets/imgs/icons/direction.png" alt="Направление вправо"> Fast and easy checkout</a>
                     <br>
-                    <a href="#"><img src="../src/img/icons/direction.png" class="second_direction" alt="Направление вправо">
+                    <a href="#"><img src="../src/assets/imgs/icons/direction.png" class="second_direction" alt="Направление вправо">
                         Easy access to your order history and status</a>
                     <br>
                     <button>Continue</button>
@@ -215,7 +159,7 @@
 
         <div class="mailing-container">
             <div class="mailing-container__description">
-                <img src="../src/img/face-girl.png" alt="Лицо девушки">
+                <img src="../src/assets/imgs/face-girl.png" alt="Лицо девушки">
                 <div>
                     <q>Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
                         condimentum mattis neque sed pretium</q>
@@ -296,17 +240,17 @@
                 <p>© 2017 Brand All Rights Reserved.</p>
             </div>
             <div class="container-copyright__icons">
-                <a href="#"><img src="../src/img/icons/f.png" alt="Фэйсбук"></a>
-                <a href="#"><img src="../src/img/icons/twitter.png" alt="Твиттер"></a>
-                <a href="#"><img src="../src/img/icons/in.png" alt="#"></a>
-                <a href="#"><img src="../src/img/icons/p.png" alt="#"></a>
-                <a href="#"><img src="../src/img/icons/g+.png" alt="#"></a>
+                <a href="#"><img src="../src/assets/imgs/icons/f.png" alt="Фэйсбук"></a>
+                <a href="#"><img src="../src/assets/imgs/icons/twitter.png" alt="Твиттер"></a>
+                <a href="#"><img src="../src/assets/imgs/icons/in.png" alt="#"></a>
+                <a href="#"><img src="../src/assets/imgs/icons/p.png" alt="#"></a>
+                <a href="#"><img src="../src/assets/imgs/icons/g+.png" alt="#"></a>
             </div>
         </div>
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -314,7 +258,7 @@
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
