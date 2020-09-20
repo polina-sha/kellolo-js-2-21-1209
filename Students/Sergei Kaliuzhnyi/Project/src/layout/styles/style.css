@@ -1416,7 +1416,7 @@ a {
 
 .nav-line {
   min-height: 148px;
-  background-image: url(img/nav-line-back.jpg);
+  background-image: url(../../assets/img/nav-line-back.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1851,7 +1851,7 @@ a {
 }
 
 .card-option__cell_color {
-  background: url(img/red-color.jpg) no-repeat;
+  background: url(../../assets/img/red-color.jpg) no-repeat;
   background-size: 15px 15px;
   background-position-x: 15px;
   background-position-y: center;

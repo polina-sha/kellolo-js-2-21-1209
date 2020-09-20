@@ -50,8 +50,8 @@ export let basket = {
     },
     _handleActions() {
         document.querySelector('#basket-toggler').addEventListener('click', () => {
-            this.container.classList.toggle('invisible');
-            // document.querySelector('#basket').classList.toggle('invisible');
+            this.container.classList.toggle('hidden');
+            // document.querySelector('#basket').classList.toggle('hidden');
             this.shown = !this.shown;
         })
 

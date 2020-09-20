@@ -133,13 +133,13 @@
   border-left: 1px solid #ebebeb;
 }
 .arr__down {
-  background-image: url(../img/secondary/arr_down.png);
+  background-image: url(../../assets/img/secondary/arr_down.png);
   background-position: center;
   background-repeat: no-repeat;
   padding: 12px;
 }
 .arr__down:active {
-  background-image: url(../img/secondary/arr_up.png);
+  background-image: url(../../assets/img/secondary/arr_up.png);
 }
 .paginator {
   display: flex;
