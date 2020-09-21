@@ -1091,14 +1091,12 @@ input[type=checkbox]:checked ~ .form {
 
 .header__right {
   position: relative; }
-  .header__right:hover .headerCartWrap {
-    display: block;
-    z-index: 2; }
   .header__right .headerCartWrap {
+    display: block;
     position: absolute;
     width: 260px;
     left: -40px;
-    display: none; }
+    z-index: 2; }
     @media (max-width: 650px) {
       .header__right .headerCartWrap {
         left: -120px; } }
@@ -1114,12 +1112,13 @@ input[type=checkbox]:checked ~ .form {
       .header__right .headerCartWrap .headerCartWrapInAll div {
         justify-content: space-between;
         align-items: center; }
-        .header__right .headerCartWrap .headerCartWrapInAll div a:last-child {
+        .header__right .headerCartWrap .headerCartWrapInAll div button {
+          border:none;
           color: #c0c0c0;
           font-size: 16px;
           font-weight: 400;
           text-transform: uppercase; }
-          .header__right .headerCartWrap .headerCartWrapInAll div a:last-child:hover {
+          .header__right .headerCartWrap .headerCartWrapInAll div button:hover {
             color: #f16d7f; }
         .header__right .headerCartWrap .headerCartWrapInAll div a {
           text-decoration: none; }
@@ -1170,7 +1169,8 @@ input[type=checkbox]:checked ~ .form {
                 text-transform: uppercase;
                 border: 1px solid #eaeaea;
                 background-color: #ffffff; }
-            
+
+
 
 /*
 @media (min-width: 575.98px){

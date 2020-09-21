@@ -1,4 +1,4 @@
-const basket = {
+export let basket = {
     items: [],
     container: null,
     containerItems: null,
@@ -32,11 +32,11 @@ const basket = {
                             <div class="headerCartWrapPrice">${item.amount} <span>x</span> $${item.productPrice}</div>
                         </div>
                     </a>
-                    <a href="#">
-                        <i class="fas fa-times-circle"
-                            data-id="${item.productId}"
-                            name="remove"></i>
-                    </a>
+                    <button 
+                        class="fas fa-times-circle" 
+                        data-id="${item.productId}"
+                        name="remove"
+                    ></button>
                 </div>
             `
         });
@@ -83,5 +83,3 @@ const basket = {
         this._render();
     }
 }
-
-basket.init();

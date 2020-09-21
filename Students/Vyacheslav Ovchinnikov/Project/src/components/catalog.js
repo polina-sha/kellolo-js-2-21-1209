@@ -1,4 +1,4 @@
-const catalog = {
+export let catalog = {
     container: null,
     items: [],
     basket: null,
@@ -61,5 +61,3 @@ const catalog = {
         }
     }
 }
-
-catalog.init();
