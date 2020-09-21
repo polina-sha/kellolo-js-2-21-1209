@@ -1,0 +1,202 @@
+.b-product
+  display: flex
+  justify-content: space-between
+  margin-top: 40px
+  &-nav
+        width: 243px
+        margin: -18px 0 0 0//проверить
+        &-mainitem
+            position: relative
+            +ul-nostyle
+            a
+                text-decoration: none 
+                &:nth-child(n+2)
+                    margin: 18px 0 0 0
+            & [data-toggle="dropdown"] 
+                display: block
+                border-bottom: 1px solid $uiBorderColor
+                border-left: 5px solid $accentColor
+                padding: 12px
+                +fontHeading($grayFont)
+                &:before 
+                    position: absolute
+                    display: block
+                    content: '\f0d7'
+                    font-family: 'FontAwesome'
+                    font-size: 1.0em
+                    color: $grayFont
+                    right: 10px
+            & > .dropdown-menu 
+                max-height: 0
+                overflow: hidden
+                +ul-nostyle
+                transform: scaleY(0)
+                transform-origin: 50% 0%
+                transition: max-height .6s ease-out
+                +animation(hideAnimation .4s ease-out)
+                animation-duration: 0.5s
+                li
+                    padding: 0
+                    a
+                     display: block
+                     line-height: 40px
+                     padding: 0 0 0 17px
+                     +hover-style($grayFont)
+            input[type="checkbox"]
+                opacity: 0
+                display: block
+                position: absolute
+                top: 0
+                width: 100%
+                height: 100%
+                cursor: pointer
+                &:checked ~ .dropdown-menu 
+                    max-height: 999px
+                    transform: scaleY(1)
+                    transition: max-height 2s ease-in-out
+                    +animation(showAnimation .5s ease-in-out)
+                &:checked + a[data-toggle="dropdown"]::before
+                    transform: rotate(-180deg)
+                    transition: transform .6s
+                    color: $accentColor
+                &:checked + a[data-toggle="dropdown"]
+                    color: $accentColor
+  &-content
+        width: 850px
+        background: none
+        color: $grayFont
+        &__heading
+          display: flex
+          justify-content: space-between
+          width: inherit
+          height: 100px
+          &-block
+            display: flex
+            flex-direction: column
+            text-transform: uppercase
+            font-weight: 700
+            height: inherit
+            background: #ffffff
+            justify-content: space-between
+            &-row
+              display: flex
+              justify-content: space-between
+              max-width: 260px
+            input[type="range"]
+              width: 262px
+            form
+              input[type="checkbox"]
+                position: absolute
+                z-index: -1
+                opacity: 0
+              input[type="checkbox"]:checked + label::before 
+                border-color: $accentColor
+                background-color: $accentColor
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+              label
+                font-weight: 400
+                display: inline-flex
+                align-items: center
+                user-select: none
+                margin-top: 13px
+                &::before
+                  content: ''
+                  display: inline-block
+                  width: 1em
+                  height: 1em
+                  flex-shrink: 0
+                  flex-grow: 0
+                  border: 1px solid #ebebeb
+                  margin-right: 0.5em
+                  background-repeat: no-repeat
+                  background-position: center center
+                  background-size: 50% 50%
+        &__filter
+            display: flex
+            align-items: center
+            width: inherit
+            margin-top: 40px
+            height: 50px
+            background: $itemsBgColor
+            form
+                max-height: 30px
+                background: #ffffff
+                margin: 0 0 0 10px
+                border: 1px solid #ebebeb
+                label
+                    padding: 0 10px 0 10px
+                input
+                    height: 30px
+                    max-width: 90px
+                    +noBorder
+                    border-left: 1px solid #ebebeb
+                    background-color: #ffffff
+                    padding: 0 0 0 10px
+                    &:hover
+                        cursor: pointer
+  &-control 
+    display: flex
+    margin: 20px 0 0 0 
+    justify-content: space-between
+    align-items: center
+    font-weight: 400
+    ul
+      +ul-nostyle
+      +borderRadius(#ebebeb)
+      color: #c4c4c4
+      line-height: 40px
+      padding: 0 30px 0 15px
+      li
+        display: inline
+        padding: 0 0 0 15px
+        transition: 0.5s
+        &:nth-child(8)
+          padding: 0
+          margin-left: -3px
+        &:nth-child(9)
+          padding: 0
+          margin-left: -3px
+        &:hover
+          color: $accentColor
+        a
+          color: #c4c4c4
+          transition: 0.5s
+          &:hover
+            color: $accentColor
+         
+    &-btn
+      margin-left: 0 auto
+      width: 150px
+      height: 45px
+      +borderRadius($accentColor)
+      color: $accentColor
+      outline: none
+      transition: 0.5s
+      &:hover
+        color: #ffffff
+        background-color: $accentColor
+.b-prospect .container
+  display: flex
+  justify-content: space-araound
+  background-color: #222224
+  margin-top: 110px
+  &-block
+    width: 100px
+    height: 100px
+    background: pink
+
+@keyframes hideAnimation 
+  0% 
+    transform: scaleY(1)
+  60% 
+    transform: scaleY(0.7)
+  80% 
+    transform: scaleY(0.4)
+  100%
+    transform: scaleY(0)
+.sp-row
+  font-weight: 400
+  text-transform: none
+.sum
+  display: flex
+  justify-content: space-between
