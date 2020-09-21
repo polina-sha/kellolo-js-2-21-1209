@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            color: honeydew;
+        }
+
+        fieldset {
+            border: none;
+            background-color: gray;
+            margin-bottom: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 400px;
+            height: 30px;
+            border: 1px solid gray;
+            background-color: darkgray;
+            color: honeydew;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <p>Выберите размер:</p>
+            <label>
+                <input type="radio" name="size" value="Большой" data-price="100" data-calories="40"> Большой (100
+                рублей, 40 калорий).
+            </label>
+            <label>
+                <input type="radio" name="size" value="Маленький" data-price="50" data-calories="20"> Маленький (50
+                рублей, 20 калорий).
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>Выберите начинку:</p>
+            <label>
+                <input type="radio" name="add" value="Сыр" data-price="10" data-calories="20"> Сыр (+10 рублей, +20
+                калорий).
+            </label>
+            <label>
+                <input type="radio" name="add" value="Салат" data-price="20" data-calories="5"> Салат (+20 рублей, +5
+                калорий).
+            </label>
+            <label>
+                <input type="radio" name="add" value="Картофель" data-price="15" data-calories="10"> Картофель (+15
+                рублей, +10 калорий).
+            </label>
+        </fieldset>
+        <fieldset>
+            <p>По желанию:</p>
+            <label>
+                <input type="checkbox" name="toping" value="Специи" data-price="15" data-calories="1"> Посыпать специями
+                (+15 рублей, +1 калорий);
+            </label>
+            <label>
+                <input type="checkbox" name="toping" value="Майонез" data-price="20" data-calories="5"> Полить майонезом
+                (+20 рублей, +5 калорий).
+            </label>
+        </fieldset>
+    </form>
+    <button id="okBtn">Добавить заказ</button>
+    <div class="yourBurger"></div>
+
+    <script>
+
+        class Burger {
+            constructor(size, add, toping) {
+                this.sizeObj = this._getObj(this._getInfo(size));
+                this.addObj = this._getObj(this._getInfo(add));
+                this.topArr = this._getArr(toping);
+                this.totalPrice = this._getSum(this.sizeObj, this.addObj, this.topArr);
+                this.totalCal = this._getCal(this.sizeObj, this.addObj, this.topArr);
+            }
+            _getObj(obj) {
+                return { value: obj.value, price: +obj.dataset['price'], calories: +obj.dataset['calories'] };
+            }
+
+            _getInfo(attrName) {
+                let obj = document.querySelector(`input[name=${attrName}]:checked`);
+                return obj;
+            }
+
+            _getArr(attrName) {
+                let formArr = [...document.querySelectorAll(`input[name=${attrName}]:checked`)];
+                let topArr = formArr.map(el => this._getObj(el));
+                return topArr;
+            }
+
+            _getSum(obj1, obj2, arr) {
+                let totalPrice = obj1.price + obj2.price;
+                this.topArr.map(el => totalPrice += el.price);
+                return totalPrice;
+            }
+            _getCal(obj1, obj2, arr) {
+                let totalCal = obj1.calories + obj2.calories;
+                this.topArr.map(el => totalCal += el.calories);
+                return totalCal;
+            }
+
+            _getArrValue(arr) {
+                return arr.map(el => el.value);
+            }
+
+            _render() {
+                return document.querySelector('.yourBurger').innerHTML = `<h3>Ваш заказ:</h3>
+                        <p>Вы выбрали бургер размера: ${this.sizeObj.value};</p>
+                        <p>Он содержит ${this.addObj.value} и приправу: ${this._getArrValue(this.topArr)}. </p>
+                        <p>Стоимость Вашего заказа: ${this.totalPrice} руб.</p>
+                        <p>Общее содержание каллорий: ${this.totalCal} кал.</p>
+                        `
+            }
+        };
+
+        class Form {
+            constructor(){
+                this.btn = document.querySelector('#okBtn');
+                this._init();
+            }
+            _init() {
+                this.btn.addEventListener('click', () => {
+                    let newBurger = new Burger('size', 'add', 'toping');
+                    newBurger._render();
+                    console.log(newBurger);
+                });
+            }
+        };
+
+        let form = new Form();
+
+    </script>
+</body>
+
+</html>

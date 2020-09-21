@@ -1,12 +1,12 @@
 
-import { basket } from './bask';
-import { catalog } from './cat';
+import { basket } from './basket';
+import { catalog } from './catalog';
 
 
 
 export default () => {
     basket._init();
-    catalog._init();
+    catalog._init(basket);
     
     basket.hello();
     catalog.hello();
