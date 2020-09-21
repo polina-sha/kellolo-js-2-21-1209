@@ -23,31 +23,31 @@ const basket = {
         let htmlStr = '';
         this.items.forEach(item => {
             htmlStr += `
-            <div class="d-flex headerCartWrapIn">
-                <a href="#" class="d-flex ">
-                    <img src="${item.productImg}" alt="photo">
-                    <div>
-                        <div>${item.productName}</div>
-                        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                        <div class="headerCartWrapPrice">${item.amount} <span>x</span> $${item.productPrice}</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <i class="fas fa-times-circle"
-                        data-id="${item.productId}"
-                        name="remove"></i>
-                </a>
-            </div>
+                <div class="d-flex headerCartWrapIn">
+                    <a href="#" class="d-flex ">
+                        <img src="${item.productImg}" alt="photo">
+                        <div>
+                            <div>${item.productName}</div>
+                            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                            <div class="headerCartWrapPrice">${item.amount} <span>x</span> $${item.productPrice}</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-times-circle"
+                            data-id="${item.productId}"
+                            name="remove"></i>
+                    </a>
+                </div>
             `
         });
         htmlStr += `
-        <div class="headerCartWrapTotalPrice">
-            <div>total</div>
-            <div>$500.00</div>
-        </div>
+            <div class="headerCartWrapTotalPrice">
+                <div>total</div>
+                <div>$500.00</div>
+            </div>
 
-        <button type="button" class="button productsButtonIndex">Checkout</button>
-        <button type="button" class="button productsButtonIndex">Go to cart</button>
+            <button type="button" class="button productsButtonIndex">Checkout</button>
+            <button type="button" class="button productsButtonIndex">Go to cart</button>
         `;
         this.container.innerHTML = htmlStr;
     },

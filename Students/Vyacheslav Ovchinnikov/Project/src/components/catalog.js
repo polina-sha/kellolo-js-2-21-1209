@@ -1,4 +1,4 @@
-export default {
+const catalog = {
     container: null,
     items: [],
     basket: null,
@@ -24,40 +24,22 @@ export default {
     _render() {
         let htmlStr = '';
         this.items.forEach(item => {
-            htmlStr += `<div class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 col-lg-3 feturedItems ">
-                            <div class="feturedItem">
-                                <div class="feturedImgWrap">
-                                    <div class="feturedBuy">
-                                        <button
-                                            name="add"
-                                            data-id="${item.productId}"
-                                            data-name="${item.productName}"
-                                            data-price="${item.productPrice}"
-                                            data-img="${item.productImg}"
-                                        >
-                                            <div><i class="fas fa-shopping-cart"></i> Add to Cart</div>
-                                        </button>
-                                    </div>
-                                    <img class="feturedProduct" src="${item.productImg}" alt="product1">
-                                </div>
-                                <div>
-                                    <div class="feturedBuySm d-flex flex-column justify-content-around align-items-center align-items-md-start">
-                                        <div class="feturedItemName">${item.productName}</div>
-                                        <div class="feturedItemPrice">$${item.productPrice}</div>
-                                        <button 
-                                            class="d-md-none"
-                                            name="add"
-                                            data-id="${item.productId}"
-                                            data-name="${item.productName}"
-                                            data-price="${item.productPrice}"
-                                            data-img="${item.productImg}"
-                                        >
-                                            <i class="fas fa-shopping-cart"></i> Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`
+            htmlStr += `
+                <section class="product">
+                    <a href="#"><img class="product__img" src="${item.productImg}" alt="photo"></a>
+                    <div class="product__content">
+                        <h2><a href="#" class="product__name">${item.productName}</a></h2>
+                        <p class="product__price">$${item.productPrice}</p>
+                    </div>
+                    <a href="#" class="product__add"
+                                name="add"
+                                data-id="${item.productId}"
+                                data-name="${item.productName}"
+                                data-price="${item.productPrice}"
+                                data-img="${item.productImg}"
+                    ><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
+                </section>
+             `
         });
         this.container.innerHTML = htmlStr;
     },
@@ -79,3 +61,5 @@ export default {
         }
     }
 }
+
+catalog.init();
