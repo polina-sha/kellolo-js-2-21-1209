@@ -1,4 +1,4 @@
-export default {
+const basket = {
     items: [],
     container: null,
     containerItems: null,
@@ -23,29 +23,32 @@ export default {
         let htmlStr = '';
         this.items.forEach(item => {
             htmlStr += `
-            <div class="d-flex headerCartWrapIn mb-1 p-2">
-                    <img src="${item.productImg}" alt="" width="85" height="100>
+            <div class="d-flex headerCartWrapIn">
+                <a href="#" class="d-flex ">
+                    <img src="${item.productImg}" alt="photo">
                     <div>
                         <div>${item.productName}</div>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </span>
-                        <div class="headerCartWrapPrice">${item.amount} 
-                            <span>x</span> $${item.productPrice}
-                        </div>
-
-                <button 
-                    class="fas fa-times-circle" 
-                    data-id="${item.productId}"
-                    name="remove"
-                ></button>
+                        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                        <div class="headerCartWrapPrice">${item.amount} <span>x</span> $${item.productPrice}</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <i class="fas fa-times-circle"
+                        data-id="${item.productId}"
+                        name="remove"></i>
+                </a>
             </div>
             `
         });
+        htmlStr += `
+        <div class="headerCartWrapTotalPrice">
+            <div>total</div>
+            <div>$500.00</div>
+        </div>
+
+        <button type="button" class="button productsButtonIndex">Checkout</button>
+        <button type="button" class="button productsButtonIndex">Go to cart</button>
+        `;
         this.container.innerHTML = htmlStr;
     },
     _handleActions() {
@@ -80,3 +83,5 @@ export default {
         this._render();
     }
 }
+
+basket.init();

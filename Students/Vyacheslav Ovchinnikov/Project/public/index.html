@@ -5,6 +5,7 @@
         <title>Main Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../src/layout/styles/styles.css">
     </head>
     <body>
         <div class="wrap">
@@ -22,8 +23,12 @@
                     </div>
                     <div class="header__right">
                         <a class="cart" href="#" id="basket-toggler"><img class="header__cart" src="../src/assets/imgs/cart.png" alt="Basket"></a>
-                        <div class="headerCartWrap invisible" id="basket">
-                            <!-- корзина -->
+                                                
+                        <div class="headerCartWrap">
+                            <div class="headerCartWrapBlock"></div>
+                            <div class="headerCartWrapInAll" id="basket"> 
+                                <!-- корзина JS-->                                
+                            </div>
                         </div>
 
                         <a href="#" class="button">My Account <i class="fas fa-caret-down"></i></a>
@@ -74,6 +79,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -117,6 +123,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -178,6 +185,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -207,6 +215,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -284,6 +293,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -333,7 +343,7 @@
                     <div class="row" id="catalog">
                         <!-- ВСТРАИВАЕМОЕ СОДЕРЖИМОЕ -->  
                     </div>
-             <!--   <section class="product">
+                    <section class="product">
                         <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_1.png" alt="photo"></a>
                         <div class="product__content">
                             <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
@@ -396,7 +406,7 @@
                             <p class="product__price">$52.00</p>
                         </div>
                         <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section> -->
+                    </section>
                 </main>
 
                 <button class="product-box__button">Browse All Products<img src="../src/assets/imgs/arrowToRight.png" alt="Стрелка"></button>
@@ -506,6 +516,6 @@
             </div>
 
         </div>
-
+        <script src="../src/components/basket.js"></script>
     </body>
 </html>

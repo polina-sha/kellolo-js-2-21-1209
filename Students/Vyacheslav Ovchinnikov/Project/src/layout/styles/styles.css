@@ -1086,6 +1086,92 @@ input[type=checkbox]:checked ~ .form {
       color: #ffffff !important;
       background: #f38191; }
 
+
+/* добавил стили на продвинутом JS */
+
+.header__right {
+  position: relative; }
+  .header__right:hover .headerCartWrap {
+    display: block;
+    z-index: 2; }
+  .header__right .headerCartWrap {
+    position: absolute;
+    width: 260px;
+    left: -40px;
+    display: none; }
+    @media (max-width: 650px) {
+      .header__right .headerCartWrap {
+        left: -120px; } }
+    .header__right .headerCartWrap .headerCartWrapBlock {
+      height: 15px; }
+    .header__right .headerCartWrap .headerCartWrapInAll {
+      background-color: #ffffff;
+      padding: 1rem 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 5px; }
+      .header__right .headerCartWrap .headerCartWrapInAll .headerCartWrapIn {
+        margin-bottom: 1rem; }
+      .header__right .headerCartWrap .headerCartWrapInAll div {
+        justify-content: space-between;
+        align-items: center; }
+        .header__right .headerCartWrap .headerCartWrapInAll div a:last-child {
+          color: #c0c0c0;
+          font-size: 16px;
+          font-weight: 400;
+          text-transform: uppercase; }
+          .header__right .headerCartWrap .headerCartWrapInAll div a:last-child:hover {
+            color: #f16d7f; }
+        .header__right .headerCartWrap .headerCartWrapInAll div a {
+          text-decoration: none; }
+          .header__right .headerCartWrap .headerCartWrapInAll div a div {
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            align-items: start; }
+            .header__right .headerCartWrap .headerCartWrapInAll div a div:first-child {
+              color: #222222;
+              font-weight: 700; }
+            .header__right .headerCartWrap .headerCartWrapInAll div a div:last-child {
+              color: #f16d7f; }
+            .header__right .headerCartWrap .headerCartWrapInAll div a div span {
+              color: #e4af48; }
+            .header__right .headerCartWrap .headerCartWrapInAll div a div .headerCartWrapPrice {
+              color: #f16d7f;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-direction: row; }
+              .header__right .headerCartWrap .headerCartWrapInAll div a div .headerCartWrapPrice span {
+                text-transform: lowercase;
+                font-size: 10px;
+                padding: 0 0.3rem; }
+          .header__right .headerCartWrap .headerCartWrapInAll div a img {
+            padding-right: 0.5rem;
+            height: 120px;
+            width: auto; }
+          .header__right .headerCartWrap .headerCartWrapInAll .headerCartWrapTotalPrice {
+            display: flex;
+            justify-content: space-between;
+            color: #222222;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase; }
+
+            .productsButtonIndex {
+              width: -webkit-fill-available;
+              margin-top: 1rem; }
+              .productsButtonIndex:last-child {
+                color: #4a4a4a;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border: 1px solid #eaeaea;
+                background-color: #ffffff; }
+            
+
 /*
 @media (min-width: 575.98px){
   html {
