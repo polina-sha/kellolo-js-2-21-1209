@@ -821,7 +821,7 @@ button {
 .endBanner {
   margin-top: 100px;
   height: 438px;
-  background: url(../img/rectangle_9_2194.png) no-repeat center bottom, #ccc;
+  background: url(../../assets/img/rectangle_9_2194.png) no-repeat center bottom, #ccc;
   background-blend-mode: overlay;
   background-size: cover;
 }

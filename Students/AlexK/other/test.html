@@ -5,39 +5,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../project/src/styles/css/mStyle.css">
+  <link rel="stylesheet" href="../project/src/styles/css/style.css">
+  <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div></div>
+  <div class="catalog"></div>
+
+
   <script>
+    'use strict'
     let cart = {
       items: [],
-      insertSelector: null,
+      selector: null,
       url: "https://raw.githubusercontent.com/kulyamzin/GeekBrain/master/Files/GeekBrains/basket.json",
       init() {
-        this.insertSelector = document.querySelector('div');
+        this.selector = document.querySelector('.catalog');
         this._get(this.url)
-        .then(jsonTxt => {
-          this.items = jsonTxt.content;
-        })
-        .finally(() => {
-          this._render();
-        })
+          .then(jsonTxt => {
+            this.items = jsonTxt.content;
+            this.total = jsonTxt.totalPrice;
+          })
+          .finally(() => {
+            this._render();
+            this._handle();
+          })
       },
       _get(url) {
         return fetch(url).then(document => document.json()); //возвращает promise, содержащий JSON 
       },
       _render() {
         let html = '';
-        this.items.forEach(item =>{
-          html += `<p>${item}<p>`;
-            console.log(item);
+        let i = 0;
+        this.items.forEach(item => {
+          html += `
+          <div class="b-basket__row">
+            <div class="b-basket__row__item b-basket-main">
+              <div class="b-basket__row__item-img"><img src="${item.productImg}" alt="basket"></div>
+              <div class="b-basket__row__item-txt">
+                <h3><a href="#">${item.productName}</a></h3>
+                <p><b>Color:</b> ${item.productColor}<br>
+                <b>Size:</b> ${item.productSize}</p>
+              </div>
+            </div>
+            <div class="b-basket-info">${item.productPrice}</div>
+            <div class="b-basket-info"><input type="text" maxlength="4" value="${item.amount}" data-id="${item.productId}" data-command="ca"></div>
+            <div class="b-basket-info">free</div>
+            <div class="b-basket-info">${item.productPrice*item.amount}</div>
+            <div class="b-basket-info">
+              <button>   
+                <i class="fas fa-times-circle" aria-hidden="true" data-id="${item.productId}" data-command="rm" style="font-size:20px"></i>
+              </button>
+            </div>
+          </div>`;
         });
-        this.insertSelector.innerHTML= html ;
+        this.selector.innerHTML = html;
+      },
+      _handle() {
+        this.selector.addEventListener('click', event => {
+          switch (event.target.dataset.command) {
+            case 'rm':
+              this.removeFullObj(event.target.dataset.id);
+              break;
+          }
+          this.selector.addEventListener('change', event => {
+            if (event.target.dataset.command == 'ca') {
+              this.changeAmount(event.target.dataset.id);
+            };
+          })
+        })
+      },
+      removeFullObj(id) {
+        let elemDelId = this.items.find(element => element.productId == id);
+        this.items.splice(this.items.indexOf(elemDelId), 1);
+        this._render();
+      },
+      changeAmount(id) {
+        let elemCaId = this.items.find(element => element.productId == id);
+        elemCaId.amount = event.target.value;
+        this._render();
       }
-    }
 
+    }
     cart.init();
+
   </script>
 </body>
 

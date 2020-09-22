@@ -202,3 +202,8 @@ body {
   transition: all 1s ease-in-out;
   max-height: 2000px;
 }
+
+.hidden {
+  max-height: 0px;
+  overflow: hidden;
+}

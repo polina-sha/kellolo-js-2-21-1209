@@ -1,9 +1,7 @@
-import { bask } from './bask';
-import { cat } from './car';
+import {basket} from "./basket";
+import {catalog} from './catalog';
 
 export default () => {
-    bask._init();
-    cat._init();
-    bask.hello();
-    cat.hello();
+    basket.init();
+    catalog.init();
 }

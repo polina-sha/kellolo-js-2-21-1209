@@ -83,8 +83,14 @@
 .header__cart {
   margin-left: auto;
   margin-right: 26px;
+  position: relative;
     &:hover {
       cursor: pointer;
+  }
+  .headerCartWrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
   }
 }
 
