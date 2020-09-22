@@ -1,3 +1,4 @@
+import Item from './item';
 export default class Catalog {
     constructor(basket, url = '/catalog.json', container = '.featured__items'){
         this.container = document.querySelector(container);
@@ -21,7 +22,7 @@ export default class Catalog {
     }
     _render() {
         let htmlStr = '';
-        this.items.forEach(item => htmlStr += new CatalogItem(item).render());
+        this.items.forEach(item => htmlStr += new Item(item, this.constructor.name).render());
         this.container.innerHTML = htmlStr;
     }
     _handleActions() {
@@ -43,30 +44,30 @@ export default class Catalog {
     }
 };
 
-class CatalogItem {
-    constructor(item){
-        this.item = item;
-    }
-    render(){
-        return `<div class="featured__items_block">
-                    <a href="single_page.html">
-                        <div class="featured__items_block-image-1 featured__hover"><img class="feturedProduct" src="${this.item.productImg}" alt="product1"></div>
-                        <h3 class="featured__items_block-name">${this.item.productName}</h3>
-                        <p class="featured__items_block-price">$${this.item.productPrice}</p>
-                    </a>
-                    <button 
-                        class="featured__add"
-                        name="add"
-                        data-id="${this.item.productId}"
-                        data-name="${this.item.productName}"
-                        data-price="${this.item.productPrice}"
-                        data-img="${this.item.productImg}"
-                    >
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
-                    </button>
-                </div>
-                `
-    }
-};
+// class CatalogItem {
+//     constructor(item){
+//         this.item = item;
+//     }
+//     render(){
+//         return `<div class="featured__items_block">
+//                     <a href="single_page.html">
+//                         <div class="featured__items_block-image-1 featured__hover"><img class="feturedProduct" src="${this.item.productImg}" alt="product1"></div>
+//                         <h3 class="featured__items_block-name">${this.item.productName}</h3>
+//                         <p class="featured__items_block-price">$${this.item.productPrice}</p>
+//                     </a>
+//                     <button 
+//                         class="featured__add"
+//                         name="add"
+//                         data-id="${this.item.productId}"
+//                         data-name="${this.item.productName}"
+//                         data-price="${this.item.productPrice}"
+//                         data-img="${this.item.productImg}"
+//                     >
+//                         <i class="fas fa-shopping-cart"></i> Add to Cart
+//                     </button>
+//                 </div>
+//                 `
+//     }
+// };
 
 

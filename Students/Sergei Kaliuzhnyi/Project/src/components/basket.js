@@ -1,3 +1,4 @@
+import Item from './item';
 export default class Basket {
     constructor(url = '/basket.json', container = '.header__drop') {
         this.items = [];
@@ -24,7 +25,7 @@ export default class Basket {
     _render() {
         let htmlStr = '';
         this.items.map(item => {
-            htmlStr += new BasketItem(item).render();
+            htmlStr += new Item(item, this.constructor.name).render();
         });
         this.container.innerHTML = htmlStr;
     }
@@ -61,35 +62,18 @@ export default class Basket {
     }
 };
 
-class BasketItem {
-    constructor(item) {
-        this.name = item.productName;
-        this.img = item.productImg;
-        this.price = item.productPrice;
-        this.amount = item.amount;
-        this.id = item.productId;
-    }
-    render() {
-        return ` <div class="header__dropbox">
-                    <a href="single_page.html">
-                        <img src="${this.img}" class="header__dropimg" alt="" width="85" height="100>
-                    </a>
-                    <div class="header__dropcontent">
-                        <a href="single_page.html">
-                            <h3 class="header__dropname">${this.name}</h3>
-                            <img src="../src/assets/img/headerdropstars.jpg" alt="">
-                            <p class="header__dropprice">${this.amount} Х $${this.price}</p>
-                        </a>
-                    </div>
-                    <button 
-                        class="header__cart-drop-button fas fa-times-circle" 
-                        data-id="${this.id}"
-                        name="remove"
-                    ></button>
-                </div>
-                `
-    }
-};
+// class BasketItem {
+//     constructor(item) {
+//         this.name = item.productName;
+//         this.img = item.productImg;
+//         this.price = item.productPrice;
+//         this.amount = item.amount;
+//         this.id = item.productId;
+//     }
+//     render() {
+        
+//     }
+// };
 
 
 
