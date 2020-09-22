@@ -1,15 +1,13 @@
-class Basket {
-    constructor() {
+export default class Basket {
+    constructor(url = '/basket.json', container = '.header__drop') {
         this.items = [];
-        this.container = null;
+        this.container = document.querySelector(container);
         // this.containerItems =null,
         this.shown = false;
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json';
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
         this._init();
     }
     _init() {
-        this.container = document.querySelector('.header__drop');
-        //this.containerItems = document.querySelector('');
         this._get(this.url)
             .then(basket => {
                 this.items = basket.content;
@@ -93,7 +91,6 @@ class BasketItem {
     }
 };
 
-export let basket = new Basket();
 
 
 
