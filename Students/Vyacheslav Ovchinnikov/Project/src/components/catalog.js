@@ -1,11 +1,38 @@
-export default {
-    container: null,
-    items: [],
-    basket: null,
-    url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
-    init(basket) {
-        this.container = document.querySelector('#catalog');
+class CatalogItem {
+    constructor(item) {
+        this.item = item;
+    }
+
+    render() {
+        return `
+            <section class="product">
+                <a href="#"><img class="product__img" src="${this.item.productImg}" alt="photo"></a>
+                <div class="product__content">
+                    <h2><a href="#" class="product__name">${this.item.productName}</a></h2>
+                    <p class="product__price">$${this.item.productPrice}</p>
+                </div>
+                <a href="#" class="product__add"
+                            name="add"
+                            data-id="${this.item.productId}"
+                            data-name="${this.item.productName}"
+                            data-price="${this.item.productPrice}"
+                            data-img="${this.item.productImg}"
+                ><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
+            </section>
+        `
+    }
+}
+
+export default class Catalog {
+    constructor(basket, container = '#catalog', url = '/catalog.json') {
+        this.container = document.querySelector(container);
+        this.items = [];
         this.basket = basket;
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
+        this.init();
+    }
+    
+    init() {
         this._get(this.url)
             .then(arr => {
                 this.items = arr;
@@ -14,35 +41,24 @@ export default {
                 this._render();
                 this._handleActions();
             })
-    },
+    }
+
     _get(url) {
         return fetch(url).then(d => d.json());
-    },
+    }
+
     _fillCatalog() { //Инкапсуляция (условная для JS)
         this.items = getArrayOfObjects();
-    },
+    }
+
     _render() {
         let htmlStr = '';
         this.items.forEach(item => {
-            htmlStr += `
-                <section class="product">
-                    <a href="#"><img class="product__img" src="${item.productImg}" alt="photo"></a>
-                    <div class="product__content">
-                        <h2><a href="#" class="product__name">${item.productName}</a></h2>
-                        <p class="product__price">$${item.productPrice}</p>
-                    </div>
-                    <a href="#" class="product__add"
-                                name="add"
-                                data-id="${item.productId}"
-                                data-name="${item.productName}"
-                                data-price="${item.productPrice}"
-                                data-img="${item.productImg}"
-                    ><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                </section>
-             `
+            htmlStr += new CatalogItem(item).render();
         });
         this.container.innerHTML = htmlStr;
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', ev => {
             if (ev.target.name == 'add') {
@@ -50,7 +66,8 @@ export default {
                 this.basket.add(this._createNewItem(dataset));
             }
         })
-    },
+    }
+
     _createNewItem(dataset) {
         return {
             productId: dataset.id,
