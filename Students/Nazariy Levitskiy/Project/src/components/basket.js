@@ -1,6 +1,6 @@
 'use strict';
 
-class Basket{
+export default class Basket{
     constructor(){
     this.items = [],
     this.container = null,
@@ -86,5 +86,3 @@ class Basket{
         this._render();
     }
 }
-
-export let basket = new Basket();

@@ -24,7 +24,7 @@ body {
     width: 165px;
     line-height: 51px;
     text-transform: uppercase;
-    background-image: url("../../assets/img/logo.png");
+    background-image: url("../../assets/imgs/logo.png");
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     font-size: 27px;
@@ -131,7 +131,7 @@ body {
     width: 1140px;
     margin: 0 auto;
     height: inherit;
-    background-image: url("../../assets/img/topHeaderBack.png");
+    background-image: url("../../assets/imgs/topHeaderBack.png");
     background-repeat: no-repeat;
     background-position: right 40px top 1px;
     background-size: 555px;
@@ -188,24 +188,24 @@ body {
 .flex_box:nth-child(1) {
     width: 560px;
     height: 542px;
-    background-image: url("../../assets/img/offer1.jpg");
+    background-image: url("../../assets/imgs/offer1.jpg");
 }
 
 .flex_box:nth-child(4) {
     width: 560px;
     height: 542px;
-    background-image: url("../../assets/img/offer4.jpg");
+    background-image: url("../../assets/imgs/offer4.jpg");
 }
 .flex_box:nth-child(2) {
     width: 560px;
     height: 261px;
-    background-image: url("../../assets/img/offer2.jpg");
+    background-image: url("../../assets/imgs/offer2.jpg");
 }
 
 .flex_box:nth-child(3) {
     width: 560px;
     height: 261px;
-    background-image: url("../../assets/img/offer3.jpg");
+    background-image: url("../../assets/imgs/offer3.jpg");
 }
 
 .text_hot {
@@ -408,7 +408,7 @@ body {
 .ForWomen {
     height: inherit;
     width: 767px;
-    background-image: url("../../assets/img/offerForWomen.jpg");
+    background-image: url("../../assets/imgs/offerForWomen.jpg");
     position: relative;
 }
 
@@ -451,15 +451,15 @@ body {
 }
 
 .OfferUnit:first-child {
-    background: url("../../assets/img/offerDetails1.png") no-repeat 36px 30px;
+    background: url("../../assets/imgs/offerDetails1.png") no-repeat 36px 30px;
 }
 
 .OfferUnit:nth-child(2) {
-    background: url("../../assets/img/offerDetails2.png") no-repeat 36px 30px;
+    background: url("../../assets/imgs/offerDetails2.png") no-repeat 36px 30px;
 }
 
 .OfferUnit:last-child {
-    background: url("../../assets/img/offerDetails3.png") no-repeat 36px 30px;
+    background: url("../../assets/imgs/offerDetails3.png") no-repeat 36px 30px;
 }
 
 .OfferMain {
@@ -478,7 +478,7 @@ body {
     height: 438px;
     width: 1600px;
     margin: 100px auto;
-    background: url("../../assets/img/subscribe.jpg") no-repeat, #ccc;
+    background: url("../../assets/imgs/subscribe.jpg") no-repeat, #ccc;
     background-blend-mode: overlay;
     background-size: cover;
 }

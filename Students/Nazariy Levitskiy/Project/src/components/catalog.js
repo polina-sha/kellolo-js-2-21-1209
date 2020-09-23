@@ -1,6 +1,6 @@
 'use strict';
 
-class Catalog{
+export default class Catalog{
     constructor(){
     this.container = null,
     this.items = [],
@@ -83,5 +83,3 @@ class Catalog{
         }
     }
 }
-
-export let catalog = new Catalog();
