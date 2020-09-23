@@ -1,4 +1,4 @@
-export let catalog = {
+export default {
     container: null,
     items: [],
     basket: null,

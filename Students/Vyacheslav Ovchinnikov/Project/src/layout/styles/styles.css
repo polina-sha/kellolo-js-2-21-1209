@@ -662,11 +662,12 @@ input[type=checkbox]:checked ~ a.mainFilter__a3 {
       display: inline-block;
       width: 13px;
       height: 13px;
-      background: url("") no-repeat; }
+      /* background: url("") no-repeat; */
+       }
     .sizesWrap > div input[type="checkbox"] {
       display: none; }
     .sizesWrap > div input[type="checkbox"]:checked + .productsCheckbox {
-      background: url("") no-repeat, url("") no-repeat;
+      /* background: url("") no-repeat; */
       background-size: contain, 12px;
       background-blend-mode: multiply; }
     .sizesWrap > div label {
@@ -716,7 +717,7 @@ input[type=checkbox]:checked ~ a.mainFilter__a3 {
       padding-bottom: 2px;
       -webkit-appearance: none;
       -moz-appearance: none;
-      background: url("") no-repeat right 5px center;
+      /* background: url("") no-repeat right 5px center; */
       background-size: 9px;
       padding-right: 20px; }
 

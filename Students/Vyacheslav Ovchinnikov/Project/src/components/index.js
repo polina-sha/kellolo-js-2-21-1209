@@ -1,5 +1,5 @@
-import { basket } from './basket';
-import { catalog } from './catalog';
+import basket from './basket';
+import catalog from './catalog';
 
 export default () => {
     basket.init();
