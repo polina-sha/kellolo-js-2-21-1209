@@ -23,15 +23,7 @@ class CatalogItem {
     }
 }
 
-export default class Catalog {
-    constructor(basket, container = '#catalog', url = '/catalog.json') {
-        this.container = document.querySelector(container);
-        this.items = [];
-        this.basket = basket;
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
-        this.init();
-    }
-    
+class CatalogInit {
     init() {
         this._get(this.url)
             .then(arr => {
@@ -45,6 +37,16 @@ export default class Catalog {
 
     _get(url) {
         return fetch(url).then(d => d.json());
+    }
+}
+
+export default class Catalog extends CatalogInit {
+    constructor(basket, container = '#catalog', url = '/catalog.json') {
+        this.container = document.querySelector(container);
+        this.items = [];
+        this.basket = basket;
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
+        this.init();
     }
 
     _fillCatalog() { //Инкапсуляция (условная для JS)

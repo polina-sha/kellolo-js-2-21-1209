@@ -24,16 +24,7 @@ class BasketItem {
     }
 }
 
-export default class Basket {
-    constructor(container = '#basket', url = '/basket.json') {
-        this.items = [];
-        this.container = document.querySelector(container);
-        this.containerItems = document.querySelector('#basket-items');
-        this.shown = false;
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
-        this.init();
-    }
-
+class BasketInit {
     init() {
         this._get(this.url)
             .then(basket => {
@@ -47,6 +38,17 @@ export default class Basket {
 
     _get(url) {
         return fetch(url).then(d => d.json());
+    }
+}
+
+export default class Basket extends BasketInit {
+    constructor(container = '#basket', url = '/basket.json') {
+        this.items = [];
+        this.container = document.querySelector(container);
+        this.containerItems = document.querySelector('#basket-items');
+        this.shown = false;
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
+        this.init();
     }
 
     _render() {
