@@ -42,6 +42,7 @@ class CatalogInit {
 
 export default class Catalog extends CatalogInit {
     constructor(basket, container = '#catalog', url = '/catalog.json') {
+        super(url);
         this.container = document.querySelector(container);
         this.items = [];
         this.basket = basket;

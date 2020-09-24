@@ -43,6 +43,7 @@ class BasketInit {
 
 export default class Basket extends BasketInit {
     constructor(container = '#basket', url = '/basket.json') {
+        super(url);
         this.items = [];
         this.container = document.querySelector(container);
         this.containerItems = document.querySelector('#basket-items');
