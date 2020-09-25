@@ -1,10 +1,10 @@
 export default class Basket {
-    constructor(container= '#basket') {
+    constructor(container= '#basket', url = '/basket.json') {
         this.items = [];
         this.container = document.querySelector(container);
         this.containerItems = document.querySelector('#basket-items');
         this.shown = false;
-        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON/basket.json';
+        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON' + url;
         this.init()
     }
     init(){
