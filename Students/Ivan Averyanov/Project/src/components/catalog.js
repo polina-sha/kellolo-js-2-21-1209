@@ -61,10 +61,8 @@ export default class Catalog {
         this.buyButton.forEach(btn => {
         btn.addEventListener('click', ev => {
             if (ev.currentTarget.name == 'add' && ev.currentTarget.dataset.id) {
-                //if (ev.currentTarget.dataset.id){
                     let dataset = ev.currentTarget.dataset;
                     this.basket.add(this._createNewItem(dataset));
-                //}
             }
         })})
     }
