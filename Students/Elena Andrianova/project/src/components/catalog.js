@@ -1,41 +1,13 @@
-// const imgURL = 'https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/';
-// let NAMES = [
-//     'MANGO PEOPLE T-SHIRT', 
-//     'BANANA PEOPLE T-SHIRT', 
-//     'STRAWBERRY PEOPLE T-SHIRT',
-//     'ORANGE PEOPLE T-SHIRT',
-//     'PUMKIN PEOPLE T-SHIRT',
-//     'PINEAPPLE PEOPLE T-SHIRT',
-//     'CUCUMBER PEOPLE T-SHIRT',
-//     'TOMATO PEOPLE T-SHIRT'
-// ];
-// let PRICES = [52, 53, 55, 67, 69, 94, 23, 45];
-
-// function getArrayOfObjects() {
-//     let local = [];
-
-//     for (let i = 0; i < NAMES.length; i++) {
-//         local.push({
-//             productName: NAMES[i],
-//             productPrice: PRICES[i],
-//             productImg: `${imgURL}featuredItem${i + 1}.jpg`,
-//             productId: 'prod_' + i
-//             //rates (звезды)
-//         })
-//     }
-//     return local;
-// }
-
-export let catalog = {
-    container: null,
-    items: [],
-    basket: null,
-
-    
-    url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
-    init() {
-        this.container = document.querySelector('#catalog');
+export default class  Catalog {
+    constructor(basket, container = '#catalog', url = '/catalog.json') {
+        this.container = document.querySelector(container);
+        this.items = [];
+        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON'+ url;
         this.basket = basket;
+        this._init();
+    }
+
+    _init() {
         this._get(this.url)
             .then(arr => {
                 this.items = arr;
@@ -44,42 +16,21 @@ export let catalog = {
                 this._render();
                 this._handleActions();
             })
-    },
+    }
+
     _get(url) {
         return fetch(url).then(d => d.json());
-    },
-    _fillCatalog() { //Инкапсуляция (условная для JS)
-        this.items = getArrayOfObjects();
-    },
+    }
+
     _render() {
         let htmlStr = '';
         this.items.forEach(item => {
-            htmlStr += `
-            <div class="item">
-                <div class="itemImg">
-                    <div class="itemImgHover">
-                        <button
-                            name="add"
-                            data-id="${item.productId}"
-                            data-name="${item.productName}"
-                            data-price="${item.productPrice}"
-                            data-img="${item.productImg}"
-                        >
-                            <img src="../src/assets/imgs/cart2.png" alt="imgCart">
-                            Add to Cart
-                        </button>
+            htmlStr += new CatalogItem(item).render();
+        })
 
-                    </div>
-                    <img src="${item.productImg}" alt="imgProduct">
-                </div>
-                <div class="itemText">
-                    <a href="#">"${item.productName}"</a>
-                    <p>"${item.productPrice}"</p>
-                </div>
-            </div>`
-        });
         this.container.innerHTML = htmlStr;
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', ev => {
             if (ev.target.name == 'add') {
@@ -87,7 +38,8 @@ export let catalog = {
                 this.basket.add(this._createNewItem(dataset));
             }
         })
-    },
+    }
+
     _createNewItem(dataset) {
         return {
             productId: dataset.id,
@@ -99,4 +51,34 @@ export let catalog = {
     }
 }
 
-catalog.init();
+class CatalogItem {
+    constructor(item) {
+        this.item = item;
+    }
+
+    render() {
+        return `  
+        <div class="item">
+                <div class="itemImg">
+                    <div class="itemImgHover">
+                        <button
+                            name="add"
+                            data-id="${this.item.productId}"
+                            data-name="${this.item.productName}"
+                            data-price="${this.item.productPrice}"
+                            data-img="${this.item.productImg}"
+                        >
+                            <img src="../src/assets/imgs/cart2.png" alt="imgCart">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <img src="${this.item.productImg}" alt="imgProduct">
+                </div>
+                <div class="itemText">
+                    <a href="#">"${this.item.productName}"</a>
+                    <p>"${this.item.productPrice}"</p>
+                </div>
+            </div>
+        `
+    }
+}

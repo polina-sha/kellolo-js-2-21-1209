@@ -1,87 +1,97 @@
-export let basket = {
-    items: [],
-    container: null,
-    containerItems: null,
-    // shown: false,
-    url: 'https://raw.githubusercontent.com/kulyamzin/GeekBrain/master/Files/GeekBrains/basket.json',
+export class cart{
+    constructor() {
+        this.items = [];
+        this.selector = null;
+        this.url = "https://raw.githubusercontent.com/kulyamzin/GeekBrain/master/Files/GeekBrains/basket.json";
+    }
     init() {
-        this.container = document.querySelector('.b-basket');
-        // this.containerItems = document.querySelector('#basket-items');
+        this.selector = document.querySelector('.b-basket');
         this._get(this.url)
-            .then(basket => {
-                this.items = basket.content;
+            .then(jsonTxt => {
+                this.items = jsonTxt.content;
+                this.total = jsonTxt.totalPrice;
             })
             .finally(() => {
                 this._render();
-                this._handleActions();
+                this._handle();
             })
-    },
+    }
     _get(url) {
-        return fetch(url).then(d => d.json());
-    },
-    _render() {
-        let htmlStr = `<div class="b-basket__top">
-                        <div class="b-basket-main">Product Details</div>
-                        <div class="b-basket-info">unite Price</div>
-                        <div class="b-basket-info">Quantity</div>
-                        <div class="b-basket-info">shipping</div>
-                        <div class="b-basket-info">Subtotal</div>
-                        <div class="b-basket-info">ACTION</div>
-                       </div>`;
-        this.items.forEach(item => {
-            htmlStr += `
-            <div class="b-basket__row">
-            <div class="b-basket__row__item b-basket-main">
-                <div class="b-basket__row__item-img"><img src="${item.productImg}" alt="basket"></div>
-                <div class="b-basket__row__item-txt">
-                    <h3><a href="#">${item.productName}</a></h3>
-                    <p><b>Color:</b> ${item.productColor}<br>
-                       <b>Size:</b> ${item.productSize}</p>
-                </div>
-            </div>
-            <div class="b-basket-info">${item.productPrice}</div>
-            <div class="b-basket-info"><input type="text" maxlength="4" value="${item.amount}"></div>
-            <div class="b-basket-info">free</div>
-            <div class="b-basket-info">${item.productPrice*item.amount}</div>
-            <div class="b-basket-info">
-                <button>   
-                    <i class="fa fa-times-circle-o" aria-hidden="true" data-id="${item.productId}" name="remove"></i>
-                </button>
-            </div>
-        </div>`
-
-        });
-        this.container.innerHTML = htmlStr;
-    },
-    _handleActions() {
-        // document.querySelector('#basket-toggler').addEventListener('click', () => {
-        //     this.container.classList.toggle('invisible');
-        //     // document.querySelector('#basket').classList.toggle('invisible');
-        //     this.shown = !this.shown;
-        // })
-
-        this.container.addEventListener('click', ev => {
-            if (ev.target.getAttribute('name')== 'remove') {
-                this._remove(ev.target.dataset.id);
+        return fetch(url).then(document => document.json());
+    }
+    _handle() {
+        this.selector.addEventListener('click', event => {
+            switch (event.target.dataset.command) {
+                case 'rm':
+                    this.removeFullObj(event.target.dataset.id);
+                    break;
             }
+            this.selector.addEventListener('change', event => {
+                if (event.target.dataset.command == 'ca') {
+                    this.changeAmount(event.target.dataset.id,event.target.value);
+                };
+            })
         })
-    },
-    add(item) {
-        let find = this.items.find(el => el.productId == item.productId);
-        if (find) {
-            find.amount++;
-        } else {
-            this.items.push(item);
-        }
+    }
+    _render() {
+        let htmlToRend =`
+    <div class="b-basket__top">
+        <div class="b-basket-main">Product Details</div>
+        <div class="b-basket-info">unite Price</div>
+        <div class="b-basket-info">Quantity</div>
+        <div class="b-basket-info">shipping</div>
+        <div class="b-basket-info">Subtotal</div>
+        <div class="b-basket-info">ACTION</div>
+    </div>`;
+        this.items.forEach(item => {
+            let renderResult = new genShopingCartHtml(item);
+            htmlToRend += renderResult._rend();
+        })
+        this.selector.innerHTML = htmlToRend;
+    }
+    removeFullObj(id) {
+        let elemDelId = this.items.find(element => element.productId == id);
+        this.items.splice(this.items.indexOf(elemDelId), 1);
         this._render();
-    },
-    _remove(id) {
-        let find = this.items.find(el => el.productId == id);
-        if (find.amount > 1) {
-            find.amount--;
-        } else {
-            this.items.splice(this.items.indexOf(find), 1);
-        }
+    }
+    changeAmount(id,newVal) {
+        let elemCaId = this.items.find(element => element.productId == id);
+        elemCaId.amount = newVal;
         this._render();
+    }
+}
+
+class genShopingCartHtml {
+    constructor(item) {
+        this.productId = item.productId;
+        this.productImg = item.productImg;
+        this.productPrice = item.productPrice;
+        this.productName = item.productName;
+        this.productColor = item.productColor;
+        this.productSize = item.productSize;
+        this.amount = item.amount;
+    }
+    _rend() { 
+        let renderResult ='';
+        return renderResult =
+        `<div class="b-basket__row">
+        <div class="b-basket__row__item b-basket-main">
+          <div class="b-basket__row__item-img"><img src="${this.productImg}" alt="basket"></div>
+          <div class="b-basket__row__item-txt">
+            <h3><a href="#">${this.productName}</a></h3>
+            <p><b>Color:</b> ${this.productColor}<br>
+            <b>Size:</b> ${this.productSize}</p>
+          </div>
+        </div>
+        <div class="b-basket-info">${this.productPrice}</div>
+        <div class="b-basket-info"><input type="text" maxlength="4" value="${this.amount}" data-id="${this.productId}" data-command="ca"></div>
+        <div class="b-basket-info">free</div>
+        <div class="b-basket-info">${this.productPrice*this.amount}</div>
+        <div class="b-basket-info">
+          <button>   
+            <i class="fas fa-times-circle" aria-hidden="true" data-id="${this.productId}" data-command="rm" style="font-size:15px"></i>
+          </button>
+        </div>
+      </div>`
     }
 }

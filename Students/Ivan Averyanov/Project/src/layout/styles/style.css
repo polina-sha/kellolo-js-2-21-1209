@@ -1,7 +1,7 @@
-@import url(style_wrapper.css);
+/* @import url(style_wrapper.css);
 @import url(../style_sass/mixin_list.sass);
 @import url(checkout__stule.css);
-@import url(style__singlePage.css);
+@import url(style__singlePage.css); */
 
 @-webkit-keyframes tracking-contract {
     0% {
@@ -471,7 +471,7 @@ body {
 .promo {
     height: 614px;
     background-color: #e8e8e8;
-    background-image: url(../img/promo/promo-back.png);
+    background-image: url(../../assets/img/promo/promo-back.png);
     background-position: center -51px;
     background-repeat: no-repeat;
     -webkit-animation: kenburns-top 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate-reverse both;

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Main Page</title>
-        <link rel="stylesheet" href="../src/layout/styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -22,22 +22,14 @@
                     </div>
                     <div class="header__right">
                         <a class="cart" href="#" id="basket-toggler"><img class="header__cart" src="../src/assets/imgs/cart.png" alt="Basket"></a>
-                        <div class="headerCartWrap invisible" id="basket">
+                                                
+                        <div class="headerCartWrap">
                             <div class="headerCartWrapBlock"></div>
-                            <div class="headerCartWrapInAll" >
-                                <div id="basket-items" class="headerCartWrapInAll">
-        
-                                </div>
-        
-                                <div class="headerCartWrapTotalPrice">
-                                    <div>total</div>
-                                    <div>$500.00</div>
-                                </div>
-        
-                                <button type="button" class="productsButtonIndex">Checkout</button>
-                                <button type="button" class="productsButtonIndex">Go to cart</button>
+                            <div class="headerCartWrapInAll invisible" id="basket"> 
+                                <!-- ВСТРАИВАЕМОЕ СОДЕРЖИМОЕ-->                                
                             </div>
                         </div>
+
                         <a href="#" class="button">My Account <i class="fas fa-caret-down"></i></a>
                     </div>
                 </header>
@@ -86,6 +78,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -129,6 +122,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -190,6 +184,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -219,6 +214,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -296,6 +292,7 @@
                                         <li><a href="#" class="drop__a">Sweaters/Knits</a></li>
                                         <li><a href="#" class="drop__a">Jackets/Coats</a></li>
                                     </ul>
+                                    <a href=""><img src="../src/assets/imgs/navDrop.jpg" alt="nav img"></a>
                                 </div>
                             </div>
                         </li>
@@ -342,78 +339,14 @@
                 <main class="product-box center">
                     <h1 class="product-box__head">Fetured Items</h1>
                     <p class="product-box__desc">Shop for items based on what we featured in this week</p>
-                    <div class="row" id="catalog">
+                    <div class="product-box center" id="catalog">
                         <!-- ВСТРАИВАЕМОЕ СОДЕРЖИМОЕ -->  
-                      </div>
-             <!--   <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_1.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_2.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_3.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_4.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_5.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_6.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_7.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section>
-                    <section class="product">
-                        <a href="#"><img class="product__img" src="../src/assets/imgs/Layer_8.png" alt="photo"></a>
-                        <div class="product__content">
-                            <h2><a href="#" class="product__name">Mango People T-shirt</a></h2>
-                            <p class="product__price">$52.00</p>
-                        </div>
-                        <a href="#" class="product__add"><img src="../src/assets/imgs/addToCart.png" alt="Корзина"> Add to Cart</a>
-                    </section> -->
+                    </div>
                 </main>
 
                 <button class="product-box__button">Browse All Products<img src="../src/assets/imgs/arrowToRight.png" alt="Стрелка"></button>
 
-                <section class="offerForWomen center">
+                <div class="offerForWomen center">
                     <aside class="offerForWomenBanner">
                         <div class="offerText">
                             <div>30% <span>OFFER</span></div>
@@ -433,7 +366,7 @@
                             <p class="offerDetailsText">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
                         </article>
                     </div>
-                </section>
+                </div>
 
                 <div class="subscribeWrap">
                     <div class="center subscribe">
@@ -518,10 +451,6 @@
             </div>
 
         </div>
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="../dist/main.js"></script>
+
     </body>
 </html>

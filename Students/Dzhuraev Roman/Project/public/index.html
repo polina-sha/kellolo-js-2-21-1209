@@ -17,8 +17,8 @@
         <button><i class="fas fa-search"></i></button>
     </form>
 
-    <a href="cart.html" class="header__cart"><img src="img/cart_button.png" alt="cart"></a>
-    <div class="headerCartWrap invisible" id="basket">
+    <div class="header__cart"><img id="basket-toggler" src="img/cart_button.png" alt="cart">
+        <div class="headerCartWrap hidden" id="basket">
         <div class="headerCartWrapBlock"></div>
         <div class="headerCartWrapInAll" >
             <div id="basket-items" class="headerCartWrapInAll">
@@ -33,6 +33,7 @@
             <button type="button" class="productsButtonIndex">Checkout</button>
             <button type="button" class="productsButtonIndex">Go to cart</button>
         </div>
+    </div>
     </div>
 
     <button name="accountBar" class="header__account-bar">My&nbsp;Account&nbsp;<i class="fas fa-caret-down"></i></button>
@@ -261,6 +262,6 @@
         </div>
     </div>
 </footer>
-
+<script src="../dist/main.js" ></script>
 </body>
 </html>

@@ -79,5 +79,3 @@ export let cat = {
         }
     }
 }
-
-cat.init();

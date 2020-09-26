@@ -81,4 +81,3 @@ export let bask = {
     }
 }
 
-bask.init();
