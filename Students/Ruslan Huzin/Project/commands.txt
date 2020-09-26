@@ -13,4 +13,4 @@ additions:
 
     npm i -D file-loader html-webpack-plugin copy-webpack-plugin
 
-    npm i -D webpack-dev-server
+    npm i -D webpack-dev-server / npm run dev
