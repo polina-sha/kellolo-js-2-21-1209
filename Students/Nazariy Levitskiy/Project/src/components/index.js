@@ -1,13 +1,9 @@
+'use strict';
 
-import { basket } from './bask';
-import { catalog } from './cat';
-
-
+import Basket from './basket';
+import Catalog from './Catalog';
 
 export default () => {
-    basket._init();
-    catalog._init();
-    
-    basket.hello();
-    catalog.hello();
+    let basket = new Basket();
+    let catalog = new Catalog(basket);
 }

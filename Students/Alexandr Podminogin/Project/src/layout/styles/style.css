@@ -8,10 +8,33 @@
 
 body {
   font-family: "Lato", sans-serif;
+  text-decoration: none;
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+p:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ol, ul {
+  margin: 0;
+}
+
+.nav {
+  padding: 0 calc(50% - 570px);
+  display: flex;
+  justify-content: center;
 }
 
 .center {
@@ -37,13 +60,17 @@ a {
   text-transform: uppercase;
 }
 
+.cart-icon {
+  padding-right: 20px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   background-color: #ffffff;
-  border: 1.5px solid #F1F1F1;
+  border-bottom: 1.5px solid #F1F1F1;
 }
 .header__left {
   display: flex;
@@ -53,9 +80,6 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-}
-.header__right .cart-header {
-  padding-right: 26px;
 }
 .header__form {
   display: flex;
@@ -336,12 +360,14 @@ a {
   background-color: white;
   padding-left: 14px;
   height: 67px;
-  margin-top: -3px;
   padding-top: 17px;
 }
 
+.gen_add_to_card:hover {
+  outline: 1px solid white;
+}
+
 .h2_item, .h1_item {
-  margin-top: 11px;
   font-size: 16px;
   font-weight: bold;
   color: #f16d7f;
@@ -1127,21 +1153,34 @@ steps-item {
   position: relative;
 }
 
-.cart-header:hover .drop-cart {
-  opacity: 1;
+.cart-header {
+  position: absolute;
   z-index: 2;
-  padding: 50px 15px 20px 15px;
+}
+
+.drop-cart-down {
+  display: none;
+}
+
+.drop-cart:first-child {
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.drop-cart:last-child {
+  padding: 1px 20px 20px;
 }
 
 .drop-cart {
   right: 0;
   transition: all 0.2s;
   margin-right: -60px;
-  opacity: 0;
-  z-index: -1;
-  position: absolute;
   background-color: white;
-  margin-top: 2px;
+}
+.drop-cart .invisible {
+  display: none;
 }
 .drop-cart-products-1:hover {
   transform: scale(1.03);
@@ -1160,7 +1199,6 @@ steps-item {
 }
 .drop-cart-products-1-text {
   text-align: left;
-  margin-left: -17%;
 }
 .drop-cart-products-1-text-h3 {
   margin-top: 7px;
@@ -1292,7 +1330,7 @@ steps-item {
 }
 
 .header__form_text_input:hover .drop-borwse {
-  height: 550px;
+  height: 620px;
   opacity: 1;
   z-index: 3;
   margin-top: 560px;
