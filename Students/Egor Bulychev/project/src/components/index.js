@@ -1,11 +1,8 @@
-import { bask } from './bask';
-import { cat } from './cat';
 
-
+import Basket from './basket';
+import Catalog from './Catalog';
 
 export default () => {
-
-    bask._init();
-    cat._init();
-
+    let basket = new Basket();
+    let catalog = new Catalog(basket);
 }
