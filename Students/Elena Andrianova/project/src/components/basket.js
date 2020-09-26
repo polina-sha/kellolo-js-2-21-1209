@@ -1,18 +1,16 @@
 export default class Basket {
-    constructor() {
+    constructor(container= '#basket') {
         this.items = [];
-        this.container = null;
-        this.containerItems = null;
-        this.shown = false;
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json';
-        this._init()
-    }
-    _init(){
-        this.container = document.querySelector('#basket');
+        this.container = document.querySelector(container);
         this.containerItems = document.querySelector('#basket-items');
+        this.shown = false;
+        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON/basket.json';
+        this.init()
+    }
+    init(){
         this._get(this.url)
-            .then(bask => {
-                this.items = bask.content.map(prod => new BasketProduct(prod.productName, prod.productPrice, prod.productImg, prod.productId, prod.amount));
+            .then(basket => {
+                this.items = basket.content;
             })
             .finally(() => {
                 this._render();
@@ -26,9 +24,8 @@ export default class Basket {
     _render() {
         let htmlStr= '';
         this.items.forEach(item => {
-            htmlStr += item.render();
+            htmlStr += new BasketItem(item).render();
         })
-
         this.container.innerHTML = htmlStr;
     }
     _handleActions() {
@@ -49,7 +46,7 @@ export default class Basket {
         if (find) {
             find.amount++;
         } else {
-            this.items.push(new BasketProduct (item.productName, item.productPrice, item.productImg, item.productId, item.amount));
+            this.items.push(new BasketItem(item));
         }
         this._render();
     }
@@ -67,22 +64,18 @@ export default class Basket {
 
 }
 
-class BasketProduct {
-    constructor(productName, productPrice, productImg, productId, amount) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.productImg = productImg;
-        this.productId = productId;
-        this.amount = amount;
+class BasketItem {
+    constructor(item) {
+        this.item = item;
     }
 
     render() {
         return `
         <div class="headerCartWrapIn">
-            <div class="basketItemImg"><img src="${this.productImg}" alt="productPhoto" width="85" height="100></div>
+            <div class="basketItemImg"><img src="${this.item.productImg}" alt="productPhoto" width="85" height="100></div>
             
             <div class="basketInfoProduct">
-                <div class="BasketItemName">'${this.productName}'</div>
+                <div class="BasketItemName">${this.item.productName}</div>
                 <span>
                     <i class="fas fa-star goldenStar"></i>
                     <i class="fas fa-star goldenStar"></i>
@@ -90,10 +83,9 @@ class BasketProduct {
                     <i class="fas fa-star goldenStar"></i>
                     <i class="fas fa-star-half-alt goldenStar"></i>
                 </span>
-                <div class="headerCartWrapPrice">${this.amount}<span>x</span> $${this.productPrice}</div>
+                <div class="headerCartWrapPrice">${this.item.amount}<span>x</span> $${this.item.productPrice}</div>
             </div>
-            <button class="fas fa-times-circle" data-id="${this.productId}"name="remove"></button>
-        
+            <button class="fas fa-times-circle" data-id="${this.item.productId}" name="remove"></button>     
         </div>
         `;
     }
