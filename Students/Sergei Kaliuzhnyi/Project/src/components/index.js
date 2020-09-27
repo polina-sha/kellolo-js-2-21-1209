@@ -1,8 +1,9 @@
-import { catalog } from './catalog';
-import { basket } from './basket';
+import Basket  from './basket';
+import Catalog from './catalog';
+
 
 export default () => {
-    catalog.init();
-    basket.init();
+    let basket = new Basket();
+    let catalog = new Catalog(basket);
 };
 

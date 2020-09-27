@@ -53,12 +53,15 @@ header {
     box-shadow: 0 2px 5px #333333;
     cursor: pointer; }
 
+
+    
+
 .logo {
   width: 165px;
   line-height: 51px;
   text-transform: uppercase;
   font-size: 27px;
-  background-image: url("../img/logo.png");
+  background-image: url("https://github.com/LuidgyK/kellolo-js-2-21-1209/blob/master/Students/Egor%20Bulychev/project/src/img/Logo.png?raw=true");
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   padding-left: 72px;
@@ -554,7 +557,7 @@ body {
   color: #222222;
   font-size: 18px;
   text-transform: uppercase;
-  background: url("../img/white.png");
+  background: url("https://github.com/LuidgyK/kellolo-js-2-21-1209/blob/master/Students/Egor%20Bulychev/project/src/img/white.png?raw=true");
   position: absolute;
   left: 5px;
   top: 115px;
@@ -582,12 +585,7 @@ body {
   left: 575px;
   top: 380px; }
 
-.product__block {
-  margin-top: 60px;
-  box-shadow: none; }
-  .product__block:hover {
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
-    filter: brightness(0.5); }
+
 
 .product__blockMain h2 {
   font-size: 30px;
@@ -613,14 +611,86 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px; }
 
-.product__images {
+.featuredItems {
+  margin-top: 60px;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: center; }
-  .product__imagesimg .product__images:hover {
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16); }
+}
+
+.featuredItem {
+  width: 264px;
+  height: 370px;
+}
+
+.featuredItem:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.featuredItem:nth-child(n+5) {
+  margin-top: 27px;
+}
+
+.featuredImgWrap {
+  height: 280px;
+  position: relative;
+}
+.featuredBuy {
+  height: inherit;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: absolute;
+}
+
+.featuredItem:hover .featuredBuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuredBuy button {
+  padding: 15px;
+  border: 1px solid #ffffff;
+  background: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.featuredBuy button img {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.featuredDesc {
+  text-align: center;
+  color: #9f9f9f;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.featuredNameAndPrice {
+  padding: 15px;
+}
+.featuredItemName {
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+  max-height: 2.4em;
+  overflow: hidden;
+}
+
+.featuredItemPrice {
+  color: #f16d7f;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
 .browse_all {
   display: flex;
@@ -654,7 +724,7 @@ body {
     width: 767px;
     height: 529px;
     float: left;
-    background: url("../img/layer_girl.png"); }
+    background: url("https://github.com/LuidgyK/kellolo-js-2-21-1209/blob/master/Students/Egor%20Bulychev/project/src/img/Layer_girl.png?raw=true"); }
   .banner .percent {
     color: #f16d7f;
     letter-spacing: 1.5px; }
@@ -702,7 +772,7 @@ body {
     padding-left: 63px; }
 
 .subscribe__block {
-  background: url(../img/layer_41.png) no-repeat center bottom #ccc;
+  background: url(https://github.com/LuidgyK/kellolo-js-2-21-1209/blob/master/Students/Egor%20Bulychev/project/src/img/Layer_41.png?raw=true) no-repeat center bottom #ccc;
   width: 100%;
   height: 438px;
   background-blend-mode: overlay;
