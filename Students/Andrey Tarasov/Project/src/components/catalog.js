@@ -1,11 +1,13 @@
-export default {
-    container: null,
-    items: [],
-    basket: null,
-    url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
-    init(basket) {
+export default class Catalog {
+    constructor(basket) {
+    this.container = null;
+    this.items = [];
+    this.basket = basket;
+    this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json';
+    }
+
+    init() {
         this.container = document.querySelector('#catalog');
-        this.basket = basket;
         this._get(this.url)
             .then(arr => {
                 this.items = arr;
@@ -14,13 +16,16 @@ export default {
                 this._render();
                 this._handleActions();
             })
-    },
+    }
+
     _get(url) {
         return fetch(url).then(d => d.json());
-    },
+    }
+
     _fillCatalog() { //Инкапсуляция (условная для JS)
         this.items = getArrayOfObjects();
-    },
+    }
+
     _render() {
         let htmlStr = '';
         this.items.forEach(item => {
@@ -60,7 +65,8 @@ export default {
                         </div>`
         });
         this.container.innerHTML = htmlStr;
-    },
+    }
+
     _handleActions() {
         this.container.addEventListener('click', ev => {
             if (ev.target.name == 'add') {
@@ -68,7 +74,8 @@ export default {
                 this.basket.add(this._createNewItem(dataset));
             }
         })
-    },
+    }
+
     _createNewItem(dataset) {
         return {
             productId: dataset.id,
