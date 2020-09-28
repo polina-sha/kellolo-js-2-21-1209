@@ -1,4 +1,3 @@
-
 import Basket from './basket';
 import Catalog from './Catalog';
 
