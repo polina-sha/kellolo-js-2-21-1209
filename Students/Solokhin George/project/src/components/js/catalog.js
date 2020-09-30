@@ -1,9 +1,10 @@
  export default class Catalog {
-    constructor() {
+    constructor(basket) {
         this.container= null;
         this.items= [];
         this.basket=null;
         this.url='https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json';
+        this.init(basket);
     }
 
     init(basket) {
