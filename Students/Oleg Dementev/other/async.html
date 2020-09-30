@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class testAsync {
+            constructor(url) {
+                this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
+                this.data = null;
+                this.items = [];
+                this.init();
+            }
+
+            init() {
+                this.get();
+            }
+
+            get() {
+                let req = new XMLHttpRequest();
+                //console.log(req)
+                req.open('GET', this.url, true); 
+                req.send(null);
+
+                req.onreadystatechange = () => {
+                    if (req.readyState == 4) {
+                        if(req.status == 200){
+                            this.handleData(req.responseText);
+                            //console.log('done')
+                            //console.log(req)
+                        }
+                    }
+                }
+            }
+
+            handleData(jsonchik) {
+                this.data = jsonchik;
+                this.items = JSON.parse(this.data);
+            }
+        }
+
+
+        //let a; //undefined
+
+        //async(() => {
+        //    a = a + 50;
+        //    console.log(a);
+        //});
+
+        //function some() {
+        //    a = a + 50;
+        //    console.log(a);
+        //}
+
+        //function async(callback) {
+        //    setTimeout(() =>{
+        //    a = 100;
+        //    callback();
+        //}, 1);
+        //}
+        
+    </script>
+</body>
+</html>
