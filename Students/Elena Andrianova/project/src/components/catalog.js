@@ -1,17 +1,16 @@
-export default class Catalog {
-    constructor(basket) {
-        this.container = null;
+export default class  Catalog {
+    constructor(basket, container = '#catalog', url = '/catalog.json') {
+        this.container = document.querySelector(container);
         this.items = [];
-        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json';
+        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON'+ url;
         this.basket = basket;
         this._init();
     }
 
     _init() {
-        this.container = document.querySelector('#catalog');
         this._get(this.url)
             .then(arr => {
-                this.items = arr.map(p => new Product(p.productName, p.productPrice, p.productImg, p.productId));
+                this.items = arr;
             })
             .finally(() => {
                 this._render();
@@ -24,12 +23,12 @@ export default class Catalog {
     }
 
     _render() {
-        let html = '';
+        let htmlStr = '';
         this.items.forEach(item => {
-            html += item.render();
+            htmlStr += new CatalogItem(item).render();
         })
 
-        this.container.innerHTML = html;
+        this.container.innerHTML = htmlStr;
     }
 
     _handleActions() {
@@ -40,7 +39,7 @@ export default class Catalog {
             }
         })
     }
-    
+
     _createNewItem(dataset) {
         return {
             productId: dataset.id,
@@ -50,15 +49,11 @@ export default class Catalog {
             amount: 1
         }
     }
-
 }
 
-class Product {
-    constructor(productName, productPrice, productImg, productId) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.productImg = productImg;
-        this.productId = productId;
+class CatalogItem {
+    constructor(item) {
+        this.item = item;
     }
 
     render() {
@@ -68,20 +63,20 @@ class Product {
                     <div class="itemImgHover">
                         <button
                             name="add"
-                            data-id="${this.productId}"
-                            data-name="${this.productName}"
-                            data-price="${this.productPrice}"
-                            data-img="${this.productImg}"
+                            data-id="${this.item.productId}"
+                            data-name="${this.item.productName}"
+                            data-price="${this.item.productPrice}"
+                            data-img="${this.item.productImg}"
                         >
                             <img src="../src/assets/imgs/cart2.png" alt="imgCart">
                             Add to Cart
                         </button>
                     </div>
-                    <img src="${this.productImg}" alt="imgProduct">
+                    <img src="${this.item.productImg}" alt="imgProduct">
                 </div>
                 <div class="itemText">
-                    <a href="#">"${this.productName}"</a>
-                    <p>"${this.productPrice}"</p>
+                    <a href="#">"${this.item.productName}"</a>
+                    <p>"${this.item.productPrice}"</p>
                 </div>
             </div>
         `

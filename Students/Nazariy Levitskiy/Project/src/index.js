@@ -1,5 +1,6 @@
+'use strict';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '/layout/style.css'
+import './layout/styles/style.css'
 
 import app from './components';
 

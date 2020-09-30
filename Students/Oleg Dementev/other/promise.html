@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Promise
+
+        //function promiseFunction(status) {
+        //    return new Promise((resolve, reject) => {
+        //        setTimeout(() => {
+        //            if (status) {
+        //                resolve(100);
+        //            } else {
+        //                reject('some error');
+        //            }
+        //        }, 3000);
+        //    })
+        //}
+
+        //promiseFunction().then() //коллбэк. который вызовется если всё ок
+        //promiseFunction().catch() // коллбэк. который вызовется если всё не ок
+        //promiseFunction().finally() //коллбэк. который вызовется всегда в самом конце
+        //promiseFunction(true)
+        //    .then(fromPromise => {
+        //        console.log(fromPromise);
+        //        return fromPromise + 500;
+        //    })
+        //    .then(fromPrevThen => {
+        //        console.log(fromPrevThen);
+        //    })
+        //    .catch(errText => {
+        //        throw new Error(errText);
+        //    })
+        //    .finally(() => {
+        //        console.log('Promise End');
+        //    })
+
+        class testAsync {
+            constructor(url) {
+                this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
+                this.data = null;
+                this.items = [];
+                this.init();
+            }
+
+            init() {
+                this.get()
+                    .then(data => {
+                        this.items = JSON.parse(data);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+                //.finally(() => {
+                //    this.render();
+                //    this.handleActions();
+                //})
+            }
+
+            get() {
+                return new Promise((res, rej) => {
+                    let req = new XMLHttpRequest();
+                    //console.log(req)
+                    req.open('GET', this.url, true); 
+                    req.send(null);
+
+                    req.onreadystatechange = () => {
+                        if (req.readyState == 4) {
+                            if(req.status == 200){
+                                res(req.responseText);
+                                //console.log('done')
+                                //console.log(req)
+                            } else {
+                                rej('ERR');
+                            }
+                        }
+                    }
+
+                })
+            }
+        }
+    </script>
+</body>
+</html>
