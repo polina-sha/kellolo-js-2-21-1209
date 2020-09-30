@@ -1,8 +1,7 @@
-import Item from './item';
-import Page from './page';
-export default class Basket extends Page {
-    constructor(url = '/basket.json', container = '.header__drop') {
-        super(url, container);
+import List from './LIST.js';
+export default class Basket extends List {
+    constructor(container = '.header__drop', url = '/basket.json') {
+        super(container, url);
         this.shown = false;
     }
     _handleActions() {
@@ -11,7 +10,7 @@ export default class Basket extends Page {
             this.shown = !this.shown;
         })
 
-        document.querySelector(this.container).addEventListener('click', ev => {
+        this.container.addEventListener('click', ev => {
             if (ev.target.name == 'remove') {
                 this._remove(ev.target.dataset.id);
             }
@@ -22,7 +21,9 @@ export default class Basket extends Page {
         if (find) {
             find.amount++;
         } else {
-            this.items.push(item);
+            let newItem = Object.assign({}, item, { amount: 1 });
+            console.log(newItem)
+            this.items.push(newItem);
         }
         this._render();
     }
