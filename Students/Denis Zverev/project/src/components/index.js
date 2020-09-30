@@ -1,7 +1,9 @@
 import Basket from './basket';
-import Catalog from './catalog';
+import Catalog from './Catalog';
+import SearchController from './search.js';
 
 export default () => {
+    let SearchController = new SearchController();
     let basket = new Basket();
-    let Catalog = new Catalog(basket);
+    let catalog = new Catalog(basket, searchController);
 }
