@@ -3,15 +3,7 @@
   заменяет одинарные кавычки на двойные.
  2. Улучшить шаблон так, чтобы в конструкциях типа aren't одинарная кавычка не заменялась на двойную.
  */
-
-let str =  document.querySelector('div').innerText;
+let div =  document.querySelector('div');
 let RegExp = /\B'/gm;
-str = str.replace(RegExp, '"');
+let str = div.innerText.replace(RegExp, '"')
 console.log(str);
-
-
-
-
-
-
-
