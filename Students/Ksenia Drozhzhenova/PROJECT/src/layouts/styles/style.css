@@ -1335,6 +1335,247 @@
   letter-spacing: 0.35px;
 }
 
+.feturedItem {
+  margin-top: 2rem;
+}
+
+.feturedItem:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.feturedItem .feturedImgWrap {
+  height: 280px;
+  position: relative;
+}
+
+.feturedItem .feturedImgWrap img {
+  width: 100%;
+  display: block;
+  height: inherit;
+  object-fit: contain;
+  object-position: center center;
+}
+
+@media (max-width: 450px) {
+  .feturedItem .feturedImgWrap img {
+    object-fit: contain;
+    margin-top: 2rem;
+  }
+}
+
+.feturedItem .feturedImgWrap .feturedBuy {
+  height: inherit;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: absolute;
+}
+
+.feturedItem .feturedImgWrap .feturedBuy button {
+  padding: 15px;
+  border: 1px solid #ffffff;
+  background: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.feturedItem .feturedImgWrap .feturedBuy button div {
+  margin-right: 10px;
+}
+
+.feturedItem .feturedImgWrap .feturedBuy button i {
+  padding-right: 10px;
+}
+
+.feturedItem .feturedItemName {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding-top: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .feturedItem .feturedItemName {
+    font-size: 16px;
+    padding-top: 0.4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .feturedItem .feturedItemName {
+    padding-top: 0;
+  }
+}
+
+.feturedItem .feturedItemPrice {
+  color: #f16d7f;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.4rem 0 0.5rem 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .feturedItem .feturedItemPrice {
+    font-size: 16px;
+    padding-left: 0;
+    padding-top: 0.4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .feturedItem .feturedItemPrice {
+    padding-top: 0.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feturedItem:hover .feturedBuy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.feturedBuySm button {
+  border-radius: 3px;
+  border: 1px solid #ef5b70;
+  background-color: #ffffff;
+  color: #ef5b70;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 0.5rem;
+}
+
+.feturedBuySm button:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
+}
+
+.headerCart {
+  position: relative;
+  margin-left: 350px;
+}
+
+.headerCartWrap {
+  display: block;
+  z-index: 2;
+}
+
+.headerCart:hover {
+  display: block;
+  z-index: 3;
+}
+
+.headerCart .headerCartWrap {
+  position: absolute;
+  width: 260px;
+  left: -40px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapBlock {
+  height: 15px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll {
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn {
+  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a:last-child {
+  color: #c0c0c0;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a:last-child:hover {
+  color: #f16d7f;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a {
+  text-decoration: none;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div:first-child {
+  color: #222222;
+  font-weight: 700;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div:last-child {
+  color: #f16d7f;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div span {
+  color: #e4af48;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div .headerCartWrapPrice {
+  color: #f16d7f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div {
+  text-transform: lowercase;
+  font-size: 10px;
+  padding: 0 0.3rem;
+}
+
+.headerCartWrapPrice {
+  margin-top: 40px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a img {
+  padding-right: 0.5rem;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapTotalPrice {
+  display: flex;
+  justify-content: space-between;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fas {
+  height: 30px;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -1,0 +1,109 @@
+.feturedItem {
+    margin-top: 2rem;
+}
+.feturedItem:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.feturedItem .feturedImgWrap {
+    height: 280px;
+    position: relative;
+}
+.feturedItem .feturedImgWrap img {
+    width: 100%;
+    display: block;
+    height: inherit;
+    object-fit: contain;
+    object-position: center center;
+}
+@media (max-width: 450px) {
+    .feturedItem .feturedImgWrap img {
+        object-fit: contain;
+        margin-top: 2rem;
+    }
+}
+.feturedItem .feturedImgWrap .feturedBuy {
+    height: inherit;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+}
+.feturedItem .feturedImgWrap .feturedBuy button {
+    padding: 15px;
+    border: 1px solid #ffffff;
+    background: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.feturedItem .feturedImgWrap .feturedBuy button div {
+    margin-right: 10px;
+}
+.feturedItem .feturedImgWrap .feturedBuy button i {
+    padding-right: 10px;
+}
+.feturedItem .feturedItemName {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding-top: 0.8rem;
+    padding-left: 0.8rem;
+}
+@media (max-width: 768px) {
+    .feturedItem .feturedItemName {
+        font-size: 16px;
+        padding-top: 0.4rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .feturedItem .feturedItemName {
+        padding-top: 0;
+    }
+}
+.feturedItem .feturedItemPrice {
+    color: #f16d7f;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 0 0.5rem 0.8rem;
+}
+@media (max-width: 768px) {
+    .feturedItem .feturedItemPrice {
+        font-size: 16px;
+        padding-left: 0;
+        padding-top: 0.4rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .feturedItem .feturedItemPrice {
+        padding-top: 0.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .feturedItem:hover .feturedBuy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.feturedBuySm button {
+    border-radius: 3px;
+    border: 1px solid #ef5b70;
+    background-color: #ffffff;
+    color: #ef5b70;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 0.5rem;
+}
+.feturedBuySm button:hover {
+    background-color: #f16d7f;
+    color: #ffffff;
+}

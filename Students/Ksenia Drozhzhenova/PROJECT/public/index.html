@@ -35,93 +35,6 @@
         <button name="accountBar" class="header__account-bar">My Account <i class="fas fa-caret-down"></i></button>
     </div>
     <div class="headerLine"></div>
-    <div class="topNav">
-        <div class="navAll">
-            <a href="#" class="active">Home</a>
-            <div class="dropNav">
-                <div class="dropNavIn">
-                    <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
-                    <a href="#" class="dropNavItem" type="button">Accessories</a>
-                </div>
-                <div class="dropNavIn">
-                    <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="#" class="dropNavItem" type="button">Blazers</a>
-                    <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Denim</a>
-                    <a href="#" class="dropNavItem" type="button">Leggings/Pants</a>
-                    <a href="#" class="dropNavItem" type="button">Skirts/Shorts</a>
-                </div>
-                <div class="dropNavIn">
-                    <div class="dropNavItem">home</div>
-                    <a href="#" class="dropNavItem" type="button">Dresses</a>
-                    <a href="#" class="dropNavItem" type="button">Tops</a>
-                    <a href="#" class="dropNavItem" type="button">Sweaters/Knits</a>
-                    <a href="#" class="dropNavItem" type="button">Jackets/Coats</a>
-                    <a href="">
-                        <div>Super sale!</div>
-                        <img src="../src/assets/imgs/navDrop.jpg" alt="nav img">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="navAll">
-            <a href="#">Man</a>
-        </div>
-        <div class="navAll">
-            <a href="#">Women</a>
-        </div>
-        <div class="navAll">
-            <a href="#">Kids</a>
-        </div>
-        <div class="navAll">
-            <a href="#">Accoseriese</a>
-        </div>
-        <div class="navAll">
-            <a href="#">Featured</a>
-        </div>
-        <div class="navAll">
-            <a href="#">Hot Deals</a>
-        </div>
-    </div>
-    <div class="topBanner">
-        <div class="container"></div>
-    </div>
-    <div class="slider clearfix">
-        <div class="rectangle"></div>
-        <h1 class="slider_text"><span class="the_brand">THE BRAND</span><br>OF LUXERIOUS <span
-                class="fasion">FASHION</span></h1>
-        <img src="../src/assets/imgs/topHeaderBack.png" alt="topHeaderBack">
-    </div>
-    <div class="category container clearfix">
-        <div class="banner">
-            <img src="../src/assets/imgs/offer1.jpg" class="banner_img" alt="banner">
-            <h4 class="banner_text"><span>hot deal</span><br><span class="banner_text2">for men</span></h4>
-        </div>
-        <div class="banner">
-            <img src="../src/assets/imgs/offer2.jpg" class="banner_img" alt="banner">
-            <h4 class="banner_text"><span>LUXIROUS & TRENDY</span><br><span class="banner_text2">ACCESORIES</span></h4>
-        </div>
-        <div class="banner">
-            <img src="../src/assets/imgs/offer3.jpg" class="banner_img" alt="banner">
-            <h4 class="banner_text"><span>30% offer</span><br><span class="banner_text2">women</span></h4>
-        </div>
-        <div class="banner">
-            <img src="../src/assets/imgs/offer4.jpg" class="banner_img" alt="banner">
-            <h4 class="banner_text"><span>new arrivals</span><br><span class="banner_text2">FOR kids</span></h4>
-        </div>
-    </div>
     <div class="product container">
         <div class="product_banner">
             <h2>Fetured Items</h2>
@@ -133,7 +46,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -141,7 +56,10 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add" data-id="prod_1" data-name="BANANA PEOPLE T-SHIRT" data-price="53"
+                        data-img="https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/featuredItem2.jpg">
+                        <div><i class="fas fa-shopping-cart" aria-hidden="true"></i> Add to Cart</div>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -149,7 +67,11 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <button name="add">
+                            <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                        </button>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -157,7 +79,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -165,7 +89,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -173,7 +99,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -181,7 +109,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
             <div class="products_gal">
@@ -189,7 +119,9 @@
                     <h4>Mango People T-shirt<br><span>$52.00</span></h4>
                 </div>
                 <div class="product_hover">
-                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    <button name="add">
+                        <p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to Cart</p>
+                    </button>
                 </div>
             </div>
         </div>
