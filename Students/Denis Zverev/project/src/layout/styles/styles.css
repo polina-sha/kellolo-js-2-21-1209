@@ -702,7 +702,7 @@
 /*-------------------------------FETURED END-----------------------------*/
 /*-------------------------------OFFER FOR WOMEN ST-----------------------------*/
 .offerWomenLeft {
-  background: url("https://github.com/kellolo/static/blob/master/img/JS1_shop/offer1.jpg?raw=true");
+  background: url("https://raw.githubusercontent.com/kellolo/static/master/img/JS1_shop/offer1.jpg");
   flex-shrink: 0;
   background-size: cover; }
   @media (max-width: 992px) {

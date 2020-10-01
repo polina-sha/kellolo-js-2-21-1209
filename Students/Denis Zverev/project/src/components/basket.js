@@ -1,12 +1,15 @@
 import List from './LIST.js';
 export default class Basket extends List {
-    constructor(container = '.header__drop', url = '/basket.json') {
-        super(container, url);
+    constructor(container = '#basket', url = '/basket.json') {
+        super(container, url)
+        this.containerItems = document.querySelector('#basket-items');
         this.shown = false;
     }
+    
     _handleActions() {
         document.querySelector('#basket-toggler').addEventListener('click', () => {
             this.container.classList.toggle('invisible');
+            // document.querySelector('#basket').classList.toggle('invisible');
             this.shown = !this.shown;
         })
 
@@ -16,7 +19,9 @@ export default class Basket extends List {
             }
         })
     }
+
     add(item) {
+        console.log(item)
         let find = this.items.find(el => el.productId == item.productId);
         if (find) {
             find.amount++;
@@ -27,6 +32,7 @@ export default class Basket extends List {
         }
         this._render();
     }
+
     _remove(id) {
         let find = this.items.find(el => el.productId == id);
         if (find.amount > 1) {
@@ -36,9 +42,4 @@ export default class Basket extends List {
         }
         this._render();
     }
-};
-
-
-
-
-
+}
