@@ -18,6 +18,10 @@ export default class List {
         this._get(this.url)
             .then(data => {
                 this.items = this.basket ? data : data.content; 
+                if (this.filtered) {
+                    this.filtered = data;
+                }
+                
                 this._render();
                 this._handleActions();
             })
@@ -29,7 +33,8 @@ export default class List {
 
     _render() {
         let str = '';
-        this.items.forEach(item => {
+        let arr = this.filtered ? this.filtered : this.items;
+        arr.forEach(item => {
             str += new Item(item, type[this.constructor.name]).render()
         })
         this.container.innerHTML = str;

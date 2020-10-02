@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 450px;
+        }
+
+        input{
+            width: 450px;
+        }
+
+        .error {
+            border: 3px solid red;
+        }
+
+        .success {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset class="form">
+            <legend> Введите контактную информацию:</legend>
+            <div id="userNameStatus"></div>
+            <input 
+                type="text" 
+                id="userName" 
+                name="userName" 
+                placeholder="Имя (должно содержать только буквы)">
+            <div id="userNumberStatus"></div>
+            <input 
+                type="text" 
+                id="userNumber" 
+                name="userNumber" 
+                placeholder="Телефон в формате +7(000)000-0000">
+            <div id="userEmailStatus"></div>
+            <input 
+                type="text" 
+                id="userEmail" 
+                name="userEmail"
+                placeholder="E-mail в виде mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru">
+        </fieldset>
+    </form>
+    <button id="okBtn" class="button">Подтвердить</button>
+    <button id="reset" class="button">Сбросить</button>
+
+    <script>
+
+        window.onload = () => {
+            document.querySelector('#okBtn').addEventListener('click', () => {
+                let regular = new Pattern('userName', 'userNumber', 'userEmail');
+            })
+        };
+
+        class Pattern {
+            constructor(userName, userNumber, userEmail) {
+                this.userNameReg = new RegExp('[а-я]', 'i');
+                this.userNumberReg = /^\+\d{1,3}\s?\(\d{3}\)\s?\d{3}(-\d{4})/;
+                this.userEmailReg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.ru$/;
+                this.userName = this._checkData(this._getValue(userName), this.userNameReg, userName);
+                this.userNumber = this._checkData(this._getValue(userNumber), this.userNumberReg, userNumber);
+                this.userEmail = this._checkData(this._getValue(userEmail), this.userEmailReg, userEmail);
+                this._reset();
+            }
+
+            _getValue(attrName) {
+                return document.querySelector(`input[name=${attrName}]`).value;
+            }
+
+            _checkData(text, reg, attrName) {
+                let statusLine = document.querySelector(`#${attrName}Status`);
+                let textLine = document.querySelector(`#${attrName}`);
+                if (reg.test(text)) {
+                    textLine.classList.add('success');
+                    textLine.classList.remove('error');
+                    return statusLine.textContent = 'Корректно';
+                } else {
+                    textLine.classList.add('error');
+                    textLine.classList.remove('success');
+                    return statusLine.textContent = 'Некорректный ввод, повторите попытку';
+                }
+            }
+
+            _reset(){
+                document.querySelector('#reset').addEventListener('click', () => {
+                    let a = document.querySelectorAll(`input[type=text]`);
+                    a.forEach(el => el.value = null);
+                })
+            }
+        };
+
+    </script>
+</body>
+
+</html>
