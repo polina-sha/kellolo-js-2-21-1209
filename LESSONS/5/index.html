@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .catalog-item {
+            border-radius: 5px;
+            border: 2px solid grey;
+            padding: 15px;
+            margin: 10px;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footer {
+            text-align: right
+        }
+
+        .font-it {
+            font-style: italic
+        }
+
+        .red {
+            color: red
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <div>
+            <button @click="showCalc = !showCalc">Hide</button>
+            <div v-if="showCalc">
+                <h1>{{ helloString }}</h1>
+                <input type="number" v-model.lazy="a"> a<br>
+                <input type="number" v-model.lazy="b"> b
+                <h1>a + b = {{ result }}</h1>
+            </div>
+            <div v-else>
+                <h1>Calc is vypilen</h1>
+            </div> 
+        </div>
+        
+        <div>
+            <button @click="showCatalog = !showCatalog">{{ computedCatalogBtnCaption }} Catalog</button>
+            <div v-show="showCatalog" id="catalog" class="container">
+                <div class="catalog-item" v-for="item of items">
+                    <img :src="item.productImg" alt="" width="70">
+                    <strong>{{ item.productName }}</strong>
+                    <p>$ {{ item.productPrice }}</p>
+                    <button @click="buy(item)">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // class Vue {}
+
+        const app = new Vue({
+            //here
+            el: '#app',
+            data: {
+                //типа конструктора (все свойства нашего компонента)
+                helloString: 'Hello Vue',
+                a: 0,
+                b: 0,
+                showCalc: false,
+                // вам для дз
+                showCatalog: true,
+                catalogUrl: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/catalog.json',
+                items: [],
+                basketItems: []
+            },
+            computed: {
+                result() {
+                    return +this.a + +this.b
+                },
+                computedCatalogBtnCaption() {
+                    return this.showCatalog ? 'Hide' : 'Show'
+                }
+            },
+            methods: {
+                get(url) {
+                    return fetch(url).then(d => d.json())
+                },
+                buy(item) {
+                    this.basketItems.push(Object.assign({}, item, { amount: 1 }));
+                    console.log(this.basketItems)
+                }
+            },
+            //hooks
+            mounted() {
+                this.get(this.catalogUrl)
+                .then(items => {
+                    this.items = items;
+                    console.log(this.items);
+                })
+            },
+        });
+    </script>
+</body>
+</html>
