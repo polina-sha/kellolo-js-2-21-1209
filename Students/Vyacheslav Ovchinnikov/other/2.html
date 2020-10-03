@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Did you see the movie Cat's Eye? 
+        'If you can dream it, you can do it.'
+    </p>
+    <script>
+        // 2. Улучшить шаблон так, чтобы в конструкциях типа aren't одинарная кавычка не заменялась на двойную.
+
+        document.body.innerHTML = document.querySelector('p').innerText.replace(/(?<=\W)'|'(?=\W)/g, '”');
+    </script>
+</body>
+</html>
