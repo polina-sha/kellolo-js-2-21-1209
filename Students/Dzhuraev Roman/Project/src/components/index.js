@@ -1,9 +1,9 @@
-import { catalog } from './catalog'
-import { basket } from './basket'
+import { Catalogue } from './catalogue_2'
+import { Cart } from './cart'
 
 
 export default () => {
-    catalog.init();
-    basket.init();
+    new Catalogue('/catalog.json');
+    new Cart;
 }
 

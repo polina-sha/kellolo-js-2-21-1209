@@ -28,41 +28,65 @@ class Product {
     }
 }
 
-class Catalogue {
-    constructor(data) {
+export class Catalogue {
+    constructor(url) {
+        this.url = 'https://raw.githubusercontent.com/kellolo/static/master/JSON' + url;
         this.container = document.querySelector('.catalogue')
         this.items = [];
-        this.data = data;
+        this.data = null;
         this._init();
     }
-
     _init() {
-        this.items = this.data.map(product => new Product(
-            product.name,
-            product.cost,
-            product.imgSrc,
-            product.id));
+        this._get()
+            .then(data => {
+                this.data = JSON.parse(data);
+                console.log('Got data');
+            })
+            .then(() => {
+                this.data.forEach(item => {
+                    this.items += new Product(
+                        item.productName,
+                        item.productPrice,
+                        item.productImg,
+                        item.productId)
+                })
+                console.log('Collected items')
+            })
+            .catch(err => console.log(err))
+            .finally(() => {
+                this.renderCatalogue()
+            })
     }
-
-    renderCatalogue() {
-        let html = '';
-        this.items.forEach(item => {
-            html += item.renderProductCard();
+    _get() {
+        return new Promise((good, bad) => {
+            let req = new XMLHttpRequest();
+            req.open('GET', this.url, true);
+            req.send();
+            req.onreadystatechange = () => {
+                if (req.readyState == 4) {
+                    if (req.status == 200) {
+                        good(req.responseText);
+                    } else {
+                        bad('Oshibka, saryan');
+                    }
+                }
+            }
         })
-        this.container.innerHTML = html;
+    }
+    renderCatalogue() {
+        {
+            let html = '';
+            this.items.forEach(item => {
+                html += item.renderProductCard();
+            })
+            this.container.innerHTML = html;
+        }
     }
 }
 
 
-const data = [
-    {name: 'Mango people T-Shirt', cost: 530, imgSrc: 'https://placehold.it/260x300', id: 1},
-    {name: 'Mango people T-Shirt', cost: 830, imgSrc: 'https://placehold.it/260x300', id: 2},
-    {name: 'Mango people T-Shirt', cost: 730, imgSrc: 'https://placehold.it/260x300', id: 3},
-    {name: 'Mango people T-Shirt', cost: 330, imgSrc: 'https://placehold.it/260x300', id: 4},
-    {name: 'Mango people T-Shirt', cost: 520, imgSrc: 'https://placehold.it/260x300', id: 5},
-]
 
 
-const cat = new Catalogue(data)
-cat.renderCatalogue()
+
+
 

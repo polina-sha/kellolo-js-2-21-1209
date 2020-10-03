@@ -19,7 +19,7 @@ class Cart {
                 <div class="card">
                     <img src="${item.imgSrc}">
                     <p><b>${item.name}</b></p>
-                    <p>${item.cost}</p>
+                    <p>${item.cost * item.quantity}</p>
                     <br>
                     <p>Quantity ${item.quantity}</p>
                     <button 
@@ -41,8 +41,8 @@ class Cart {
         return {
             id: dataset.id,
             name: dataset.name,
-            imgSrc: dataset.imgSrc,
-            cost: +dataset.cost,
+            imgSrc: dataset.img,
+            cost: +dataset.price,
             quantity: 1
         }
     }
