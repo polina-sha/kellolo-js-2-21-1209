@@ -1,5 +1,5 @@
 import Basket from './basket';
-import Catalog from './Catalog';
+import Catalog from './catalog';
 
 
 
