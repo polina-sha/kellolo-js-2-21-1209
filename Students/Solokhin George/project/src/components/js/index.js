@@ -3,8 +3,6 @@ import Catalog from "./catalog.js";
 
 export default ()=>{
     let basket=new Basket();
-    let catalog=new Catalog();
-    basket.init();
-    catalog.init(basket);
+    let catalog=new Catalog(basket);
 }
 

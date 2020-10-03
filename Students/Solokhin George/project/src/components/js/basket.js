@@ -5,7 +5,8 @@ export default class Basket {
         this.container= null;
         this.containerItems= null;
         this.shown=false;
-        this.url= 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json'
+        this.url= 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json';
+        this.init();
     }
 
     init() {
