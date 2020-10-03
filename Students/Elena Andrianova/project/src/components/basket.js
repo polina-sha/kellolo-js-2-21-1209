@@ -1,32 +1,11 @@
-export default class Basket {
-    constructor(container= '#basket') {
-        this.items = [];
-        this.container = document.querySelector(container);
+import List from "./LIST";
+
+export default class Basket extends List {
+    constructor(container= '#basket', url = '/basket.json') {
+        super(container, url)
         this.containerItems = document.querySelector('#basket-items');
         this.shown = false;
-        this.url = 'https://raw.githubusercontent.com/Alaya95/static/master/JSON/basket.json';
-        this.init()
-    }
-    init(){
-        this._get(this.url)
-            .then(basket => {
-                this.items = basket.content;
-            })
-            .finally(() => {
-                this._render();
-                this._handleActions();
-            })
-    }
-    _get(url) {
-        return fetch(url).then(d => d.json());
-    }
 
-    _render() {
-        let htmlStr= '';
-        this.items.forEach(item => {
-            htmlStr += new BasketItem(item).render();
-        })
-        this.container.innerHTML = htmlStr;
     }
     _handleActions() {
         document.querySelector('#basket-toggler').addEventListener('click', () => {
@@ -42,11 +21,13 @@ export default class Basket {
     }
 
     add(item) {
+        console.log(item)
         let find = this.items.find(el => el.productId == item.productId);
         if (find) {
             find.amount++;
         } else {
-            this.items.push(new BasketItem(item));
+            let newItem = Object.assign({}, item, { amount: 1 });
+            this.items.push(newItem);
         }
         this._render();
     }
@@ -62,31 +43,4 @@ export default class Basket {
     }
 
 
-}
-
-class BasketItem {
-    constructor(item) {
-        this.item = item;
-    }
-
-    render() {
-        return `
-        <div class="headerCartWrapIn">
-            <div class="basketItemImg"><img src="${this.item.productImg}" alt="productPhoto" width="85" height="100></div>
-            
-            <div class="basketInfoProduct">
-                <div class="BasketItemName">${this.item.productName}</div>
-                <span>
-                    <i class="fas fa-star goldenStar"></i>
-                    <i class="fas fa-star goldenStar"></i>
-                    <i class="fas fa-star goldenStar"></i>
-                    <i class="fas fa-star goldenStar"></i>
-                    <i class="fas fa-star-half-alt goldenStar"></i>
-                </span>
-                <div class="headerCartWrapPrice">${this.item.amount}<span>x</span> $${this.item.productPrice}</div>
-            </div>
-            <button class="fas fa-times-circle" data-id="${this.item.productId}" name="remove"></button>     
-        </div>
-        `;
-    }
 }

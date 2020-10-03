@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="formStyle.css">
+    <script src="https://kit.fontawesome.com/861689887d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+            <form action="#" id="registerForm">
+                <div class="register">
+
+                    <label for="registerName">Введите ваше имя<span>*</span></label>
+                    <input type="name" id="registerName" name="name" placeholder="Your name">
+
+                    <label for="registerEmail">Введите ваш Email <span>*</span></label>
+                    <input type="email" id="registerEmail" name="email" placeholder="E-mail">
+
+                    <label for="registerPhoneNumber">Введите ваш номер телефона<span>*</span></label>
+                    <input type="tel" id="registerPhoneNumber" name="phone" placeholder="+7 (900) 123-45-67">
+
+                    <label for="registerTextMessage">Введите сообщение<span>*</span></label>
+                    <input type="text" id="registerTextMessage" placeholder="Your message here" name="message">
+                    <p class="errorText"></p>
+                    <p><span>*Обязательно к заполнению</span></p>
+
+                    <input type="submit" value="Отправить" id="inputBtn">
+
+                    <div class="registerLog">
+
+                    </div>
+                </div>
+            </form>
+
+
+            <script src="formScript.js"></script>
+
+</body>
+</html>
