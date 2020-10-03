@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+.container{
+    width:1150px;
+    margin:auto
+    }
+
+ form{
+    min-height:350px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content:space-around;
+}
+ form .register{
+    width:700px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:flex-start;
+    font-size:13px;
+    font-weight:400;
+    line-height:20px;
+}
+.register h3{
+    text-transform:uppercase;
+}
+ form .register p{
+    text-transform: initial;
+    color:#b3b2b2;
+}
+ form .register p span{
+    color:#ff0d0d;
+}
+
+form .register input[type="email"], form .register [type="password"], .register input[type="tel"], .register input[type="name"] {
+    width: 390px;
+    height: 25px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    padding: 10px;
+}
+form .register input[type="text"] {
+    width: 390px;
+    height: 70px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    padding: 10px;
+}
+form .register label{
+    color:#222222;
+    font-size:12px;
+    text-transform:uppercase;
+}
+form .register label span{
+    color:#ff0d0d;
+    font-size:17px;
+}
+form .register button{
+    width:180px;
+    height:50px;
+    border:1px solid #eaeaea;
+    background-color:#ffffff;
+    outline:none;
+    color:#4a4a4a;
+    font-weight:700;
+    text-transform:uppercase;
+}
+form .register button:hover{
+    box-shadow:0 0 10px #4a4a4a;
+}
+form .registerLog{
+    width:450px;
+}
+form .registerLog a{
+    display:inline-block;
+    margin-left:30px;
+    text-decoration:none;
+    color:#222222;
+    font-size:14px;
+}

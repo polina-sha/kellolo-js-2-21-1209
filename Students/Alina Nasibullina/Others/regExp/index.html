@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+        input, textarea {
+            margin: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        Вспомнились мне слова М.Горького: 'Слово – одежда всех фактов, всех мыслей'  
+        'Знаки препинания служат нотами при чтении', - мудро подметил А.П.Чехов.
+
+        'Изымите всё произведение, если в этом произведении вам не нравится запятая, - писал А.Блок, - но не вычёркивайте запятой: она имеет свой смысл'.
+        'I don't see how he can ever finish, if he doesn't begin' - said Alice.
+    </div>
+
+    <form action="#" id="personForm">
+        <input type="text" name="personName" id="personName" placeholder="Имя">
+        <input type="tel" name="personPhone" id="personPhone" placeholder="Номер телефона"> 
+        <input type="email" name="personEmail" id="personEmail" placeholder="Электронная почта">
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        <p class="errorText"></p>
+        <input type="submit" value="Отправить" id="formButton">
+    </form>
+    <script>
+        'use strict'
+        //Задание 1,2
+        let text = document.querySelector('div').innerText;
+
+        // let regexp = /'/g;
+        let regexp = /(?<=[\s.,!-])'|'(?=[\s.,!-])/gm;
+
+        console.log(text.match(regexp, '"'));
+        console.log(text.replace(regexp, '"'));
+
+        //Задание 3
+
+        let form = document.querySelector("form"),
+            button = document.querySelector("#formButton"),
+            nameInput = form.querySelector("#personName"),
+            phoneInput = form.querySelector("#personPhone"),
+            emailInput = form.querySelector("#personEmail"),
+            errorText = form.querySelector(".errorText");
+
+
+        button.addEventListener("click", ev => {
+            // checkInput(ev);
+            let formArr = ev.target.parentNode.children
+            errorText.innerHTML = "";
+            for (let i = 0; i < (formArr.length - 2); i++) {
+                let result;
+                result = checkInput(formArr[i], formArr[i].name);
+                if(!result) {
+                    formArr[i].style.borderColor = "red";
+                    formArr[i].value = "";
+                    ev.preventDefault();
+                    errorText.innerHTML += `Не корректно заполнено поле ${formArr[i].placeholder}. \n`;
+                }
+                
+            }
+
+        });
+        
+        function checkInput(inputEl, inputElName) {
+            let regexpname = /[а-яА-Я]+/g,
+                regexpphone = /\+7\(\d{3}\)\d{3}-\d{4}/g,
+                regexpemail = /\w+\-?\.?\w+@\w+\.\w{2,3}/
+            if (inputElName == "personName") {
+                return (regexpname.test(inputEl.value));
+            }  else if (inputElName == "personPhone") {
+                return (regexpphone.test(inputEl.value));
+            } else if (inputElName == "personEmail") {
+                return (regexpemail.test(inputEl.value));
+            } else return true;
+            
+        }
+
+    </script>
+</body>
+</html>

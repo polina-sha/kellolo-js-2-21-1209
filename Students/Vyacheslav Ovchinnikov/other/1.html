@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        'If you can dream it, you can do it.'
+    </p>
+    <script>
+        // 1. Дан большой текст, в котором для оформления прямой речи используются одинарные кавычки. 
+        //    Придумать шаблон, который заменяет одинарные кавычки на двойные.
+        
+        document.body.innerHTML = document.querySelector('p').innerText.replace(/'/g, '”');
+    </script>
+</body>
+</html>

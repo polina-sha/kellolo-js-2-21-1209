@@ -21,9 +21,35 @@
 			<button></button>
 		</form>
 
-		<img src="../src/assets/imgs/cart.png" alt="cart" class="header__cart">
-		<button name="accountBar" class="header__account-bar">My Account <img src="../src/assets/imgs/icons/fa-caret-down-white.png"
-				alt="#"></button>
+		<!-- <img src="../src/assets/imgs/cart.png" alt="cart" class="header__cart"> -->
+
+		<div class="headerCart pr-4">
+			<button id="basket-toggler"></button>
+
+			<div class="headerCartWrap invisible" id="basket">
+				<div class="headerCartWrapBlock"></div>
+				<div class="headerCartWrapInAll">
+					<div id="basket-items" class="headerCartWrapInAll">
+
+					</div>
+
+					<div class="headerCartWrapTotalPrice">
+						<div>total</div>
+						<div>$500.00</div>
+					</div>
+
+					<button type="button" class="productsButtonIndex">Checkout</button>
+					<button type="button" class="productsButtonIndex">Go to cart</button>
+				</div>
+			</div>
+
+		</div>
+
+		<!--  -->
+
+
+		<button name="accountBar" class="header__account-bar">My Account <img
+				src="../src/assets/imgs/icons/fa-caret-down-white.png" alt="#"></button>
 	</header>
 
 	<div class="headerLine"></div>
@@ -205,6 +231,14 @@
 		</div>
 	</div>
 
+	<!--  -->
+
+	<div class="row" id="catalog">
+		<!-- ВСТРАИВАЕМОЕ СОДЕРЖИМОЕ -->
+	</div>
+
+	<!--  -->
+
 	<div class="button-browseProduct">
 
 		<button name="browseProduct" class="browseProduct">Browse All Product &#129042;</button>
@@ -337,7 +371,7 @@
 			</div>
 		</div>
 	</footer>
-<!-- 
+
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 	</script>
@@ -346,7 +380,11 @@
 	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-	</script> -->
+	</script>
+
+	<script src="../src/components/basket.js"></script>
+	<script src="../src/components/catalog.js"></script>
+	<script src="../src/components/index.js"></script>
 
 </body>
 
