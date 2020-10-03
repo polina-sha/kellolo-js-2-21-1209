@@ -1,0 +1,109 @@
+.headerCart {
+    position: relative;
+    margin-left: 350px;
+}
+.headerCartWrap {
+    display: block;
+    z-index: 2;
+}
+.headerCart:hover {
+    display: block;
+    z-index: 3;
+}
+.headerCart .headerCartWrap {
+    position: absolute;
+    width: 260px;
+    left: -40px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapBlock {
+    height: 15px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll {
+    background-color: #ffffff;
+    padding: 1rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapIn {
+    background: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a:last-child {
+    color: #c0c0c0;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a:last-child:hover {
+    color: #f16d7f;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a {
+    text-decoration: none;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div:first-child {
+    color: #222222;
+    font-weight: 700;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div:last-child {
+    color: #f16d7f;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div span {
+    color: #e4af48;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div .headerCartWrapPrice {
+    color: #f16d7f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a div {
+    text-transform: lowercase;
+    font-size: 10px;
+    padding: 0 0.3rem;
+}
+.headerCartWrapPrice {
+    margin-top: 40px;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll div a img {
+    padding-right: 0.5rem;
+}
+
+.headerCart .headerCartWrap .headerCartWrapInAll .headerCartWrapTotalPrice {
+    display: flex;
+    justify-content: space-between;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.fas {
+    height: 30px;
+}
